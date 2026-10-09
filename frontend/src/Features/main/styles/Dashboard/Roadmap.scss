@@ -1,0 +1,136 @@
+.learning-roadmap {
+  width: 100%;
+  margin-top: 25px;
+  background: var(--bg-card);
+  border-radius: 18px;
+  padding: 25px;
+  box-shadow: 0 8px 20px rgba(91, 76, 243, 0.25);
+  transition: .3s all ease;
+}
+
+.roadmap-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+
+  h2 {
+    font-size: clamp(1.2rem,2vw,1.7rem);
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    color: #363636;
+  }
+
+  button {
+    border: none;
+    background: transparent;
+    color: #6C4DFF;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    font-size: clamp(.9rem,2vw,1.2rem);
+    font-family: "Poppins", sans-serif;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+
+.roadmap-list {
+  position: relative;
+}
+
+.roadmap-list::before {
+  content: "";
+  position: absolute;
+  left: 31px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: #e6e6e6;
+}
+
+.roadmap-item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 18px 15px;
+  position: relative;
+  border-radius: 12px;
+  transition: .3s;
+
+  &:hover {
+    background: rgba(108,77,255,.05);
+  }
+}
+
+.timeline {
+  width: 36px;
+  display: flex;
+  justify-content: center;
+  z-index: 2;
+  background: var(--bg-card);
+}
+
+.timeline svg {
+  font-size: 1.3rem;
+}
+
+.completed {
+  color: #18C964;
+}
+
+.current {
+  color: #6C4DFF;
+}
+
+.locked {
+  color: #9CA3AF;
+}
+
+.roadmap-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex: 1;
+
+  h3 {
+    font-size: 1.2rem;
+    color: var(--text-primary);
+    font-weight: 600;
+  }
+
+  span {
+    font-size: 1rem;
+    font-weight: 600;
+  }
+}
+
+.completed .roadmap-content span {
+  color: #18C964;
+}
+
+.current {
+  background: rgba(108,77,255,.08);
+}
+
+.current .roadmap-content span {
+  color: #6C4DFF;
+}
+
+.locked .roadmap-content span {
+  color: #9CA3AF;
+}
+
+@media (max-width:768px) {
+
+  .roadmap-content {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+}

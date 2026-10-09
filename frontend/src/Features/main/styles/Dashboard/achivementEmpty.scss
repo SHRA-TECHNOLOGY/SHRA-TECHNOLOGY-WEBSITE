@@ -1,0 +1,403 @@
+/* ==========================================
+   OUTER CONTAINER / DAILY CHALLENGE
+========================================== */
+
+.outer-container {
+
+    width: 100%;
+    min-width: 0;
+
+    margin-top: 20px;
+
+    padding: 20px;
+
+    background: #ffffff;
+
+    border: 1px solid #e8eaf0;
+
+    border-radius: 14px;
+
+    box-shadow:
+        0 8px 20px rgba(91, 76, 243, 0.25);
+
+    box-sizing: border-box;
+
+    max-height: 300px;
+
+    overflow: hidden;
+
+    transition:
+        box-shadow .25s ease,
+        border-color .25s ease;
+}
+
+.outer-container:hover {
+
+    border-color:
+        rgba(91, 76, 243, .18);
+
+    box-shadow:
+        0 12px 28px rgba(91, 76, 243, .28);
+}
+
+
+/* ==========================================
+   HEADING
+========================================== */
+
+.outer-container h2 {
+
+    margin: 0;
+
+    color: #20232b;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: clamp(
+        .95rem,
+        2vw,
+        1.2rem
+    );
+
+    font-weight: 650;
+
+    line-height: 1.4;
+}
+
+
+/* ==========================================
+   EMPTY CHALLENGE ICON
+========================================== */
+
+.empty-challenge-icon {
+
+    width: 100%;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    margin: 5px 0 10px;
+
+    color: #6c4dff;
+
+    font-size: clamp(
+        1.4rem,
+        4vw,
+        2.5rem
+    );
+}
+
+.empty-challenge-icon svg {
+
+    width: 48px;
+    height: 48px;
+
+    padding: 10px;
+
+    border-radius: 13px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #f0edff,
+            #e8e3ff
+        );
+
+    border: 1px solid
+        rgba(108, 77, 255, .10);
+
+    box-sizing: content-box;
+
+    box-shadow:
+        0 5px 14px
+        rgba(108, 77, 255, .10);
+}
+
+
+/* ==========================================
+   EMPTY CONTENT
+========================================== */
+
+.outer-container .empty-content {
+
+    width: 100%;
+    min-width: 0;
+
+    min-height: 155px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 12px;
+
+    text-align: center;
+
+    box-sizing: border-box;
+}
+
+
+/* ==========================================
+   EMPTY TEXT
+========================================== */
+
+.outer-container .empty-content p {
+
+    max-width: 500px;
+
+    margin: 0;
+
+    color: #777d89;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: clamp(
+        .6rem,
+        1.3vw,
+        .72rem
+    );
+
+    font-weight: 450;
+
+    line-height: 1.6;
+
+    letter-spacing: .1px;
+
+    overflow-wrap: anywhere;
+}
+
+
+/* ==========================================
+   BUTTON
+========================================== */
+
+.outer-container .empty-content button {
+
+    min-height: 35px;
+
+    padding: 7px 15px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #6c4dff,
+            #5b3bea
+        );
+
+    color: #ffffff;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: .61rem;
+
+    font-weight: 650;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 5px 14px
+        rgba(108, 77, 255, .20);
+
+    transition:
+        transform .2s ease,
+        box-shadow .2s ease,
+        filter .2s ease;
+}
+
+.outer-container .empty-content button:hover {
+
+    transform: translateY(-2px);
+
+    filter: brightness(1.03);
+
+    box-shadow:
+        0 8px 20px
+        rgba(108, 77, 255, .27);
+}
+
+.outer-container .empty-content button:active {
+
+    transform: translateY(0);
+}
+
+
+/* ==========================================
+   TABLET
+========================================== */
+
+@media (max-width: 768px) {
+
+    .outer-container {
+
+        margin-top: 15px;
+
+        padding: 17px;
+
+        max-height: 290px;
+
+        border-radius: 12px;
+    }
+
+    .outer-container h2 {
+
+        font-size: .88rem;
+    }
+
+    .empty-challenge-icon {
+
+        margin: 4px 0 7px;
+    }
+
+    .empty-challenge-icon svg {
+
+        width: 40px;
+        height: 40px;
+
+        padding: 8px;
+
+        border-radius: 11px;
+    }
+
+    .outer-container .empty-content {
+
+        min-height: 145px;
+
+        gap: 10px;
+    }
+
+    .outer-container .empty-content p {
+
+        font-size: .58rem;
+    }
+
+    .outer-container .empty-content button {
+
+        min-height: 33px;
+
+        padding: 6px 13px;
+
+        font-size: .57rem;
+    }
+}
+
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 600px) {
+
+    .outer-container {
+
+        padding: 13px;
+
+        max-height: 280px;
+
+        border-radius: 11px;
+    }
+
+    .outer-container h2 {
+
+        font-size: .8rem;
+    }
+
+    .empty-challenge-icon {
+
+        margin: 4px 0 5px;
+    }
+
+    .empty-challenge-icon svg {
+
+        width: 34px;
+        height: 34px;
+
+        padding: 7px;
+    }
+
+    .outer-container .empty-content {
+
+        min-height: 135px;
+
+        gap: 9px;
+    }
+
+    .outer-container .empty-content p {
+
+        max-width: 95%;
+
+        font-size: .54rem;
+
+        line-height: 1.55;
+    }
+
+    .outer-container .empty-content button {
+
+        width: auto;
+
+        min-height: 32px;
+
+        padding: 6px 12px;
+
+        font-size: .54rem;
+    }
+}
+
+
+/* ==========================================
+   SMALL MOBILE
+========================================== */
+
+@media (max-width: 380px) {
+
+    .outer-container {
+
+        padding: 10px;
+
+        max-height: 260px;
+
+        border-radius: 9px;
+    }
+
+    .outer-container h2 {
+
+        font-size: .73rem;
+    }
+
+    .empty-challenge-icon svg {
+
+        width: 29px;
+        height: 29px;
+
+        padding: 6px;
+    }
+
+    .outer-container .empty-content {
+
+        min-height: 125px;
+
+        gap: 8px;
+    }
+
+    .outer-container .empty-content p {
+
+        font-size: .5rem;
+    }
+
+    .outer-container .empty-content button {
+
+        min-height: 30px;
+
+        padding: 5px 10px;
+
+        font-size: .51rem;
+    }
+}

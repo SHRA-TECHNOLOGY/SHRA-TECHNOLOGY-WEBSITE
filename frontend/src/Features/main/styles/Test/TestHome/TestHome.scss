@@ -1,0 +1,188 @@
+// ==========================================
+// TEST MAIN CONTAINER
+// ==========================================
+
+.test-container {
+
+    width: 100%;
+
+    min-height: 100vh;
+
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    background:
+        radial-gradient(
+            circle at top right,
+            rgba(124, 92, 255, .07),
+            transparent 32%
+        ),
+        #0b0d12;
+
+    border-left: 1px solid #252831;
+
+    box-sizing: border-box;
+
+    scrollbar-width: none;
+}
+
+.test-container::-webkit-scrollbar {
+    display: none;
+}
+
+
+// ==========================================
+// TEST CONTENT
+// ==========================================
+
+.test-container > * {
+
+    min-width: 0;
+
+    max-width: 100%;
+
+    box-sizing: border-box;
+}
+
+
+// ==========================================
+// TEST FOOTER
+// ==========================================
+
+.test-footer {
+
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 2fr)
+        minmax(0, 1fr);
+
+    gap: 18px;
+
+    margin-top: 25px;
+
+    padding: 0 20px 25px;
+
+    box-sizing: border-box;
+}
+
+
+// ==========================================
+// RECENT + LEADERBOARD
+// ==========================================
+
+.test-recent-container,
+.test-leaderboard {
+
+    min-width: 0;
+
+    width: 100%;
+
+    background:
+        linear-gradient(
+            145deg,
+            #181a20,
+            #111318
+        );
+
+    border: 1px solid #292c34;
+
+    border-radius: 1rem;
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, .25),
+        inset 0 1px 0 rgba(255, 255, 255, .02);
+
+    box-sizing: border-box;
+
+    overflow: hidden;
+}
+
+
+// ==========================================
+// HOVER
+// ==========================================
+
+.test-recent-container:hover,
+.test-leaderboard:hover {
+
+    border-color: #353945;
+
+    box-shadow:
+        0 14px 35px rgba(0, 0, 0, .32);
+}
+
+
+// ==========================================
+// TABLET
+// ==========================================
+
+@media (max-width: 900px) {
+
+    .test-footer {
+
+        grid-template-columns: 1fr;
+
+        gap: 14px;
+
+        margin-top: 20px;
+
+        padding: 0 16px 20px;
+    }
+}
+
+
+// ==========================================
+// MOBILE
+// ==========================================
+
+@media (max-width: 600px) {
+
+    .test-container {
+
+        border-left: none;
+    }
+
+
+    .test-footer {
+
+        grid-template-columns: 1fr;
+
+        gap: 12px;
+
+        margin-top: 15px;
+
+        padding: 0 12px 18px;
+    }
+
+
+    .test-recent-container,
+    .test-leaderboard {
+
+        border-radius: .9rem;
+    }
+}
+
+
+// ==========================================
+// SMALL PHONE
+// ==========================================
+
+@media (max-width: 400px) {
+
+    .test-footer {
+
+        padding: 0 10px 15px;
+
+        gap: 10px;
+    }
+
+
+    .test-recent-container,
+    .test-leaderboard {
+
+        border-radius: .8rem;
+    }
+}

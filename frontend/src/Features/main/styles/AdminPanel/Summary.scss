@@ -1,0 +1,244 @@
+// ==========================================
+// ADMIN DASHBOARD SUMMARY
+// ==========================================
+
+.admin-dashboard {
+
+    width: 100%;
+    min-width: 0;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, minmax(0, 1fr));
+
+    gap: 14px;
+
+    box-sizing: border-box;
+}
+
+
+// ==========================================
+// SUMMARY CARD
+// ==========================================
+
+.admin-summary-card {
+
+    width: 100%;
+    min-width: 0;
+
+    min-height: 105px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    padding: 18px;
+
+    background: #ffffff;
+
+    border: 1px solid #e8eaf0;
+
+    border-radius: 14px;
+
+    box-shadow:
+        0 6px 20px rgba(31, 35, 50, .06);
+
+    box-sizing: border-box;
+
+    position: relative;
+
+    overflow: hidden;
+
+    transition:
+        transform .25s ease,
+        border-color .25s ease,
+        box-shadow .25s ease;
+}
+
+
+// ==========================================
+// LEFT ACCENT
+// ==========================================
+
+.admin-summary-card::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 4px;
+    height: 100%;
+
+    background:
+        linear-gradient(
+            180deg,
+            #6366f1,
+            #8b5cf6
+        );
+}
+
+
+// ==========================================
+// HOVER
+// ==========================================
+
+.admin-summary-card:hover {
+
+    transform: translateY(-4px);
+
+    border-color:
+        rgba(99, 102, 241, .25);
+
+    box-shadow:
+        0 12px 28px rgba(31, 35, 50, .10);
+}
+
+
+// ==========================================
+// TITLE
+// ==========================================
+
+.admin-summary-card p {
+
+    margin: 0 0 8px;
+
+    color: #777d89;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: .68rem;
+
+    font-weight: 550;
+
+    line-height: 1.4;
+
+    letter-spacing: .1px;
+}
+
+
+// ==========================================
+// VALUE
+// ==========================================
+
+.admin-summary-card span {
+
+    display: block;
+
+    margin: 0;
+
+    color: #20232b;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: clamp(
+        1.35rem,
+        2.5vw,
+        1.75rem
+    );
+
+    font-weight: 700;
+
+    letter-spacing: -.5px;
+
+    line-height: 1.2;
+}
+
+
+// ==========================================
+// TABLET
+// ==========================================
+
+@media (max-width: 1024px) {
+
+    .admin-dashboard {
+
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        gap: 12px;
+    }
+
+    .admin-summary-card {
+
+        min-height: 100px;
+
+        padding: 16px;
+    }
+}
+
+
+// ==========================================
+// MOBILE
+// ==========================================
+
+@media (max-width: 600px) {
+
+    .admin-dashboard {
+
+        grid-template-columns: 1fr;
+
+        gap: 10px;
+    }
+
+    .admin-summary-card {
+
+        min-height: 82px;
+
+        padding: 14px 15px;
+    }
+
+    .admin-summary-card p {
+
+        margin-bottom: 5px;
+
+        font-size: .62rem;
+    }
+
+    .admin-summary-card span {
+
+        font-size: 1.25rem;
+    }
+}
+
+
+// ==========================================
+// SMALL PHONE
+// ==========================================
+
+@media (max-width: 380px) {
+
+    .admin-dashboard {
+
+        gap: 8px;
+    }
+
+    .admin-summary-card {
+
+        min-height: 76px;
+
+        padding: 12px 13px;
+
+        border-radius: 10px;
+    }
+
+    .admin-summary-card::before {
+
+        width: 3px;
+    }
+
+    .admin-summary-card p {
+
+        font-size: .57rem;
+    }
+
+    .admin-summary-card span {
+
+        font-size: 1.1rem;
+    }
+}

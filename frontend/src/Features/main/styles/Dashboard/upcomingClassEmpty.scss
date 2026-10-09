@@ -1,0 +1,472 @@
+/* ==========================================
+   Upcoming Live Class - Empty State
+========================================== */
+
+.empty-live-class {
+
+    width: 100%;
+    min-width: 0;
+
+    margin-top: 20px;
+
+    padding: 22px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 22px;
+
+    background: #ffffff;
+
+    border: 1px solid #e8eaf0;
+
+    border-radius: 14px;
+
+    box-shadow:
+        0 8px 20px rgba(91, 76, 243, 0.25);
+
+    box-sizing: border-box;
+
+    overflow: hidden;
+
+    transition:
+        transform .25s ease,
+        box-shadow .25s ease,
+        border-color .25s ease;
+}
+
+.empty-live-class:hover {
+
+    transform: translateY(-2px);
+
+    border-color:
+        rgba(91, 76, 243, 0.18);
+
+    box-shadow:
+        0 12px 28px rgba(91, 76, 243, 0.28);
+}
+
+
+/* ==========================================
+   Icon
+========================================== */
+
+.empty-live-icon {
+
+    width: 64px;
+    height: 64px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 14px;
+
+    color: #6c4dff;
+
+    background:
+        linear-gradient(
+            135deg,
+            #f0edff,
+            #e9e5ff
+        );
+
+    border: 1px solid
+        rgba(108, 77, 255, 0.10);
+
+    box-shadow:
+        0 5px 14px
+        rgba(108, 77, 255, 0.10);
+
+    transition:
+        transform .25s ease,
+        background .25s ease;
+}
+
+.empty-live-class:hover .empty-live-icon {
+
+    transform: scale(1.04);
+
+    background:
+        linear-gradient(
+            135deg,
+            #ebe7ff,
+            #e3deff
+        );
+}
+
+.empty-live-icon svg {
+
+    width: 30px;
+    height: 30px;
+
+    stroke-width: 1.8;
+}
+
+
+/* ==========================================
+   Content
+========================================== */
+
+.empty-live-content {
+
+    flex: 1;
+
+    min-width: 0;
+
+    max-width: 620px;
+}
+
+.empty-live-content h2 {
+
+    margin: 0 0 7px;
+
+    color: #20232b;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: clamp(
+        .9rem,
+        2vw,
+        1.15rem
+    );
+
+    font-weight: 650;
+
+    line-height: 1.4;
+
+    letter-spacing: -.2px;
+}
+
+.empty-live-content p {
+
+    margin: 0 0 10px;
+
+    color: #858a95;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: clamp(
+        .58rem,
+        1.2vw,
+        .68rem
+    );
+
+    font-weight: 450;
+
+    line-height: 1.6;
+
+    overflow-wrap: anywhere;
+}
+
+
+/* ==========================================
+   Notification Info
+========================================== */
+
+.empty-live-info {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    margin-bottom: 13px;
+
+    color: #777d89;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: clamp(
+        .55rem,
+        1.1vw,
+        .63rem
+    );
+
+    font-weight: 500;
+
+    line-height: 1.5;
+}
+
+.empty-live-info svg {
+
+    width: 15px;
+    height: 15px;
+
+    flex-shrink: 0;
+
+    color: #6c4dff;
+}
+
+
+/* ==========================================
+   Browse Button
+========================================== */
+
+.browse-classes-btn {
+
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 6px;
+
+    min-height: 34px;
+
+    padding: 7px 13px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #6c4dff,
+            #5b3bea
+        );
+
+    color: #ffffff;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: .62rem;
+
+    font-weight: 650;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 5px 14px
+        rgba(108, 77, 255, 0.20);
+
+    transition:
+        transform .2s ease,
+        box-shadow .2s ease,
+        filter .2s ease;
+}
+
+.browse-classes-btn:hover {
+
+    transform: translateY(-2px);
+
+    filter: brightness(1.03);
+
+    box-shadow:
+        0 8px 20px
+        rgba(108, 77, 255, 0.27);
+}
+
+.browse-classes-btn:active {
+
+    transform: translateY(0);
+
+    box-shadow:
+        0 4px 10px
+        rgba(108, 77, 255, 0.18);
+}
+
+.browse-classes-btn svg {
+
+    width: 14px;
+    height: 14px;
+}
+
+
+/* ==========================================
+   Tablet
+========================================== */
+
+@media (max-width: 768px) {
+
+    .empty-live-class {
+
+        padding: 18px;
+
+        gap: 16px;
+
+        border-radius: 12px;
+    }
+
+    .empty-live-icon {
+
+        width: 56px;
+        height: 56px;
+
+        border-radius: 12px;
+    }
+
+    .empty-live-icon svg {
+
+        width: 26px;
+        height: 26px;
+    }
+
+    .empty-live-content h2 {
+
+        font-size: .9rem;
+    }
+
+    .empty-live-content p {
+
+        font-size: .59rem;
+    }
+
+    .empty-live-info {
+
+        font-size: .55rem;
+
+        margin-bottom: 11px;
+    }
+
+    .browse-classes-btn {
+
+        min-height: 32px;
+
+        padding: 6px 11px;
+
+        font-size: .58rem;
+    }
+}
+
+
+/* ==========================================
+   Mobile
+========================================== */
+
+@media (max-width: 576px) {
+
+    .empty-live-class {
+
+        flex-direction: column;
+
+        text-align: center;
+
+        padding: 20px 14px;
+
+        gap: 12px;
+
+        border-radius: 11px;
+    }
+
+    .empty-live-icon {
+
+        width: 58px;
+        height: 58px;
+
+        border-radius: 13px;
+    }
+
+    .empty-live-icon svg {
+
+        width: 27px;
+        height: 27px;
+    }
+
+    .empty-live-content {
+
+        width: 100%;
+
+        max-width: 100%;
+    }
+
+    .empty-live-content h2 {
+
+        font-size: .82rem;
+
+        margin-bottom: 6px;
+    }
+
+    .empty-live-content p {
+
+        font-size: .57rem;
+
+        line-height: 1.6;
+
+        margin-bottom: 9px;
+    }
+
+    .empty-live-info {
+
+        justify-content: center;
+
+        text-align: left;
+
+        font-size: .53rem;
+
+        margin-bottom: 12px;
+    }
+
+    .browse-classes-btn {
+
+        width: 100%;
+
+        min-height: 34px;
+
+        font-size: .58rem;
+    }
+}
+
+
+/* ==========================================
+   Small Mobile
+========================================== */
+
+@media (max-width: 380px) {
+
+    .empty-live-class {
+
+        padding: 16px 11px;
+
+        gap: 10px;
+    }
+
+    .empty-live-icon {
+
+        width: 50px;
+        height: 50px;
+
+        border-radius: 11px;
+    }
+
+    .empty-live-icon svg {
+
+        width: 23px;
+        height: 23px;
+    }
+
+    .empty-live-content h2 {
+
+        font-size: .76rem;
+    }
+
+    .empty-live-content p {
+
+        font-size: .52rem;
+    }
+
+    .empty-live-info {
+
+        font-size: .49rem;
+
+        gap: 5px;
+    }
+
+    .empty-live-info svg {
+
+        width: 13px;
+        height: 13px;
+    }
+
+    .browse-classes-btn {
+
+        min-height: 32px;
+
+        font-size: .54rem;
+    }
+}

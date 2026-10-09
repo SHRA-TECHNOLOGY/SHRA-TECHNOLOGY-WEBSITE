@@ -1,0 +1,911 @@
+.test-leaderboard {
+    width: 100%;
+    background: var(--card-bg);
+    border: 1px solid var(--test-border);
+    border-radius: 1.25rem;
+    padding: 1.4rem;
+    overflow: hidden;
+
+    box-shadow:
+        0 12px 35px rgba(0, 0, 0, 0.18),
+        inset 0 1px 0 rgba(255, 255, 255, 0.025);
+
+    // ==========================================
+    // HEADER
+    // ==========================================
+
+    .header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 1.5rem;
+
+        h2 {
+            margin: 0;
+            font-size: clamp(1.25rem, 2vw, 1.8rem);
+            font-family: "Poppins", sans-serif;
+            font-weight: 650;
+            letter-spacing: -0.4px;
+            color: #ffffff;
+        }
+
+        button {
+            border: none;
+            background: transparent;
+            cursor: pointer;
+            color: var(--primary);
+            font-size: clamp(0.8rem, 2vw, 1.05rem);
+            font-family: "Poppins", sans-serif;
+            font-weight: 600;
+            padding: 0.35rem 0.2rem;
+            transition: 0.25s ease;
+
+            &:hover {
+                opacity: 0.85;
+                transform: translateX(2px);
+            }
+        }
+    }
+
+    // ==========================================
+    // TABS
+    // ==========================================
+
+    .leaderboard-tabs {
+        display: flex;
+        align-items: center;
+        gap: 0.25rem;
+
+        border-bottom: 1px solid var(--test-border);
+        margin-bottom: 0.7rem;
+
+        button {
+            flex: 1;
+            min-width: 0;
+
+            padding: 0.85rem 0.5rem;
+
+            background: transparent;
+            border: none;
+
+            color: #b8bdc9;
+
+            font-size: clamp(0.75rem, 2vw, 1rem);
+            font-family: "Poppins", sans-serif;
+            font-weight: 500;
+
+            cursor: pointer;
+            position: relative;
+
+            transition:
+                color 0.25s ease,
+                background 0.25s ease;
+
+            border-radius: 0.6rem 0.6rem 0 0;
+
+            &:hover {
+                color: #ffffff;
+                background: rgba(255, 255, 255, 0.025);
+            }
+        }
+
+        button.active {
+            color: #ffffff;
+            font-weight: 600;
+        }
+
+        button.active::after {
+            content: "";
+
+            position: absolute;
+            left: 12%;
+            bottom: -1px;
+
+            width: 76%;
+            height: 3px;
+
+            background: var(--primary);
+            border-radius: 10px 10px 0 0;
+
+            box-shadow:
+                0 0 8px rgba(90, 76, 255, 0.55),
+                0 0 16px rgba(90, 76, 255, 0.25);
+        }
+    }
+
+    // ==========================================
+    // LIST
+    // ==========================================
+
+    .leader-list-section {
+        display: flex;
+        flex-direction: column;
+        gap: 0.35rem;
+    }
+
+    // ==========================================
+    // SINGLE USER
+    // ==========================================
+
+    .single-leader-list {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        min-height: 68px;
+
+        padding: 0.7rem 0.75rem;
+
+        border-radius: 0.85rem;
+
+        transition:
+            background 0.25s ease,
+            transform 0.25s ease;
+
+        &:hover {
+            background: rgba(255, 255, 255, 0.035);
+            transform: translateX(3px);
+        }
+
+        // ======================================
+        // LEFT SIDE
+        // ======================================
+
+        .leader-list-left {
+            display: flex;
+            align-items: center;
+            gap: 0.85rem;
+            min-width: 0;
+
+            // ==================================
+            // RANK
+            // ==================================
+
+            span:first-child {
+                width: 28px;
+                flex-shrink: 0;
+
+                font-size: clamp(0.95rem, 2vw, 1.15rem);
+                font-weight: 700;
+
+                color: #f1f3f7;
+
+                text-align: center;
+            }
+
+            // ==================================
+            // AVATAR
+            // ==================================
+
+            span:nth-child(2) {
+                width: 44px;
+                height: 44px;
+
+                flex-shrink: 0;
+
+                border-radius: 50%;
+                overflow: hidden;
+
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                background:
+                    linear-gradient(
+                        145deg,
+                        #363c4c,
+                        #1d212b
+                    );
+
+                border: 1px solid rgba(255, 255, 255, 0.1);
+
+                box-shadow:
+                    0 4px 12px rgba(0, 0, 0, 0.25);
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+
+                .default-avatar {
+                    width: 100%;
+                    height: 100%;
+
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    color: #ffffff;
+                    font-size: 1rem;
+                    font-weight: 700;
+
+                    background: var(--primary);
+                }
+            }
+
+            // ==================================
+            // NAME
+            // ==================================
+
+            h3 {
+                margin: 0;
+
+                max-width: 180px;
+
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+
+                font-size: clamp(0.9rem, 2vw, 1.05rem);
+                font-family: "Poppins", sans-serif;
+                font-weight: 600;
+
+                color: #f5f6fa;
+
+                letter-spacing: 0.05px;
+
+                transition: color 0.25s ease;
+            }
+        }
+
+        // ======================================
+        // XP
+        // ======================================
+
+        > h3 {
+            margin: 0;
+
+            flex-shrink: 0;
+
+            font-size: clamp(0.95rem, 2vw, 1.1rem);
+            font-family: "Poppins", sans-serif;
+            font-weight: 700;
+
+            color: #ffffff;
+
+            letter-spacing: 0.2px;
+
+            // XP ko thoda premium/gold feel
+            text-shadow:
+                0 1px 8px rgba(255, 255, 255, 0.08);
+        }
+    }
+
+    // ==========================================
+    // TOP 3 RANK COLORS
+    // ==========================================
+
+    .single-leader-list:nth-child(1) {
+        .leader-list-left span:first-child {
+            color: #ffd166;
+            text-shadow: 0 0 10px rgba(255, 209, 102, 0.25);
+        }
+
+        .leader-list-left span:nth-child(2) {
+            border-color: rgba(255, 209, 102, 0.4);
+        }
+    }
+
+    .single-leader-list:nth-child(2) {
+        .leader-list-left span:first-child {
+            color: #d9e1eb;
+        }
+
+        .leader-list-left span:nth-child(2) {
+            border-color: rgba(217, 225, 235, 0.3);
+        }
+    }
+
+    .single-leader-list:nth-child(3) {
+        .leader-list-left span:first-child {
+            color: #d9955c;
+        }
+
+        .leader-list-left span:nth-child(2) {
+            border-color: rgba(217, 149, 92, 0.3);
+        }
+    }
+
+    // ==========================================
+    // CURRENT USER
+    // ==========================================
+
+    .single-leader-list.current-user {
+        background:
+            linear-gradient(
+                90deg,
+                rgba(90, 76, 255, 0.16),
+                rgba(90, 76, 255, 0.055)
+            );
+
+        border: 1px solid rgba(90, 76, 255, 0.28);
+
+        box-shadow:
+            inset 0 0 20px rgba(90, 76, 255, 0.035);
+
+        .leader-list-left {
+
+            span:first-child {
+                color: var(--primary);
+
+                text-shadow:
+                    0 0 10px rgba(90, 76, 255, 0.35);
+            }
+
+            span:nth-child(2) {
+                border-color: var(--primary);
+
+                box-shadow:
+                    0 0 0 2px rgba(90, 76, 255, 0.1),
+                    0 4px 14px rgba(0, 0, 0, 0.25);
+            }
+
+            h3 {
+                color: #ffffff;
+                font-weight: 650;
+            }
+        }
+
+        > h3 {
+            color: var(--primary);
+
+            text-shadow:
+                0 0 10px rgba(90, 76, 255, 0.25);
+        }
+    }
+
+    // ==========================================
+    // EMPTY STATE
+    // ==========================================
+
+    .empty-leaderboard {
+        min-height: 180px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        color: #b8bdc9;
+
+        font-family: "Poppins", sans-serif;
+        font-size: 0.9rem;
+    }
+
+    // ==========================================
+    // TABLET
+    // ==========================================
+
+    @media (max-width: 768px) {
+
+        padding: 1.1rem;
+
+        .header {
+            margin-bottom: 1.2rem;
+        }
+
+        .single-leader-list {
+
+            min-height: 62px;
+
+            padding: 0.6rem 0.55rem;
+
+            .leader-list-left {
+
+                gap: 0.7rem;
+
+                span:nth-child(2) {
+                    width: 40px;
+                    height: 40px;
+                }
+
+                h3 {
+                    max-width: 150px;
+                }
+            }
+        }
+    }
+
+    // ==========================================
+    // MOBILE
+    // ==========================================
+
+    @media (max-width: 480px) {
+
+        padding: 1rem;
+
+        border-radius: 1rem;
+
+        .header {
+
+            h2 {
+                font-size: 1.15rem;
+                color: #ffffff;
+            }
+
+            button {
+                font-size: 0.8rem;
+            }
+        }
+
+        .leaderboard-tabs {
+
+            button {
+                padding: 0.7rem 0.25rem;
+                font-size: 0.72rem;
+            }
+        }
+
+        .single-leader-list {
+
+            min-height: 58px;
+
+            .leader-list-left {
+
+                gap: 0.55rem;
+
+                span:first-child {
+                    width: 22px;
+                    font-size: 0.9rem;
+                }
+
+                span:nth-child(2) {
+                    width: 36px;
+                    height: 36px;
+                }
+
+                h3 {
+                    max-width: 125px;
+                    font-size: 0.82rem;
+                    color: #f5f6fa;
+                }
+            }
+
+            > h3 {
+                font-size: 0.85rem;
+                color: #ffffff;
+            }
+        }
+    }
+}
+
+
+// ==========================================
+// LEADERBOARD OVERLAY
+// ==========================================
+
+.leaderboard-overlay {
+    position: fixed;
+    inset: 0;
+
+    z-index: 9999;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 1rem;
+
+    background: rgba(5, 7, 12, 0.72);
+
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+
+    animation: leaderboardFadeIn 0.2s ease;
+}
+
+
+// ==========================================
+// MODAL
+// ==========================================
+
+.leaderboard-modal {
+    width: min(560px, 100%);
+
+    max-height: min(720px, 90vh);
+
+    display: flex;
+    flex-direction: column;
+
+    background: var(--card-bg);
+
+    border: 1px solid var(--test-border);
+
+    border-radius: 1.25rem;
+
+    padding: 1.4rem;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 30px 80px rgba(0, 0, 0, 0.5),
+        inset 0 1px 0 rgba(255, 255, 255, 0.04);
+
+    animation: leaderboardModalIn 0.25s ease;
+}
+
+
+// ==========================================
+// MODAL HEADER
+// ==========================================
+
+.modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 1.2rem;
+
+    h2 {
+        margin: 0;
+
+        color: #ffffff;
+
+        font-family: "Poppins", sans-serif;
+
+        font-size: 1.45rem;
+        font-weight: 650;
+    }
+
+    span {
+        display: block;
+
+        margin-top: 0.15rem;
+
+        color: #aeb4c2;
+
+        font-family: "Poppins", sans-serif;
+
+        font-size: 0.8rem;
+    }
+}
+
+
+// ==========================================
+// CLOSE BUTTON
+// ==========================================
+
+.close-button {
+    width: 38px;
+    height: 38px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid var(--test-border);
+
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.035);
+
+    color: #ffffff;
+
+    font-size: 1.5rem;
+    line-height: 1;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+
+    &:hover {
+        background: rgba(255, 255, 255, 0.08);
+
+        transform: rotate(90deg);
+    }
+}
+
+
+// ==========================================
+// MODAL TABS
+// ==========================================
+
+.modal-tabs {
+    display: flex;
+
+    gap: 0.25rem;
+
+    margin-bottom: 0.8rem;
+
+    border-bottom: 1px solid var(--test-border);
+
+    button {
+        flex: 1;
+
+        padding: 0.75rem 0.3rem;
+
+        border: none;
+
+        background: transparent;
+
+        color: #aeb4c2;
+
+        font-family: "Poppins", sans-serif;
+
+        font-size: 0.82rem;
+        font-weight: 500;
+
+        cursor: pointer;
+
+        position: relative;
+
+        transition: 0.2s ease;
+
+        &:hover {
+            color: #ffffff;
+        }
+
+        &.active {
+            color: #ffffff;
+            font-weight: 600;
+        }
+
+        &.active::after {
+            content: "";
+
+            position: absolute;
+
+            left: 15%;
+            right: 15%;
+            bottom: -1px;
+
+            height: 3px;
+
+            background: var(--primary);
+
+            border-radius: 10px;
+        }
+    }
+}
+
+
+// ==========================================
+// MODAL LIST
+// ==========================================
+
+.modal-leader-list {
+    display: flex;
+    flex-direction: column;
+
+    gap: 0.35rem;
+
+    overflow-y: auto;
+
+    padding-right: 0.2rem;
+
+    // Scrollbar
+
+    &::-webkit-scrollbar {
+        width: 5px;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: var(--test-border);
+        border-radius: 10px;
+    }
+}
+
+
+// ==========================================
+// MODAL USER
+// ==========================================
+
+.modal-leader-item {
+    min-height: 62px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0.6rem 0.7rem;
+
+    border-radius: 0.8rem;
+
+    transition: 0.2s ease;
+
+    &:hover {
+        background: rgba(255, 255, 255, 0.035);
+    }
+
+    &.current-user {
+        background:
+            linear-gradient(
+                90deg,
+                rgba(90, 76, 255, 0.16),
+                rgba(90, 76, 255, 0.04)
+            );
+
+        border: 1px solid rgba(90, 76, 255, 0.25);
+    }
+
+    strong {
+        color: #ffffff;
+
+        font-family: "Poppins", sans-serif;
+
+        font-size: 1rem;
+        font-weight: 700;
+    }
+}
+
+
+// ==========================================
+// MODAL USER LEFT
+// ==========================================
+
+.modal-user-left {
+    display: flex;
+
+    align-items: center;
+
+    gap: 0.8rem;
+
+    min-width: 0;
+
+    .modal-rank {
+        width: 28px;
+
+        flex-shrink: 0;
+
+        text-align: center;
+
+        color: #f1f3f7;
+
+        font-size: 1rem;
+        font-weight: 700;
+    }
+
+    .modal-avatar {
+        width: 40px;
+        height: 40px;
+
+        flex-shrink: 0;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        overflow: hidden;
+
+        border-radius: 50%;
+
+        background: #292e3a;
+
+        border: 1px solid rgba(255, 255, 255, 0.1);
+
+        img {
+            width: 100%;
+            height: 100%;
+
+            object-fit: cover;
+        }
+    }
+
+    h3 {
+        margin: 0;
+
+        max-width: 240px;
+
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+
+        color: #f5f6fa;
+
+        font-family: "Poppins", sans-serif;
+
+        font-size: 0.95rem;
+        font-weight: 600;
+    }
+}
+
+
+// ==========================================
+// CURRENT USER
+// ==========================================
+
+.modal-leader-item.current-user {
+
+    .modal-rank {
+        color: var(--primary);
+    }
+
+    .modal-user-left h3 {
+        color: #ffffff;
+    }
+
+    strong {
+        color: var(--primary);
+    }
+}
+
+
+// ==========================================
+// ANIMATION
+// ==========================================
+
+@keyframes leaderboardFadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes leaderboardModalIn {
+    from {
+        opacity: 0;
+        transform: translateY(15px) scale(0.97);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+
+// ==========================================
+// MOBILE
+// ==========================================
+
+@media (max-width: 480px) {
+
+    .leaderboard-overlay {
+        padding: 0.75rem;
+    }
+
+    .leaderboard-modal {
+        max-height: 88vh;
+
+        padding: 1rem;
+
+        border-radius: 1rem;
+    }
+
+    .modal-header {
+
+        h2 {
+            font-size: 1.2rem;
+        }
+    }
+
+    .modal-user-left {
+
+        gap: 0.6rem;
+
+        .modal-rank {
+            width: 22px;
+
+            font-size: 0.85rem;
+        }
+
+        .modal-avatar {
+            width: 36px;
+            height: 36px;
+        }
+
+        h3 {
+            max-width: 150px;
+
+            font-size: 0.82rem;
+        }
+    }
+
+    .modal-leader-item {
+        min-height: 56px;
+
+        padding: 0.5rem;
+    }
+
+    .modal-tabs button {
+        font-size: 0.7rem;
+    }
+}

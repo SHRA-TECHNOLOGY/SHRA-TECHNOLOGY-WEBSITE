@@ -1,0 +1,425 @@
+/* ==========================================
+   MAIN DASHBOARD
+========================================== */
+
+.dashboard {
+
+    width: 100%;
+    min-height: 100vh;
+
+    display: grid;
+
+    grid-template-columns:
+        260px minmax(0, 1fr);
+
+    background: #f8f9fc;
+
+    overflow-x: hidden;
+
+    box-sizing: border-box;
+}
+
+
+/* ==========================================
+   DASHBOARD CONTENT
+========================================== */
+
+.dashboard-content {
+
+    width: 100%;
+    min-width: 0;
+
+    min-height: 100vh;
+
+    display: flex;
+
+    flex-direction: column;
+
+    overflow: hidden;
+
+    box-sizing: border-box;
+}
+
+
+/* ==========================================
+   MAIN CONTENT
+========================================== */
+
+.admin-main-content {
+
+    flex: 1;
+
+    width: 100%;
+    min-width: 0;
+
+    min-height: 0;
+
+    padding: 22px 24px 30px;
+
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    box-sizing: border-box;
+
+    scrollbar-width: thin;
+
+    scrollbar-color:
+        #d9dce5 transparent;
+}
+
+
+/* Scrollbar */
+
+.admin-main-content::-webkit-scrollbar {
+
+    width: 5px;
+}
+
+.admin-main-content::-webkit-scrollbar-track {
+
+    background: transparent;
+}
+
+.admin-main-content::-webkit-scrollbar-thumb {
+
+    background: #d9dce5;
+
+    border-radius: 10px;
+}
+
+
+/* ==========================================
+   CENTER SECTION
+========================================== */
+
+.center-section {
+
+    width: 100%;
+    min-width: 0;
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1fr)
+        minmax(0, 1fr);
+
+    gap: 18px;
+
+    box-sizing: border-box;
+}
+
+
+/* ==========================================
+   LOWER PART
+========================================== */
+
+.dashboard-lowerPart {
+
+    width: 100%;
+    min-width: 0;
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1fr)
+        minmax(0, 1fr);
+
+    gap: 18px;
+
+    margin-bottom: 25px;
+
+    box-sizing: border-box;
+}
+
+
+/* ==========================================
+   SCROLL REVEAL ANIMATION
+========================================== */
+
+/*
+   Initial state
+
+   JS card ko .card-hidden class dega.
+*/
+
+.admin-main-content .card-hidden {
+
+    opacity: 0;
+
+    transform:
+        translateY(35px)
+        scale(.97);
+}
+
+
+/*
+   Visible state
+
+   JS viewport mein aane par
+   .card-visible add karega.
+*/
+
+.admin-main-content .card-visible {
+
+    opacity: 1;
+
+    transform:
+        translateY(0)
+        scale(1);
+}
+
+
+/*
+   Smooth transition
+*/
+
+.admin-main-content > *,
+.center-section > *,
+.dashboard-lowerPart > * {
+
+    transition:
+        opacity .6s ease,
+        transform .6s cubic-bezier(.22, 1, .36, 1);
+}
+
+
+/* ==========================================
+   LARGE LAPTOP
+========================================== */
+
+@media (max-width: 1200px) {
+
+    .dashboard {
+
+        grid-template-columns:
+            220px minmax(0, 1fr);
+    }
+
+    .admin-main-content {
+
+        padding: 20px;
+    }
+
+    .center-section,
+    .dashboard-lowerPart {
+
+        gap: 15px;
+    }
+}
+
+
+/* ==========================================
+   TABLET
+========================================== */
+
+@media (max-width: 900px) {
+
+    .dashboard {
+
+        grid-template-columns: 1fr;
+    }
+
+    .dashboard-content {
+
+        width: 100%;
+
+        min-height: 100vh;
+    }
+
+    .admin-main-content {
+
+        padding: 18px 16px 25px;
+    }
+
+    .center-section,
+    .dashboard-lowerPart {
+
+        grid-template-columns: 1fr;
+
+        gap: 15px;
+    }
+
+    .dashboard-lowerPart {
+
+        margin-bottom: 20px;
+    }
+}
+
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 600px) {
+
+    .dashboard {
+
+        width: 100%;
+
+        min-height: 100vh;
+
+        display: block;
+    }
+
+    .dashboard-content {
+
+        width: 100%;
+
+        min-width: 0;
+    }
+
+    .admin-main-content {
+
+        width: 100%;
+
+        min-width: 0;
+
+        padding: 14px 12px 20px;
+
+        overflow-x: hidden;
+    }
+
+    .center-section,
+    .dashboard-lowerPart {
+
+        width: 100%;
+
+        gap: 12px;
+    }
+
+    .dashboard-lowerPart {
+
+        margin-bottom: 15px;
+    }
+}
+
+
+/* ==========================================
+   SMALL MOBILE
+========================================== */
+
+@media (max-width: 380px) {
+
+    .admin-main-content {
+
+        padding: 11px 9px 18px;
+    }
+
+    .center-section,
+    .dashboard-lowerPart {
+
+        gap: 10px;
+    }
+}
+
+
+/* ==========================================
+   ACCESSIBILITY
+========================================== */
+
+/* ==========================================
+   SCROLL REVEAL ANIMATION
+========================================== */
+
+
+/* Initial state */
+
+.admin-main-content .card-hidden {
+
+    opacity: 0;
+
+    transform:
+        translateY(45px)
+        scale(.96);
+
+    transition:
+        opacity .7s ease,
+        transform .7s cubic-bezier(.22, 1, .36, 1);
+}
+
+
+/* Visible state */
+
+.admin-main-content .card-visible {
+
+    opacity: 1;
+
+    transform:
+        translateY(0)
+        scale(1);
+
+    transition:
+        opacity .7s ease,
+        transform .7s cubic-bezier(.22, 1, .36, 1);
+}
+
+
+/* ==========================================
+   SMOOTH CARD TRANSITION
+========================================== */
+
+.admin-main-content > *,
+.center-section > *,
+.dashboard-lowerPart > * {
+
+    opacity: 1;
+
+    transform:
+        translateY(0)
+        scale(1);
+
+    transition:
+        opacity .65s ease,
+        transform .65s cubic-bezier(.22, 1, .36, 1);
+
+    will-change:
+        opacity,
+        transform;
+}
+
+
+/* ==========================================
+   HIDDEN STATE
+========================================== */
+
+.admin-main-content .card-hidden {
+
+    opacity: 0;
+
+    transform:
+        translateY(45px)
+        scale(.96);
+}
+
+
+/* ==========================================
+   VISIBLE STATE
+========================================== */
+
+.admin-main-content .card-visible {
+
+    opacity: 1;
+
+    transform:
+        translateY(0)
+        scale(1);
+}
+
+
+/* ==========================================
+   ACCESSIBILITY
+========================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .admin-main-content > *,
+    .center-section > *,
+    .dashboard-lowerPart > * {
+
+        opacity: 1 !important;
+
+        transform: none !important;
+
+        transition: none !important;
+    }
+}

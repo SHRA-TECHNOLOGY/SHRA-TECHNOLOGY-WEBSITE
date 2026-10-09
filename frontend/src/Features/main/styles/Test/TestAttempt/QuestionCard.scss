@@ -1,0 +1,823 @@
+// ==========================================
+// QUESTION CARD
+// ==========================================
+
+.question-card {
+
+    width: 100%;
+    min-width: 0;
+
+    padding: 20px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #181a20,
+            #111318
+        );
+
+    border: 1px solid #292c34;
+
+    border-radius: 1rem;
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, .28),
+        inset 0 1px 0 rgba(255, 255, 255, .025);
+
+    box-sizing: border-box;
+
+    transition:
+        border-color .25s ease,
+        box-shadow .25s ease;
+}
+
+.question-card:hover {
+
+    border-color: #343742;
+
+    box-shadow:
+        0 14px 35px rgba(0, 0, 0, .34),
+        inset 0 1px 0 rgba(255, 255, 255, .025);
+}
+
+
+// ==========================================
+// QUESTION HEADER
+// ==========================================
+
+.question-header {
+
+    width: 100%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 15px;
+
+    margin-bottom: 20px;
+
+    padding-bottom: 14px;
+
+    border-bottom: 1px solid #292c34;
+
+    box-sizing: border-box;
+}
+
+.question-header h3 {
+
+    min-width: 0;
+
+    margin: 0;
+
+    font-size: clamp(1rem, 2vw, 1.25rem);
+
+    font-family: "Poppins", sans-serif;
+
+    font-weight: 650;
+
+    letter-spacing: -.2px;
+
+    color: #f3f4f6;
+
+    line-height: 1.4;
+}
+
+
+// ==========================================
+// QUESTION MARKS
+// ==========================================
+
+.question-marks {
+
+    flex-shrink: 0;
+
+    padding: 6px 10px;
+
+    border-radius: 7px;
+
+    background:
+        rgba(124, 92, 255, .11);
+
+    border: 1px solid
+        rgba(124, 92, 255, .22);
+
+    color: #a996ff;
+
+    font-size: .68rem;
+
+    font-family: "Poppins", sans-serif;
+
+    font-weight: 600;
+
+    white-space: nowrap;
+
+    box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, .025);
+}
+
+
+// ==========================================
+// QUESTION TITLE
+// ==========================================
+
+.question-title {
+
+    margin: 0 0 20px;
+
+    font-size: clamp(.85rem, 1.5vw, 1rem);
+
+    font-family: "Poppins", sans-serif;
+
+    font-weight: 500;
+
+    color: #d8dae0;
+
+    line-height: 1.75;
+
+    letter-spacing: .05px;
+}
+
+
+// ==========================================
+// OPTIONS WRAPPER
+// ==========================================
+
+.options-wrapper {
+
+    width: 100%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 9px;
+}
+
+
+// ==========================================
+// OPTION CARD
+// ==========================================
+
+.option-card {
+
+    width: 100%;
+
+    min-width: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 12px 14px;
+
+    background:
+        #15171d;
+
+    border: 1px solid #292c34;
+
+    border-radius: 10px;
+
+    cursor: pointer;
+
+    box-sizing: border-box;
+
+    transition:
+        background .25s ease,
+        border-color .25s ease,
+        transform .25s ease,
+        box-shadow .25s ease;
+}
+
+.option-card:hover {
+
+    background:
+        #1a1c22;
+
+    border-color:
+        rgba(124, 92, 255, .50);
+
+    transform: translateX(2px);
+
+    box-shadow:
+        0 6px 18px rgba(0, 0, 0, .18);
+}
+
+.option-card p {
+
+    min-width: 0;
+
+    margin: 0;
+
+    color: #c5c8d0;
+
+    font-size: clamp(.7rem, 1vw, .8rem);
+
+    font-family: "Poppins", sans-serif;
+
+    font-weight: 450;
+
+    line-height: 1.6;
+
+    word-break: break-word;
+}
+
+
+// ==========================================
+// OPTION LABEL
+// ==========================================
+
+.option-label {
+
+    width: 36px;
+
+    height: 36px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    border: 1px solid #363a44;
+
+    background:
+        #1b1d23;
+
+    color: #aeb2bc;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: .72rem;
+
+    font-weight: 650;
+
+    transition:
+        background .25s ease,
+        border-color .25s ease,
+        color .25s ease,
+        transform .25s ease;
+}
+
+
+// ==========================================
+// SELECTED OPTION
+// ==========================================
+
+.option-card.selected {
+
+    background:
+        rgba(124, 92, 255, .09);
+
+    border-color:
+        rgba(124, 92, 255, .65);
+
+    box-shadow:
+        0 0 0 1px
+        rgba(124, 92, 255, .08),
+        0 6px 20px
+        rgba(124, 92, 255, .07);
+}
+
+.option-card.selected:hover {
+
+    background:
+        rgba(124, 92, 255, .12);
+
+    border-color:
+        rgba(124, 92, 255, .75);
+
+    transform: translateX(2px);
+}
+
+.option-card.selected .option-label {
+
+    background:
+        linear-gradient(
+            135deg,
+            #5b3df5,
+            #8068ff
+        );
+
+    border-color: #8068ff;
+
+    color: #fff;
+
+    box-shadow:
+        0 5px 14px
+        rgba(91, 61, 245, .25);
+
+    transform: scale(1.03);
+}
+
+.option-card.selected p {
+
+    color: #eeeef2;
+}
+
+
+// ==========================================
+// CORRECT OPTION
+// ==========================================
+
+.option-card.correct,
+.correct {
+
+    background:
+        rgba(34, 197, 94, .08);
+
+    border-color:
+        rgba(34, 197, 94, .55);
+}
+
+.option-card.correct:hover,
+.correct:hover {
+
+    background:
+        rgba(34, 197, 94, .10);
+
+    border-color:
+        #22c55e;
+
+    transform: none;
+}
+
+.option-card.correct .option-label {
+
+    background:
+        rgba(34, 197, 94, .16);
+
+    border-color:
+        rgba(34, 197, 94, .50);
+
+    color: #4ade80;
+}
+
+
+// ==========================================
+// WRONG OPTION
+// ==========================================
+
+.option-card.wrong,
+.wrong {
+
+    background:
+        rgba(239, 68, 68, .08);
+
+    border-color:
+        rgba(239, 68, 68, .55);
+}
+
+.option-card.wrong:hover,
+.wrong:hover {
+
+    background:
+        rgba(239, 68, 68, .10);
+
+    border-color:
+        #ef4444;
+
+    transform: none;
+}
+
+.option-card.wrong .option-label {
+
+    background:
+        rgba(239, 68, 68, .14);
+
+    border-color:
+        rgba(239, 68, 68, .50);
+
+    color: #f87171;
+}
+
+
+// ==========================================
+// QUESTION FOOTER
+// ==========================================
+
+.question-footer {
+
+    width: 100%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 10px;
+
+    margin-top: 22px;
+
+    padding-top: 16px;
+
+    border-top: 1px solid #292c34;
+
+    box-sizing: border-box;
+}
+
+
+// ==========================================
+// COMMON BUTTON
+// ==========================================
+
+.secondary-btn,
+.review-btn,
+.primary-btn {
+
+    min-height: 40px;
+
+    padding: 8px 14px;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 7px;
+
+    border-radius: 8px;
+
+    font-size: .7rem;
+
+    font-family: "Poppins", sans-serif;
+
+    font-weight: 600;
+
+    letter-spacing: .05px;
+
+    cursor: pointer;
+
+    outline: none;
+
+    box-sizing: border-box;
+
+    transition:
+        background .25s ease,
+        border-color .25s ease,
+        color .25s ease,
+        transform .25s ease,
+        box-shadow .25s ease,
+        filter .25s ease;
+}
+
+
+// ==========================================
+// SECONDARY BUTTON
+// ==========================================
+
+.secondary-btn {
+
+    background:
+        #1a1c22;
+
+    color: #b8bcc6;
+
+    border: 1px solid #30333c;
+}
+
+.secondary-btn:hover {
+
+    color: #fff;
+
+    background:
+        #20232b;
+
+    border-color:
+        rgba(124, 92, 255, .55);
+
+    transform: translateY(-1px);
+}
+
+
+// ==========================================
+// REVIEW BUTTON
+// ==========================================
+
+.review-btn {
+
+    background:
+        rgba(245, 158, 11, .08);
+
+    color: #fbbf24;
+
+    border: 1px solid
+        rgba(245, 158, 11, .30);
+}
+
+.review-btn:hover {
+
+    background:
+        rgba(245, 158, 11, .14);
+
+    border-color:
+        rgba(245, 158, 11, .55);
+
+    transform: translateY(-1px);
+
+    box-shadow:
+        0 6px 18px
+        rgba(245, 158, 11, .08);
+}
+
+
+// ==========================================
+// PRIMARY BUTTON
+// ==========================================
+
+.primary-btn {
+
+    background:
+        linear-gradient(
+            135deg,
+            #5b3df5,
+            #8068ff
+        );
+
+    color: #fff;
+
+    border: 1px solid
+        rgba(124, 92, 255, .30);
+
+    box-shadow:
+        0 6px 18px
+        rgba(91, 61, 245, .18);
+}
+
+.primary-btn:hover {
+
+    filter: brightness(1.08);
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 9px 24px
+        rgba(91, 61, 245, .28);
+}
+
+.secondary-btn:active,
+.review-btn:active,
+.primary-btn:active {
+
+    transform: translateY(0);
+
+    box-shadow: none;
+}
+
+
+// ==========================================
+// DISABLED BUTTON
+// ==========================================
+
+.secondary-btn:disabled,
+.review-btn:disabled,
+.primary-btn:disabled {
+
+    opacity: .45;
+
+    cursor: not-allowed;
+
+    transform: none;
+
+    box-shadow: none;
+
+    filter: none;
+}
+
+
+// ==========================================
+// TABLET
+// ==========================================
+
+@media (max-width: 768px) {
+
+    .question-card {
+
+        padding: 16px;
+
+        border-radius: .9rem;
+    }
+
+    .question-header {
+
+        margin-bottom: 16px;
+
+        padding-bottom: 12px;
+    }
+
+    .question-title {
+
+        margin-bottom: 16px;
+
+        font-size: .78rem;
+
+        line-height: 1.7;
+    }
+
+    .option-card {
+
+        padding: 10px 11px;
+
+        gap: 10px;
+    }
+
+    .option-label {
+
+        width: 33px;
+
+        height: 33px;
+
+        font-size: .68rem;
+    }
+
+    .option-card p {
+
+        font-size: .68rem;
+    }
+
+    .question-footer {
+
+        flex-wrap: wrap;
+
+        justify-content: stretch;
+    }
+
+    .question-footer button {
+
+        flex: 1;
+
+        min-width: 120px;
+    }
+}
+
+
+// ==========================================
+// MOBILE
+// ==========================================
+
+@media (max-width: 520px) {
+
+    .question-card {
+
+        padding: 13px;
+
+        border-radius: .85rem;
+    }
+
+    .question-header {
+
+        align-items: flex-start;
+
+        gap: 8px;
+
+        margin-bottom: 14px;
+    }
+
+    .question-header h3 {
+
+        font-size: .88rem;
+    }
+
+    .question-marks {
+
+        padding: 5px 8px;
+
+        font-size: .6rem;
+
+        border-radius: 6px;
+    }
+
+    .question-title {
+
+        margin-bottom: 14px;
+
+        font-size: .7rem;
+
+        line-height: 1.65;
+    }
+
+    .options-wrapper {
+
+        gap: 7px;
+    }
+
+    .option-card {
+
+        padding: 9px;
+
+        gap: 9px;
+
+        border-radius: 8px;
+    }
+
+    .option-label {
+
+        width: 30px;
+
+        height: 30px;
+
+        font-size: .62rem;
+    }
+
+    .option-card p {
+
+        font-size: .64rem;
+
+        line-height: 1.55;
+    }
+
+    .question-footer {
+
+        margin-top: 16px;
+
+        padding-top: 13px;
+
+        gap: 7px;
+    }
+
+    .secondary-btn,
+    .review-btn,
+    .primary-btn {
+
+        min-height: 38px;
+
+        padding: 7px 10px;
+
+        font-size: .62rem;
+
+        border-radius: 7px;
+
+        gap: 5px;
+    }
+}
+
+
+// ==========================================
+// SMALL PHONE
+// ==========================================
+
+@media (max-width: 380px) {
+
+    .question-card {
+
+        padding: 10px;
+    }
+
+    .question-header h3 {
+
+        font-size: .8rem;
+    }
+
+    .question-marks {
+
+        font-size: .56rem;
+
+        padding: 4px 7px;
+    }
+
+    .question-title {
+
+        font-size: .64rem;
+    }
+
+    .option-card {
+
+        padding: 8px;
+    }
+
+    .option-label {
+
+        width: 27px;
+
+        height: 27px;
+
+        font-size: .58rem;
+    }
+
+    .option-card p {
+
+        font-size: .6rem;
+    }
+
+    .question-footer {
+
+        flex-direction: column;
+    }
+
+    .question-footer button {
+
+        width: 100%;
+
+        flex: none;
+    }
+}

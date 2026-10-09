@@ -1,0 +1,585 @@
+// ========================================
+// Privacy & Security Panel
+// SHRA Technology
+// ========================================
+
+.privacy-container {
+    --privacy-primary: #4f46e5;
+    --privacy-primary-light: #eef2ff;
+    --privacy-text: #111827;
+    --privacy-text-secondary: #6b7280;
+    --privacy-border: #e5e7eb;
+    --privacy-surface: #ffffff;
+    --privacy-surface-soft: #f9fafb;
+    --privacy-success: #059669;
+
+    width: 100%;
+    min-width: 0;
+    padding: clamp(1rem, 3vw, 2rem);
+    background: #ffffff;
+    color: var(--privacy-text);
+    font-family: "Poppins", sans-serif;
+    box-sizing: border-box;
+
+    * {
+        box-sizing: border-box;
+    }
+
+    h2,
+    h3,
+    h4,
+    p {
+        margin: 0;
+    }
+
+    // ========================================
+    // Header
+    // ========================================
+
+    .privacy-container-header {
+        display: flex;
+        align-items: center;
+        gap: clamp(0.75rem, 2vw, 1.125rem);
+        margin-bottom: clamp(1.5rem, 3vw, 2rem);
+
+        .privacy-container-icon {
+            flex-shrink: 0;
+            width: clamp(3rem, 6vw, 3.75rem);
+            height: clamp(3rem, 6vw, 3.75rem);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--privacy-primary);
+            background: var(--privacy-primary-light);
+            border: 1px solid #e0e7ff;
+            border-radius: 1rem;
+
+            svg {
+                width: clamp(1.4rem, 3vw, 1.65rem);
+                height: clamp(1.4rem, 3vw, 1.65rem);
+            }
+        }
+
+        .privacy-panel-eyebrow {
+            display: inline-block;
+            margin-bottom: 0.35rem;
+            color: var(--privacy-primary);
+            font-size: clamp(0.65rem, 1.2vw, 0.75rem);
+            font-weight: 600;
+            letter-spacing: 0.12em;
+        }
+
+        h2 {
+            color: var(--privacy-text);
+            font-size: clamp(1.35rem, 2.5vw, 1.9rem);
+            font-family: "Poppins", sans-serif;
+            font-weight: 600;
+            line-height: 1.35;
+            letter-spacing: -0.035em;
+        }
+
+        p {
+            margin-top: 0.4rem;
+            color: var(--privacy-text-secondary);
+            font-family: "Poppins", sans-serif;
+            font-size: clamp(0.8rem, 1.4vw, 0.9rem);
+            line-height: 1.7;
+        }
+    }
+
+    // ========================================
+    // Privacy Banner
+    // ========================================
+
+    .privacy-panel-banner {
+        position: relative;
+        display: flex;
+        align-items: flex-start;
+        gap: clamp(0.875rem, 2vw, 1.25rem);
+        padding: clamp(1.125rem, 3vw, 1.75rem);
+        margin-bottom: 1.25rem;
+        overflow: hidden;
+        background: linear-gradient(
+            135deg,
+            #f5f7ff 0%,
+            #eef2ff 55%,
+            #f8faff 100%
+        );
+        border: 1px solid #e0e7ff;
+        border-radius: 1.125rem;
+
+        &::after {
+            content: "";
+            position: absolute;
+            top: -3.5rem;
+            right: -2.5rem;
+            width: clamp(7rem, 16vw, 11rem);
+            height: clamp(7rem, 16vw, 11rem);
+            background: rgba(99, 102, 241, 0.07);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+
+        .privacy-banner-icon {
+            z-index: 1;
+            flex-shrink: 0;
+            width: clamp(2.75rem, 5vw, 3.5rem);
+            height: clamp(2.75rem, 5vw, 3.5rem);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--privacy-primary);
+            background: #ffffff;
+            border: 1px solid #e0e7ff;
+            border-radius: 0.875rem;
+            box-shadow: 0 0.25rem 0.75rem rgba(79, 70, 229, 0.06);
+
+            svg {
+                width: clamp(1.4rem, 3vw, 1.8rem);
+                height: clamp(1.4rem, 3vw, 1.8rem);
+            }
+        }
+
+        > div:last-child {
+            z-index: 1;
+            min-width: 0;
+        }
+
+        h3 {
+            margin-bottom: 0.5rem;
+            color: #312e81;
+            font-size: clamp(1rem, 2vw, 1.2rem);
+            font-family: "Poppins", sans-serif;
+            font-weight: 600;
+            line-height: 1.5;
+        }
+
+        p {
+            max-width: 48rem;
+            color: #5b5e85;
+            font-family: "Poppins", sans-serif;
+            font-size: clamp(0.8rem, 1.4vw, 0.9rem);
+            line-height: 1.8;
+        }
+    }
+
+    // ========================================
+    // Security Notice
+    // ========================================
+
+    .privacy-security-note {
+        display: flex;
+        align-items: flex-start;
+        gap: 0.75rem;
+        padding: clamp(0.875rem, 2vw, 1.125rem);
+        margin-bottom: clamp(1.75rem, 4vw, 2.5rem);
+        background: #f0fdf4;
+        border: 1px solid #bbf7d0;
+        border-radius: 0.875rem;
+
+        svg {
+            flex-shrink: 0;
+            margin-top: 0.1rem;
+            color: var(--privacy-success);
+        }
+
+        p {
+            color: #166534;
+            font-size: clamp(0.75rem, 1.3vw, 0.85rem);
+            font-family: "Poppins", sans-serif;
+            line-height: 1.8;
+        }
+    }
+
+    // ========================================
+    // Privacy Overview
+    // ========================================
+
+    .privacy-panel-content {
+        width: 100%;
+        margin-bottom: clamp(1.75rem, 4vw, 2.5rem);
+
+        .privacy-content-heading {
+            margin-bottom: 1.125rem;
+            color: var(--privacy-text);
+            font-size: clamp(1rem, 2vw, 1.25rem);
+            font-family: "Poppins", sans-serif;
+            font-weight: 600;
+            letter-spacing: -0.02em;
+        }
+    }
+
+    // ========================================
+    // Accordion List
+    // ========================================
+
+    .privacy-section-list {
+        display: flex;
+        flex-direction: column;
+        gap: 0.875rem;
+        width: 100%;
+    }
+
+    .privacy-section-item {
+        width: 100%;
+        min-width: 0;
+        overflow: hidden;
+        background: var(--privacy-surface);
+        border: 1px solid var(--privacy-border);
+        border-radius: 0.875rem;
+        transition:
+            border-color 0.25s ease,
+            box-shadow 0.25s ease,
+            background-color 0.25s ease;
+
+        &:hover {
+            border-color: #c7d2fe;
+            box-shadow: 0 0.25rem 1rem rgba(17, 24, 39, 0.035);
+        }
+
+        &[open] {
+            border-color: #c7d2fe;
+            box-shadow: 0 0.375rem 1.25rem rgba(79, 70, 229, 0.055);
+
+            summary {
+                background: #fafaff;
+            }
+
+            .privacy-section-chevron {
+                transform: rotate(90deg);
+                color: var(--privacy-primary);
+            }
+        }
+
+        summary {
+            display: flex;
+            align-items: center;
+            gap: clamp(0.75rem, 2vw, 1rem);
+            min-height: 5rem;
+            padding: clamp(0.875rem, 2vw, 1.125rem);
+            list-style: none;
+            cursor: pointer;
+            user-select: none;
+            background: #ffffff;
+            transition: background-color 0.2s ease;
+
+            &::-webkit-details-marker {
+                display: none;
+            }
+
+            &:focus-visible {
+                outline: 2px solid var(--privacy-primary);
+                outline-offset: -3px;
+                border-radius: 0.75rem;
+            }
+        }
+
+        .privacy-section-icon {
+            flex-shrink: 0;
+            width: clamp(2.5rem, 5vw, 3rem);
+            height: clamp(2.5rem, 5vw, 3rem);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--privacy-primary);
+            background: var(--privacy-primary-light);
+            border: 1px solid #e0e7ff;
+            border-radius: 0.75rem;
+
+            svg {
+                width: clamp(1.15rem, 2.5vw, 1.35rem);
+                height: clamp(1.15rem, 2.5vw, 1.35rem);
+            }
+        }
+
+        .privacy-section-info {
+            flex: 1;
+            min-width: 0;
+
+            h4 {
+                margin-bottom: 0.3rem;
+                color: var(--privacy-text);
+                font-size: clamp(0.85rem, 1.5vw, 0.95rem);
+                font-weight: 600;
+                font-family: "Poppins", sans-serif;
+                line-height: 1.5;
+                overflow-wrap: anywhere;
+            }
+
+            p {
+                color: var(--privacy-text-secondary);
+                font-size: clamp(0.72rem, 1.3vw, 0.8rem);
+                line-height: 1.7;
+                font-family: "Poppins", sans-serif;
+                overflow-wrap: anywhere;
+            }
+        }
+
+        .privacy-section-chevron {
+            flex-shrink: 0;
+            color: #9ca3af;
+            transition:
+                transform 0.25s ease,
+                color 0.25s ease;
+        }
+
+        .privacy-section-details {
+            padding: 0 clamp(1rem, 2vw, 1.25rem)
+                clamp(1rem, 2vw, 1.25rem);
+            animation: privacyDetailsIn 0.25s ease both;
+
+            p {
+                padding: clamp(0.875rem, 2vw, 1.125rem);
+                color: #4b5563;
+                background: var(--privacy-surface-soft);
+                border-left: 3px solid #c7d2fe;
+                border-radius: 0 0.625rem 0.625rem 0;
+                font-size: clamp(0.78rem, 1.35vw, 0.875rem);
+                font-family: "Poppins", sans-serif;
+                line-height: 1.9;
+                overflow-wrap: anywhere;
+            }
+        }
+    }
+
+    // ========================================
+    // Support Card
+    // ========================================
+
+    .privacy-support-card {
+        display: flex;
+        align-items: flex-start;
+        gap: clamp(0.875rem, 2vw, 1.125rem);
+        padding: clamp(1rem, 2.5vw, 1.5rem);
+        margin-bottom: 1.5rem;
+        background: #ffffff;
+        border: 1px solid var(--privacy-border);
+        border-radius: 1rem;
+        transition:
+            border-color 0.25s ease,
+            box-shadow 0.25s ease;
+
+        &:hover {
+            border-color: #c7d2fe;
+            box-shadow: 0 0.375rem 1.25rem rgba(17, 24, 39, 0.04);
+        }
+
+        .privacy-support-icon {
+            flex-shrink: 0;
+            width: clamp(2.75rem, 5vw, 3.25rem);
+            height: clamp(2.75rem, 5vw, 3.25rem);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--privacy-primary);
+            background: var(--privacy-primary-light);
+            border-radius: 0.875rem;
+
+            svg {
+                width: clamp(1.25rem, 2.5vw, 1.5rem);
+                height: clamp(1.25rem, 2.5vw, 1.5rem);
+            }
+        }
+
+        > div:last-child {
+            flex: 1;
+            min-width: 0;
+        }
+
+        h3 {
+            margin-bottom: 0.45rem;
+            color: var(--privacy-text);
+            font-size: clamp(0.9rem, 1.7vw, 1.05rem);
+            font-family: "Poppins", sans-serif;
+            font-weight: 600;
+            line-height: 1.5;
+        }
+
+        p {
+            color: var(--privacy-text-secondary);
+            font-size: clamp(0.78rem, 1.35vw, 0.875rem);
+            font-family: "Poppins", sans-serif;
+            line-height: 1.8;
+            overflow-wrap: anywhere;
+        }
+    }
+
+    // ========================================
+    // Footer
+    // ========================================
+
+    .privacy-panel-footer {
+        padding-top: 1.25rem;
+        border-top: 1px solid #f3f4f6;
+        text-align: center;
+
+        p {
+            color: #9ca3af;
+            font-size: clamp(0.7rem, 1.2vw, 0.78rem);
+            font-family: "Poppins", sans-serif;
+            line-height: 1.7;
+        }
+    }
+}
+
+// ========================================
+// Accordion Animation
+// ========================================
+
+@keyframes privacyDetailsIn {
+    from {
+        opacity: 0;
+        transform: translateY(-0.25rem);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+// ========================================
+// Tablet
+// ========================================
+
+@media (max-width: 768px) {
+    .privacy-container {
+        padding: clamp(1rem, 3vw, 1.5rem);
+
+        .privacy-container-header {
+            margin-bottom: 1.5rem;
+        }
+
+        .privacy-panel-banner {
+            border-radius: 1rem;
+        }
+
+        .privacy-section-list {
+            gap: 0.75rem;
+        }
+
+        .privacy-section-item summary {
+            min-height: 4.5rem;
+        }
+    }
+}
+
+// ========================================
+// Mobile
+// ========================================
+
+@media (max-width: 480px) {
+    .privacy-container {
+        padding: 1rem 0.75rem;
+
+        .privacy-container-header {
+            align-items: flex-start;
+            gap: 0.75rem;
+
+            .privacy-container-icon {
+                width: 2.75rem;
+                height: 2.75rem;
+                border-radius: 0.75rem;
+            }
+
+            h2 {
+                font-size: clamp(1.2rem, 5vw, 1.45rem);
+            }
+        }
+
+        .privacy-panel-banner {
+            gap: 0.75rem;
+            padding: 1rem;
+            border-radius: 0.875rem;
+
+            .privacy-banner-icon {
+                width: 2.5rem;
+                height: 2.5rem;
+                border-radius: 0.75rem;
+            }
+        }
+
+        .privacy-security-note {
+            gap: 0.625rem;
+            padding: 0.875rem;
+        }
+
+        .privacy-panel-content {
+            .privacy-content-heading {
+                margin-bottom: 0.875rem;
+            }
+        }
+
+        .privacy-section-item {
+            border-radius: 0.75rem;
+
+            summary {
+                gap: 0.625rem;
+                padding: 0.875rem 0.75rem;
+            }
+
+            .privacy-section-icon {
+                width: 2.375rem;
+                height: 2.375rem;
+                border-radius: 0.625rem;
+            }
+
+            .privacy-section-info {
+                h4 {
+                    font-size: 0.82rem;
+                }
+
+                p {
+                    font-size: 0.7rem;
+                    line-height: 1.6;
+                }
+            }
+
+            .privacy-section-chevron {
+                width: 1rem;
+                height: 1rem;
+            }
+
+            .privacy-section-details {
+                padding: 0 0.75rem 0.875rem;
+
+                p {
+                    padding: 0.875rem;
+                    font-size: 0.78rem;
+                    line-height: 1.8;
+                }
+            }
+        }
+
+        .privacy-support-card {
+            gap: 0.75rem;
+            padding: 1rem;
+            border-radius: 0.875rem;
+
+            .privacy-support-icon {
+                width: 2.5rem;
+                height: 2.5rem;
+                border-radius: 0.75rem;
+            }
+        }
+
+        .privacy-panel-footer {
+            padding-top: 1rem;
+        }
+    }
+}
+
+// ========================================
+// Reduced Motion Accessibility
+// ========================================
+
+@media (prefers-reduced-motion: reduce) {
+    .privacy-container *,
+    .privacy-container *::before,
+    .privacy-container *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}

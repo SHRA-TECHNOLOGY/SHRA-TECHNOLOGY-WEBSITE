@@ -1,0 +1,338 @@
+// ==========================================
+// CONTACT LEFT SECTION
+// ==========================================
+
+.contact-left-section {
+
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    padding: 25px;
+
+    background: #ffffff;
+
+    border: 1px solid #e8e8ef;
+
+    border-radius: 1rem;
+
+    box-shadow:
+        0 8px 25px rgba(35, 35, 70, 0.07);
+
+    transition:
+        border-color 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.contact-left-section:hover {
+
+    border-color: rgba(124, 92, 255, 0.2);
+
+    box-shadow:
+        0 12px 30px rgba(35, 35, 70, 0.1);
+}
+
+
+// ==========================================
+// CONTACT FORM
+// ==========================================
+
+.contact-left-section .contact-form {
+
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 18px;
+}
+
+
+// ==========================================
+// FORM GROUP
+// ==========================================
+
+.contact-form .form-group {
+
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 7px;
+}
+
+
+// ==========================================
+// LABEL
+// ==========================================
+
+.contact-form .form-group label {
+
+    font-size: clamp(0.8rem, 1.5vw, 0.95rem);
+
+    font-family: "Poppins", sans-serif;
+
+    font-weight: 600;
+
+    color: #363842;
+
+    letter-spacing: 0.1px;
+}
+
+
+// ==========================================
+// INPUT + TEXTAREA
+// ==========================================
+
+.contact-form .form-group input,
+.contact-form .form-group textarea {
+
+    width: 100%;
+
+    padding: 12px 14px;
+
+    font-size: clamp(0.78rem, 1.5vw, 0.9rem);
+
+    font-family: "Poppins", sans-serif;
+
+    font-weight: 450;
+
+    color: #30313a;
+
+    background: #f8f8fb;
+
+    border: 1px solid #e4e4eb;
+
+    border-radius: 0.65rem;
+
+    outline: none;
+
+    transition:
+        border-color 0.2s ease,
+        background 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+// ==========================================
+// INPUT PLACEHOLDER
+// ==========================================
+
+.contact-form .form-group input::placeholder,
+.contact-form .form-group textarea::placeholder {
+
+    color: #999ba5;
+
+    font-weight: 400;
+}
+
+
+// ==========================================
+// INPUT FOCUS
+// ==========================================
+
+.contact-form .form-group input:focus,
+.contact-form .form-group textarea:focus {
+
+    background: #ffffff;
+
+    border-color: var(--primary);
+
+    box-shadow:
+        0 0 0 3px rgba(124, 92, 255, 0.09);
+}
+
+
+// ==========================================
+// TEXTAREA
+// ==========================================
+
+.contact-form .form-group textarea {
+
+    min-height: 130px;
+
+    resize: vertical;
+
+    line-height: 1.6;
+}
+
+
+// ==========================================
+// SEND BUTTON
+// ==========================================
+
+.contact-left-section .send-btn {
+
+    width: 200px;
+
+    max-width: 100%;
+
+    min-height: 48px;
+
+    padding: 10px 20px;
+
+    margin-top: 3px;
+
+    border: none;
+
+    border-radius: 0.65rem;
+
+    background: var(--gradient-primary);
+
+    color: #ffffff;
+
+    font-size: clamp(0.78rem, 1.5vw, 0.95rem);
+
+    font-family: "Poppins", sans-serif;
+
+    font-weight: 600;
+
+    letter-spacing: 0.1px;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 6px 15px rgba(124, 92, 255, 0.18);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        opacity 0.2s ease;
+}
+
+
+// ==========================================
+// BUTTON HOVER
+// ==========================================
+
+.contact-left-section .send-btn:hover {
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 9px 20px rgba(124, 92, 255, 0.25);
+}
+
+
+// ==========================================
+// BUTTON ACTIVE
+// ==========================================
+
+.contact-left-section .send-btn:active {
+
+    transform: translateY(0);
+
+    box-shadow:
+        0 4px 10px rgba(124, 92, 255, 0.15);
+}
+
+
+// ==========================================
+// BUTTON DISABLED
+// ==========================================
+
+.contact-left-section .send-btn:disabled {
+
+    opacity: 0.6;
+
+    cursor: not-allowed;
+
+    transform: none;
+
+    box-shadow: none;
+}
+
+
+// ==========================================
+// TABLET
+// ==========================================
+
+@media (max-width: 1000px) {
+
+    .contact-left-section {
+
+        padding: 20px;
+    }
+}
+
+
+// ==========================================
+// MOBILE
+// ==========================================
+
+@media (max-width: 775px) {
+
+    .contact-left-section {
+
+        width: 100%;
+
+        padding: 16px;
+
+        border-radius: 0.9rem;
+    }
+
+    .contact-left-section .contact-form {
+
+        gap: 15px;
+    }
+
+    .contact-form .form-group {
+
+        gap: 6px;
+    }
+
+    .contact-form .form-group input,
+    .contact-form .form-group textarea {
+
+        padding: 11px 12px;
+
+        border-radius: 0.6rem;
+    }
+
+    .contact-form .form-group textarea {
+
+        min-height: 115px;
+    }
+
+    .contact-left-section .send-btn {
+
+        width: 100%;
+
+        min-height: 46px;
+    }
+}
+
+
+// ==========================================
+// SMALL MOBILE
+// ==========================================
+
+@media (max-width: 380px) {
+
+    .contact-left-section {
+
+        padding: 13px;
+    }
+
+    .contact-form .form-group input,
+    .contact-form .form-group textarea {
+
+        padding: 10px 11px;
+
+        font-size: 0.75rem;
+    }
+
+    .contact-form .form-group textarea {
+
+        min-height: 105px;
+    }
+
+    .contact-left-section .send-btn {
+
+        min-height: 44px;
+
+        font-size: 0.78rem;
+    }
+}

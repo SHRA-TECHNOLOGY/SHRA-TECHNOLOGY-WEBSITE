@@ -1,0 +1,285 @@
+/* =================================
+   PROGRESS FULL WIDTH
+================================= */
+
+.progress-full {
+    width: calc(100% + 40px);
+    margin-left: -20px;
+
+    max-width: none;
+}
+
+
+/* =================================
+   VIDEO PROGRESS BAR
+================================= */
+
+.video-progress {
+    width: 100%;
+    height: 12px;
+
+    display: flex;
+    align-items: center;
+
+    margin: 0;
+    padding: 0;
+
+    box-sizing: border-box;
+}
+
+
+/* =================================
+   RANGE INPUT
+================================= */
+
+.video-progress input {
+    display: block;
+
+    width: 100%;
+    min-width: 0;
+
+    height: 5px;
+
+    margin: 0;
+    padding: 0;
+
+    cursor: pointer;
+
+    appearance: none;
+    -webkit-appearance: none;
+
+    border: none;
+    outline: none;
+
+    border-radius: 999px;
+
+    background:
+        linear-gradient(
+            to right,
+            #ff3b3b var(--progress),
+            rgba(255, 255, 255, 0.28) var(--progress)
+        );
+
+    transition: height .2s ease;
+}
+
+
+/* =================================
+   HOVER
+================================= */
+
+.video-progress input:hover {
+    height: 7px;
+}
+
+
+/* =================================
+   CHROME / EDGE / SAFARI
+================================= */
+
+.video-progress input::-webkit-slider-runnable-track {
+    height: 5px;
+
+    border-radius: 999px;
+
+    background: transparent;
+}
+
+
+.video-progress input::-webkit-slider-thumb {
+    appearance: none;
+    -webkit-appearance: none;
+
+    width: 13px;
+    height: 13px;
+
+    margin-top: -4px;
+
+    border: 2px solid #ffffff;
+
+    border-radius: 50%;
+
+    background: #ff3b3b;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 2px 8px rgba(0, 0, 0, .35);
+
+    transition:
+        transform .2s ease,
+        width .2s ease,
+        height .2s ease;
+}
+
+
+.video-progress input:hover::-webkit-slider-thumb {
+    width: 16px;
+    height: 16px;
+
+    margin-top: -5.5px;
+
+    transform: scale(1.05);
+}
+
+
+/* =================================
+   FIREFOX
+================================= */
+
+.video-progress input::-moz-range-track {
+    height: 5px;
+
+    border-radius: 999px;
+
+    background: rgba(255, 255, 255, 0.28);
+}
+
+
+.video-progress input::-moz-range-progress {
+    height: 5px;
+
+    border-radius: 999px;
+
+    background: #ff3b3b;
+}
+
+
+.video-progress input::-moz-range-thumb {
+    width: 13px;
+    height: 13px;
+
+    border: 2px solid #ffffff;
+
+    border-radius: 50%;
+
+    background: #ff3b3b;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 2px 8px rgba(0, 0, 0, .35);
+
+    transition:
+        transform .2s ease,
+        width .2s ease,
+        height .2s ease;
+}
+
+
+.video-progress input:hover::-moz-range-thumb {
+    width: 16px;
+    height: 16px;
+
+    transform: scale(1.05);
+}
+
+
+/* =================================
+   TABLET
+================================= */
+
+@media (max-width: 992px) {
+
+    .progress-full {
+        width: calc(100% + 30px);
+
+        margin-left: -15px;
+    }
+
+    .video-progress {
+        height: 11px;
+    }
+
+    .video-progress input {
+        height: 5px;
+    }
+}
+
+
+/* =================================
+   MOBILE
+================================= */
+
+@media (max-width: 600px) {
+
+    .progress-full {
+        width: calc(100% + 20px);
+
+        margin-left: -10px;
+    }
+
+    .video-progress {
+        width: 100%;
+
+        height: 10px;
+    }
+
+    .video-progress input {
+        width: 100%;
+
+        height: 4px;
+    }
+
+    .video-progress input:hover {
+        height: 5px;
+    }
+
+    .video-progress input::-webkit-slider-thumb {
+        width: 11px;
+        height: 11px;
+
+        margin-top: -3.5px;
+    }
+
+    .video-progress input:hover::-webkit-slider-thumb {
+        width: 13px;
+        height: 13px;
+
+        margin-top: -4.5px;
+    }
+
+    .video-progress input::-moz-range-thumb {
+        width: 11px;
+        height: 11px;
+    }
+
+    .video-progress input:hover::-moz-range-thumb {
+        width: 13px;
+        height: 13px;
+    }
+}
+
+
+/* =================================
+   SMALL MOBILE
+================================= */
+
+@media (max-width: 400px) {
+
+    .progress-full {
+        width: calc(100% + 16px);
+
+        margin-left: -8px;
+    }
+
+    .video-progress {
+        height: 9px;
+    }
+
+    .video-progress input {
+        height: 4px;
+    }
+
+    .video-progress input::-webkit-slider-thumb {
+        width: 10px;
+        height: 10px;
+
+        margin-top: -3px;
+    }
+
+    .video-progress input::-moz-range-thumb {
+        width: 10px;
+        height: 10px;
+    }
+}

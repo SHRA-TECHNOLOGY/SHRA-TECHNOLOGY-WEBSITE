@@ -1,0 +1,612 @@
+// =====================================================
+// LECTURE RIGHT SECTION
+// Modern • Clean • Responsive
+// =====================================================
+
+.lecture-right,
+.lower-section,
+.lower-section .course-feature-list {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    min-width: 0;
+}
+
+
+// =====================================================
+// MAIN LECTURE CONTAINER
+// =====================================================
+
+.lecture-right {
+    position: relative;
+
+    padding: 24px;
+
+    gap: 28px;
+
+    background: #ffffff;
+
+    border:
+        1px solid #ececf2;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 8px 30px
+        rgba(15, 23, 42, 0.045);
+
+    overflow: hidden;
+
+    // subtle top accent
+    &::before {
+        content: "";
+
+        position: absolute;
+
+        top: 0;
+        left: 24px;
+        right: 24px;
+
+        height: 3px;
+
+        border-radius:
+            0 0 10px 10px;
+
+        background:
+            linear-gradient(
+                90deg,
+                transparent,
+                var(--primary),
+                #8b5cf6,
+                transparent
+            );
+
+        opacity: 0.55;
+    }
+}
+
+
+// =====================================================
+// UPPER PART
+// =====================================================
+
+.lecture-right .upper-part {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    min-width: 0;
+
+    gap: 18px;
+}
+
+
+// =====================================================
+// HEADINGS
+// =====================================================
+
+.upper-part h3,
+.lower-section h3 {
+    margin: 0;
+
+    font-family: "Poppins", sans-serif;
+
+    font-weight: 700;
+
+    line-height: 1.35;
+
+    letter-spacing: -0.25px;
+}
+
+.upper-part h3 {
+    color: var(--primary);
+
+    font-size:
+        clamp(1.1rem, 2.5vw, 1.65rem);
+
+    word-break: break-word;
+}
+
+.lower-section h3 {
+    color: #25262b;
+
+    font-size:
+        clamp(0.98rem, 2vw, 1.35rem);
+}
+
+
+// =====================================================
+// BUTTON SECTION
+// =====================================================
+
+.upper-part .button-section {
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 11px;
+}
+
+
+// =====================================================
+// COMMON BUTTON
+// =====================================================
+
+.upper-part .button-section button,
+.upper-part .xp-wrapper .continue-btn {
+    min-height: 44px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+
+    padding: 0 18px;
+
+    border: 1px solid transparent;
+
+    border-radius: 11px;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--primary),
+            #7c3aed
+        );
+
+    color: #ffffff;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size:
+        clamp(0.72rem, 1.2vw, 0.84rem);
+
+    font-weight: 600;
+
+    line-height: 1;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 6px 16px
+        rgba(99, 102, 241, 0.15);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        background 0.2s ease;
+
+    svg {
+        width: 16px;
+        height: 16px;
+
+        flex: 0 0 16px;
+    }
+
+    &:hover {
+        transform: translateY(-1px);
+
+        box-shadow:
+            0 9px 22px
+            rgba(99, 102, 241, 0.22);
+    }
+
+    &:active {
+        transform: translateY(0);
+    }
+
+    &:focus-visible {
+        outline: none;
+
+        box-shadow:
+            0 0 0 3px
+            rgba(99, 102, 241, 0.14),
+            0 7px 18px
+            rgba(99, 102, 241, 0.15);
+    }
+}
+
+
+// =====================================================
+// WISHLIST BUTTON
+// =====================================================
+
+.upper-part .button-section .addTOWishlist-btn {
+    background: #ffffff;
+
+    border:
+        1px solid #dfe1e7;
+
+    color: #3f4148;
+
+    box-shadow: none;
+
+    &:hover {
+        background:
+            rgba(99, 102, 241, 0.045);
+
+        border-color:
+            rgba(99, 102, 241, 0.35);
+
+        color: var(--primary);
+
+        box-shadow: none;
+    }
+}
+
+
+// =====================================================
+// XP WRAPPER
+// =====================================================
+
+.upper-part .xp-wrapper {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 8px;
+
+    margin-top: 2px;
+
+    padding: 14px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(99, 102, 241, 0.055),
+            rgba(139, 92, 246, 0.025)
+        );
+
+    border:
+        1px solid
+        rgba(99, 102, 241, 0.10);
+
+    border-radius: 13px;
+}
+
+
+// =====================================================
+// CONTINUE BUTTON
+// =====================================================
+
+.upper-part .xp-wrapper .continue-btn {
+    width: 100%;
+
+    margin-top: 4px;
+
+    min-height: 45px;
+}
+
+
+// =====================================================
+// LOWER SECTION
+// =====================================================
+
+.lower-section {
+    gap: 14px;
+
+    padding-top: 22px;
+
+    border-top:
+        1px solid #eeeeF3;
+}
+
+
+// =====================================================
+// COURSE FEATURE LIST
+// =====================================================
+
+.lower-section .course-feature-list {
+    gap: 8px;
+}
+
+
+// =====================================================
+// SINGLE FEATURE
+// =====================================================
+
+.course-feature-list .single-course-feature {
+    width: 100%;
+
+    min-width: 0;
+
+    display: flex;
+    align-items: flex-start;
+
+    gap: 11px;
+
+    padding: 10px 11px;
+
+    border-radius: 10px;
+
+    background: #fafafa;
+
+    border:
+        1px solid #f0f0f3;
+
+    transition:
+        background 0.2s ease,
+        border-color 0.2s ease,
+        transform 0.2s ease;
+
+    &:hover {
+        background:
+            rgba(99, 102, 241, 0.035);
+
+        border-color:
+            rgba(99, 102, 241, 0.10);
+
+        transform: translateX(2px);
+    }
+}
+
+
+// =====================================================
+// FEATURE ICON
+// =====================================================
+
+.single-course-feature span {
+    width: 23px;
+    height: 23px;
+
+    flex: 0 0 23px;
+
+    display: grid;
+    place-items: center;
+
+    margin-top: 1px;
+
+    border-radius: 7px;
+
+    color: var(--success);
+
+    background:
+        rgba(34, 197, 94, 0.10);
+
+    font-size: 0.75rem;
+}
+
+
+// =====================================================
+// FEATURE TEXT
+// =====================================================
+
+.single-course-feature p {
+    min-width: 0;
+
+    margin: 0;
+
+    color: #595a5c;
+
+    font-size:
+        clamp(0.72rem, 1.2vw, 0.82rem);
+
+    font-family: "Poppins", sans-serif;
+
+    font-weight: 500;
+
+    line-height: 1.55;
+
+    word-break: break-word;
+}
+
+
+// =====================================================
+// TABLET
+// =====================================================
+
+@media (max-width: 850px) {
+
+    .lecture-right {
+        padding: 20px;
+
+        gap: 24px;
+    }
+
+    .lecture-right::before {
+        left: 20px;
+        right: 20px;
+    }
+
+    .upper-part .button-section {
+        gap: 10px;
+    }
+
+    .course-feature-list .single-course-feature {
+        padding: 9px 10px;
+    }
+}
+
+
+// =====================================================
+// MOBILE
+// =====================================================
+
+@media (max-width: 600px) {
+
+    .lecture-right {
+        padding: 17px;
+
+        gap: 21px;
+
+        border-radius: 15px;
+
+        box-shadow:
+            0 5px 20px
+            rgba(15, 23, 42, 0.04);
+    }
+
+    .lecture-right::before {
+        left: 17px;
+        right: 17px;
+
+        height: 2px;
+    }
+
+
+    // Buttons stack on mobile
+
+    .upper-part .button-section {
+        grid-template-columns: 1fr;
+
+        gap: 9px;
+    }
+
+
+    .upper-part .button-section button,
+    .upper-part .xp-wrapper .continue-btn {
+        width: 100%;
+
+        min-height: 43px;
+    }
+
+
+    .upper-part .xp-wrapper {
+        padding: 12px;
+    }
+
+
+    .lower-section {
+        padding-top: 19px;
+
+        gap: 12px;
+    }
+
+
+    .course-feature-list .single-course-feature {
+        padding: 9px;
+
+        gap: 9px;
+    }
+
+
+    .single-course-feature span {
+        width: 21px;
+        height: 21px;
+
+        flex-basis: 21px;
+
+        border-radius: 6px;
+    }
+
+
+    .single-course-feature p {
+        font-size: 0.7rem;
+
+        line-height: 1.55;
+    }
+}
+
+
+// =====================================================
+// SMALL MOBILE
+// =====================================================
+
+@media (max-width: 400px) {
+
+    .lecture-right {
+        padding: 14px;
+
+        gap: 18px;
+
+        border-radius: 13px;
+    }
+
+    .lecture-right::before {
+        left: 14px;
+        right: 14px;
+    }
+
+
+    .upper-part {
+        gap: 14px;
+    }
+
+
+    .upper-part .button-section button,
+    .upper-part .xp-wrapper .continue-btn {
+        min-height: 41px;
+
+        padding: 0 13px;
+
+        font-size: 0.68rem;
+    }
+
+
+    .upper-part .xp-wrapper {
+        padding: 10px;
+    }
+
+
+    .single-course-feature p {
+        font-size: 0.66rem;
+    }
+}
+
+
+// =====================================================
+// VERY SMALL DEVICES
+// =====================================================
+
+@media (max-width: 340px) {
+
+    .lecture-right {
+        padding: 12px;
+    }
+
+
+    .upper-part h3 {
+        font-size: 1rem;
+    }
+
+
+    .lower-section h3 {
+        font-size: 0.92rem;
+    }
+
+
+    .single-course-feature {
+        gap: 8px;
+    }
+
+
+    .single-course-feature span {
+        width: 19px;
+        height: 19px;
+
+        flex-basis: 19px;
+    }
+
+
+    .single-course-feature p {
+        font-size: 0.62rem;
+    }
+}
+
+
+// =====================================================
+// REDUCED MOTION
+// =====================================================
+
+@media (prefers-reduced-motion: reduce) {
+
+    .upper-part .button-section button,
+    .upper-part .xp-wrapper .continue-btn,
+    .single-course-feature {
+        transition: none;
+    }
+
+    .upper-part .button-section button:hover,
+    .upper-part .xp-wrapper .continue-btn:hover,
+    .single-course-feature:hover {
+        transform: none;
+    }
+}

@@ -1,0 +1,559 @@
+/* ==========================================
+   UPCOMING CLASS
+========================================== */
+
+.upcoming-class {
+
+    width: 100%;
+    min-width: 0;
+
+    margin-top: 20px;
+    padding: 20px;
+
+    background: #ffffff;
+
+    border: 1px solid #e8eaf0;
+
+    border-radius: 14px;
+
+    box-shadow:
+        0 8px 20px rgba(91, 76, 243, 0.25);
+
+    box-sizing: border-box;
+
+    overflow: hidden;
+
+    transition:
+        box-shadow .25s ease,
+        border-color .25s ease;
+}
+
+.upcoming-class:hover {
+
+    border-color:
+        rgba(91, 76, 243, .18);
+
+    box-shadow:
+        0 12px 28px rgba(91, 76, 243, .28);
+}
+
+
+/* ==========================================
+   HEADER
+========================================== */
+
+.class-header {
+
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 12px;
+}
+
+.class-header h2 {
+
+    margin: 0;
+
+    color: #20232b;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: clamp(
+        .95rem,
+        2vw,
+        1.2rem
+    );
+
+    font-weight: 650;
+
+    line-height: 1.4;
+}
+
+.class-header button {
+
+    flex-shrink: 0;
+
+    padding: 6px 10px;
+
+    border: none;
+
+    border-radius: 7px;
+
+    background:
+        rgba(99, 102, 241, .07);
+
+    color: #6c4dff;
+
+    cursor: pointer;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: .6rem;
+
+    font-weight: 650;
+
+    transition:
+        background .2s ease,
+        transform .2s ease;
+}
+
+.class-header button:hover {
+
+    background:
+        rgba(99, 102, 241, .13);
+
+    transform: translateY(-1px);
+}
+
+
+/* ==========================================
+   CLASS CARD
+========================================== */
+
+.class-card {
+
+    width: 100%;
+    min-width: 0;
+
+    margin-top: 18px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+}
+
+
+/* ==========================================
+   CLASS IMAGE
+========================================== */
+
+.class-image {
+
+    width: 145px;
+    height: 92px;
+
+    position: relative;
+
+    flex-shrink: 0;
+
+    overflow: hidden;
+
+    border-radius: 10px;
+
+    background: #f1f2f5;
+
+    border: 1px solid #e8eaf0;
+}
+
+.class-image img {
+
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    transition:
+        transform .35s ease;
+}
+
+.class-card:hover .class-image img {
+
+    transform: scale(1.04);
+}
+
+
+/* ==========================================
+   LIVE BADGE
+========================================== */
+
+.live-badge {
+
+    position: absolute;
+
+    top: 7px;
+    left: 7px;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 4px;
+
+    padding: 4px 7px;
+
+    border-radius: 20px;
+
+    background:
+        rgba(108, 77, 255, .94);
+
+    color: #ffffff;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: .5rem;
+
+    font-weight: 650;
+
+    line-height: 1;
+}
+
+.live-badge::before {
+
+    content: "";
+
+    width: 5px;
+    height: 5px;
+
+    border-radius: 50%;
+
+    background: #ffffff;
+
+    box-shadow:
+        0 0 0 3px
+        rgba(255, 255, 255, .15);
+}
+
+
+/* ==========================================
+   CLASS DETAILS
+========================================== */
+
+.class-details {
+
+    flex: 1;
+
+    min-width: 0;
+}
+
+.class-details h3 {
+
+    margin: 0 0 5px;
+
+    color: #292c34;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: clamp(
+        .72rem,
+        1.8vw,
+        .9rem
+    );
+
+    font-weight: 650;
+
+    line-height: 1.4;
+
+    overflow-wrap: anywhere;
+}
+
+.class-details p {
+
+    margin: 0 0 10px;
+
+    color: #858a95;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: clamp(
+        .55rem,
+        1vw,
+        .62rem
+    );
+
+    font-weight: 450;
+
+    line-height: 1.5;
+
+    overflow-wrap: anywhere;
+}
+
+
+/* ==========================================
+   CLASS INFO
+========================================== */
+
+.class-info {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+    flex-wrap: wrap;
+}
+
+.class-info span {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 5px;
+
+    color: #777d89;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: .55rem;
+
+    font-weight: 550;
+
+    white-space: nowrap;
+}
+
+.class-info span svg {
+
+    width: 14px;
+    height: 14px;
+
+    flex-shrink: 0;
+
+    color: #6c4dff;
+}
+
+
+/* ==========================================
+   JOIN BUTTON
+========================================== */
+
+.join-btn {
+
+    flex-shrink: 0;
+
+    min-height: 35px;
+
+    padding: 7px 14px;
+
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #6c4dff,
+            #5b3bea
+        );
+
+    color: #ffffff;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: .6rem;
+
+    font-weight: 650;
+
+    cursor: pointer;
+
+    white-space: nowrap;
+
+    box-shadow:
+        0 5px 14px
+        rgba(108, 77, 255, .20);
+
+    transition:
+        transform .2s ease,
+        box-shadow .2s ease,
+        filter .2s ease;
+}
+
+.join-btn:hover {
+
+    transform: translateY(-2px);
+
+    filter: brightness(1.03);
+
+    box-shadow:
+        0 8px 20px
+        rgba(108, 77, 255, .27);
+}
+
+.join-btn:active {
+
+    transform: translateY(0);
+
+    box-shadow:
+        0 4px 10px
+        rgba(108, 77, 255, .18);
+}
+
+
+/* ==========================================
+   TABLET
+========================================== */
+
+@media (max-width: 900px) {
+
+    .upcoming-class {
+
+        padding: 18px;
+    }
+
+    .class-card {
+
+        align-items: flex-start;
+
+        gap: 15px;
+    }
+
+    .class-image {
+
+        width: 125px;
+        height: 82px;
+    }
+
+    .join-btn {
+
+        padding: 7px 12px;
+    }
+}
+
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 650px) {
+
+    .upcoming-class {
+
+        margin-top: 15px;
+
+        padding: 14px;
+
+        border-radius: 11px;
+    }
+
+    .class-header h2 {
+
+        font-size: .82rem;
+    }
+
+    .class-header button {
+
+        padding: 5px 8px;
+
+        font-size: .54rem;
+    }
+
+    .class-card {
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+        margin-top: 15px;
+
+        gap: 12px;
+    }
+
+    .class-image {
+
+        width: 100%;
+
+        height: 150px;
+
+        border-radius: 9px;
+    }
+
+    .class-details h3 {
+
+        font-size: .72rem;
+    }
+
+    .class-details p {
+
+        font-size: .54rem;
+
+        margin-bottom: 8px;
+    }
+
+    .class-info {
+
+        gap: 9px 13px;
+    }
+
+    .class-info span {
+
+        font-size: .51rem;
+    }
+
+    .class-info span svg {
+
+        width: 13px;
+        height: 13px;
+    }
+
+    .join-btn {
+
+        width: 100%;
+
+        min-height: 34px;
+
+        font-size: .57rem;
+    }
+}
+
+
+/* ==========================================
+   SMALL MOBILE
+========================================== */
+
+@media (max-width: 380px) {
+
+    .upcoming-class {
+
+        padding: 11px;
+
+        border-radius: 9px;
+    }
+
+    .class-header h2 {
+
+        font-size: .74rem;
+    }
+
+    .class-header button {
+
+        font-size: .5rem;
+    }
+
+    .class-image {
+
+        height: 125px;
+    }
+
+    .class-details h3 {
+
+        font-size: .65rem;
+    }
+
+    .class-details p {
+
+        font-size: .5rem;
+    }
+
+    .class-info span {
+
+        font-size: .48rem;
+    }
+
+    .join-btn {
+
+        min-height: 32px;
+
+        font-size: .53rem;
+    }
+}

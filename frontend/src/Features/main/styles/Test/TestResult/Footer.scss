@@ -1,0 +1,281 @@
+// ==========================================
+// RESULT ACTIONS
+// ==========================================
+
+.result-actions {
+
+    width: 100%;
+    min-width: 0;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, minmax(0, 1fr));
+
+    gap: 12px;
+
+    margin-top: 20px;
+
+    box-sizing: border-box;
+}
+
+
+// ==========================================
+// COMMON ACTION BUTTON
+// ==========================================
+
+.action-btn {
+
+    width: 100%;
+    min-width: 0;
+
+    min-height: 46px;
+
+    padding: 9px 14px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 8px;
+
+    border-radius: 9px;
+
+    outline: none;
+
+    cursor: pointer;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: .72rem;
+
+    font-weight: 600;
+
+    white-space: nowrap;
+
+    box-sizing: border-box;
+
+    transition:
+        transform .25s ease,
+        background .25s ease,
+        border-color .25s ease,
+        box-shadow .25s ease,
+        filter .25s ease;
+}
+
+.action-btn svg {
+
+    width: 18px;
+
+    height: 18px;
+
+    flex-shrink: 0;
+
+    color: currentColor;
+
+    stroke-width: 1.9;
+}
+
+.action-btn span {
+
+    min-width: 0;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+
+    white-space: nowrap;
+
+    color: inherit;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: inherit;
+
+    font-weight: 600;
+}
+
+
+// ==========================================
+// SECONDARY
+// ==========================================
+
+.action-btn.secondary {
+
+    background:
+        #15171d;
+
+    border: 1px solid #30333c;
+
+    color: #c5c8d0;
+}
+
+.action-btn.secondary:hover {
+
+    transform: translateY(-2px);
+
+    background:
+        #1b1d23;
+
+    border-color:
+        rgba(124, 92, 255, .55);
+
+    color: #fff;
+
+    box-shadow:
+        0 8px 20px rgba(0, 0, 0, .24);
+}
+
+
+// ==========================================
+// PRIMARY
+// ==========================================
+
+.action-btn.primary {
+
+    border: 1px solid
+        rgba(124, 92, 255, .28);
+
+    color: #fff;
+
+    background:
+        linear-gradient(
+            135deg,
+            #5b3df5,
+            #8068ff
+        );
+
+    box-shadow:
+        0 6px 18px
+        rgba(91, 61, 245, .18);
+}
+
+.action-btn.primary:hover {
+
+    transform: translateY(-2px);
+
+    filter: brightness(1.08);
+
+    box-shadow:
+        0 10px 25px
+        rgba(91, 61, 245, .30);
+}
+
+
+// ==========================================
+// ACTIVE
+// ==========================================
+
+.action-btn:active {
+
+    transform: translateY(0);
+
+    box-shadow: none;
+}
+
+
+// ==========================================
+// DISABLED
+// ==========================================
+
+.action-btn:disabled {
+
+    opacity: .45;
+
+    cursor: not-allowed;
+
+    transform: none;
+
+    box-shadow: none;
+
+    filter: none;
+}
+
+
+// ==========================================
+// TABLET
+// ==========================================
+
+@media (max-width: 1024px) {
+
+    .result-actions {
+
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        gap: 10px;
+
+        margin-top: 16px;
+    }
+
+    .action-btn {
+
+        min-height: 44px;
+    }
+}
+
+
+// ==========================================
+// MOBILE
+// ==========================================
+
+@media (max-width: 640px) {
+
+    .result-actions {
+
+        grid-template-columns: 1fr;
+
+        gap: 8px;
+
+        margin-top: 14px;
+    }
+
+    .action-btn {
+
+        width: 100%;
+
+        min-height: 42px;
+
+        padding: 8px 12px;
+
+        border-radius: 8px;
+
+        font-size: .68rem;
+    }
+
+    .action-btn svg {
+
+        width: 17px;
+
+        height: 17px;
+    }
+}
+
+
+// ==========================================
+// SMALL PHONE
+// ==========================================
+
+@media (max-width: 380px) {
+
+    .result-actions {
+
+        gap: 7px;
+    }
+
+    .action-btn {
+
+        min-height: 40px;
+
+        font-size: .63rem;
+    }
+
+    .action-btn svg {
+
+        width: 16px;
+
+        height: 16px;
+    }
+}

@@ -1,0 +1,646 @@
+/* ==========================================
+   RECOMMENDATION SECTION
+========================================== */
+
+.recommendation {
+
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 16px;
+
+    margin-top: 20px;
+    padding: 20px;
+
+    background: #ffffff;
+
+    border: 1px solid #e8eaf0;
+
+    border-radius: 14px;
+
+    box-shadow:
+        0 8px 20px rgba(91, 76, 243, 0.25);
+
+    box-sizing: border-box;
+
+    overflow: hidden;
+
+    transition:
+        box-shadow .25s ease,
+        border-color .25s ease;
+}
+
+.recommendation:hover {
+
+    border-color:
+        rgba(91, 76, 243, .18);
+
+    box-shadow:
+        0 12px 28px rgba(91, 76, 243, .28);
+}
+
+
+/* ==========================================
+   SECTION HEADER
+========================================== */
+
+.section-header {
+
+    width: 100%;
+    min-width: 0;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 12px;
+
+    box-sizing: border-box;
+}
+
+.section-header h2 {
+
+    min-width: 0;
+
+    margin: 0;
+
+    color: #20232b;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: clamp(
+        .95rem,
+        2vw,
+        1.2rem
+    );
+
+    font-weight: 650;
+
+    line-height: 1.4;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+
+    white-space: nowrap;
+}
+
+
+/* ==========================================
+   VIEW ALL
+========================================== */
+
+.section-header button {
+
+    flex-shrink: 0;
+
+    padding: 6px 10px;
+
+    border: none;
+
+    border-radius: 7px;
+
+    background:
+        rgba(99, 102, 241, .07);
+
+    color: #6c4dff;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: .6rem;
+
+    font-weight: 650;
+
+    cursor: pointer;
+
+    white-space: nowrap;
+
+    transition:
+        background .2s ease,
+        transform .2s ease;
+}
+
+.section-header button:hover {
+
+    background:
+        rgba(99, 102, 241, .13);
+
+    transform: translateX(2px);
+}
+
+
+/* ==========================================
+   COURSE GRID
+========================================== */
+
+.course-grid {
+
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, minmax(0, 1fr));
+
+    gap: 14px;
+
+    align-items: stretch;
+
+    box-sizing: border-box;
+}
+
+
+/* ==========================================
+   RECOMMEND CARD
+========================================== */
+
+.recommend-card {
+
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    overflow: hidden;
+
+    box-sizing: border-box;
+
+    background: #ffffff;
+
+    border: 1px solid #e8eaf0;
+
+    border-radius: 11px;
+
+    transition:
+        transform .25s ease,
+        box-shadow .25s ease,
+        border-color .25s ease;
+}
+
+.recommend-card:hover {
+
+    transform: translateY(-4px);
+
+    border-color:
+        rgba(91, 61, 245, .20);
+
+    box-shadow:
+        0 8px 20px rgba(91, 76, 243, 0.25);
+}
+
+
+/* ==========================================
+   IMAGE
+========================================== */
+
+.recommend-card img {
+
+    width: 100%;
+    max-width: 100%;
+
+    height: 145px;
+
+    display: block;
+
+    object-fit: cover;
+
+    transition:
+        transform .35s ease;
+}
+
+.recommend-card:hover img {
+
+    transform: scale(1.03);
+}
+
+
+/* ==========================================
+   CONTENT
+========================================== */
+
+.content {
+
+    width: 100%;
+    min-width: 0;
+
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+
+    box-sizing: border-box;
+
+    padding: 13px;
+}
+
+
+/* ==========================================
+   SMALL LABEL
+========================================== */
+
+.content small {
+
+    display: block;
+
+    max-width: 100%;
+
+    margin-bottom: 3px;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+
+    white-space: nowrap;
+
+    color: #6c4dff;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: .52rem;
+
+    font-weight: 650;
+}
+
+
+/* ==========================================
+   TITLE
+========================================== */
+
+.content h3 {
+
+    min-width: 0;
+
+    margin: 5px 0 6px;
+
+    color: #292c34;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: clamp(
+        .65rem,
+        1.4vw,
+        .76rem
+    );
+
+    font-weight: 650;
+
+    line-height: 1.45;
+
+    display: -webkit-box;
+
+    -webkit-box-orient: vertical;
+
+    -webkit-line-clamp: 2;
+
+    overflow: hidden;
+
+    overflow-wrap: anywhere;
+}
+
+
+/* ==========================================
+   DESCRIPTION
+========================================== */
+
+.content p {
+
+    width: 100%;
+    min-width: 0;
+
+    margin: 0;
+
+    color: #858a95;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: .55rem;
+
+    font-weight: 450;
+
+    line-height: 1.55;
+
+    display: -webkit-box;
+
+    -webkit-box-orient: vertical;
+
+    -webkit-line-clamp: 2;
+
+    overflow: hidden;
+
+    overflow-wrap: anywhere;
+}
+
+
+/* ==========================================
+   COURSE META
+========================================== */
+
+.course-meta {
+
+    width: 100%;
+    min-width: 0;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 7px;
+
+    margin: 11px 0;
+
+    color: #777d89;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: .51rem;
+
+    flex-wrap: wrap;
+
+    box-sizing: border-box;
+}
+
+
+/* ==========================================
+   BUTTON
+========================================== */
+
+.content button {
+
+    width: 100%;
+    max-width: 100%;
+
+    min-height: 33px;
+
+    margin-top: auto;
+
+    padding: 6px 10px;
+
+    box-sizing: border-box;
+
+    border: none;
+
+    border-radius: 7px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #6c4dff,
+            #5b3bea
+        );
+
+    color: #ffffff;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: .55rem;
+
+    font-weight: 650;
+
+    cursor: pointer;
+
+    transition:
+        background .2s ease,
+        transform .2s ease,
+        box-shadow .2s ease;
+}
+
+.content button:hover {
+
+    background:
+        linear-gradient(
+            135deg,
+            #5b3bea,
+            #4b2fe0
+        );
+
+    transform: translateY(-1px);
+
+    box-shadow:
+        0 6px 15px
+        rgba(91, 61, 245, .20);
+}
+
+.content button:active {
+
+    transform: scale(.98);
+}
+
+
+/* ==========================================
+   LARGE TABLET
+========================================== */
+
+@media (max-width: 1200px) {
+
+    .recommendation {
+
+        padding: 18px;
+    }
+
+    .course-grid {
+
+        grid-template-columns:
+            repeat(3, minmax(0, 1fr));
+
+        gap: 13px;
+    }
+}
+
+
+/* ==========================================
+   TABLET
+========================================== */
+
+@media (max-width: 900px) {
+
+    .recommendation {
+
+        padding: 16px;
+
+        border-radius: 12px;
+    }
+
+    .course-grid {
+
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        gap: 13px;
+    }
+
+    .recommend-card img {
+
+        height: 140px;
+    }
+}
+
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 600px) {
+
+    .recommendation {
+
+        width: 100%;
+
+        padding: 13px;
+
+        margin-top: 15px;
+
+        gap: 13px;
+
+        border-radius: 11px;
+    }
+
+    .section-header {
+
+        gap: 8px;
+    }
+
+    .section-header h2 {
+
+        font-size: .8rem;
+    }
+
+    .section-header button {
+
+        padding: 5px 8px;
+
+        font-size: .54rem;
+    }
+
+    .course-grid {
+
+        width: 100%;
+
+        grid-template-columns:
+            minmax(0, 1fr);
+
+        gap: 11px;
+    }
+
+    .recommend-card {
+
+        border-radius: 10px;
+    }
+
+    .recommend-card img {
+
+        width: 100%;
+
+        height: 155px;
+    }
+
+    .content {
+
+        padding: 12px;
+    }
+
+    .content small {
+
+        font-size: .49rem;
+    }
+
+    .content h3 {
+
+        font-size: .64rem;
+    }
+
+    .content p {
+
+        font-size: .53rem;
+    }
+
+    .course-meta {
+
+        font-size: .49rem;
+
+        margin: 9px 0;
+    }
+
+    .content button {
+
+        min-height: 34px;
+
+        font-size: .54rem;
+    }
+}
+
+
+/* ==========================================
+   SMALL MOBILE
+========================================== */
+
+@media (max-width: 380px) {
+
+    .recommendation {
+
+        padding: 10px;
+
+        border-radius: 9px;
+    }
+
+    .section-header h2 {
+
+        font-size: .73rem;
+    }
+
+    .section-header button {
+
+        font-size: .49rem;
+    }
+
+    .course-grid {
+
+        gap: 9px;
+    }
+
+    .recommend-card img {
+
+        height: 140px;
+    }
+
+    .content {
+
+        padding: 10px;
+    }
+
+    .content small {
+
+        font-size: .46rem;
+    }
+
+    .content h3 {
+
+        font-size: .59rem;
+    }
+
+    .content p {
+
+        font-size: .49rem;
+    }
+
+    .course-meta {
+
+        font-size: .46rem;
+    }
+
+    .content button {
+
+        min-height: 32px;
+
+        font-size: .51rem;
+    }
+}

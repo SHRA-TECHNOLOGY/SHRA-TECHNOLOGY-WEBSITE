@@ -1,0 +1,136 @@
+// ==========================================
+// ATTEMPT PAGE
+// ==========================================
+
+.attempt-page {
+
+    width: 100%;
+
+    min-height: 100vh;
+
+    overflow-y: auto;
+
+    overflow-x: hidden;
+
+    background:
+        radial-gradient(
+            circle at top right,
+            rgba(124, 92, 255, .06),
+            transparent 30%
+        ),
+        #0b0d12;
+
+    border-left: 1px solid #252831;
+
+    box-sizing: border-box;
+
+    scrollbar-width: none;
+}
+
+.attempt-page::-webkit-scrollbar {
+    display: none;
+}
+
+
+// ==========================================
+// ATTEMPT CARD / MAIN LAYOUT
+// ==========================================
+
+.attempt-card {
+
+    width: 100%;
+
+    min-width: 0;
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 2fr)
+        minmax(280px, 1fr);
+
+    align-items: start;
+
+    gap: 18px;
+
+    margin-top: 10px;
+
+    position: relative;
+
+    box-sizing: border-box;
+}
+
+
+// Prevent child overflow
+
+.attempt-card > * {
+
+    min-width: 0;
+
+    max-width: 100%;
+
+    box-sizing: border-box;
+}
+
+
+// ==========================================
+// LARGE TABLET
+// ==========================================
+
+@media (max-width: 1200px) {
+
+    .attempt-card {
+
+        grid-template-columns:
+            minmax(0, 1fr);
+
+        gap: 15px;
+    }
+}
+
+
+// ==========================================
+// TABLET
+// ==========================================
+
+@media (max-width: 768px) {
+
+    .attempt-page {
+
+        border-left: none;
+    }
+
+    .attempt-card {
+
+        width: 100%;
+
+        margin-top: 5px;
+
+        gap: 12px;
+    }
+}
+
+
+// ==========================================
+// MOBILE
+// ==========================================
+
+@media (max-width: 520px) {
+
+    .attempt-card {
+
+        gap: 10px;
+    }
+}
+
+
+// ==========================================
+// SMALL PHONE
+// ==========================================
+
+@media (max-width: 380px) {
+
+    .attempt-card {
+
+        gap: 8px;
+    }
+}

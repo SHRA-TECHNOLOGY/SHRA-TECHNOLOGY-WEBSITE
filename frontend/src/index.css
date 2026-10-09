@@ -1,0 +1,195 @@
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+}
+
+/* =========================
+   LIGHT THEME (Default)
+========================= */
+:root {
+  --primary: #4B4BE0;
+  --primary-light: #5A4FF3;
+  --primary-dark: #3D42D9;
+  --secondary: #8A8ADE;
+
+  --gradient-primary: linear-gradient(135deg,
+      #5B5BFF 0%,
+      #4B4BE0 50%,
+      #3D42D9 100%);
+
+  --auth-gradient: linear-gradient(180deg,
+      #4A3FF0 0%,
+      #3555F3 45%,
+      #1E88E5 100%);
+
+  --btn-enroll: linear-gradient(90deg,
+      #5A4DF5 0%,
+      #4B7DF0 50%,
+      #27B8D8 100%);
+
+  /* --sidebar-bg: #09182F;
+  --sidebar-light: #0D1F3F;
+  --sidebar-hover: #1B2B4B; */
+  --sidebar-bg: #07152E;
+  --sidebar-hover: #14284E;
+
+  --white: #FFFFFF;
+  --bg-light: #F8FAFC;
+
+  --text-primary: #111827;
+  --text-secondary: #4B5563;
+  --present: #4CAF50;
+  --present-light: #DFF3E3;
+
+  --absent: #EF4444;
+  --absent-light: #FDE2E2 --bg-main: #F8FAFC;
+  --bg-card: #FFFFFF;
+  --bg-light: #F1F5F9;
+
+  --footer-bg: linear-gradient(135deg,
+      #071C3A 0%,
+      #081B38 50%,
+      #0A2245 100%);
+  --footer-heading: #FFFFFF;
+  --footer-text: #D1D5DB;
+  --footer-border: rgba(255, 255, 255, 0.12);
+
+
+  --border: #E2E8F0;
+  --border-light: #F1F5F9;
+  --border-black: #333;
+
+  --text-primary: #0F172A;
+  --text-light: #94A3B8;
+  --text-purple: #7d5cffeb;
+  --text-color: #f8fafc;
+  --whitesmoke-color: whitesmoke;
+  --secondary-text: #374151;
+  --dark-muted: #7d8590;
+  --muted-text: #9ca3af;
+
+  ;
+
+
+
+  --success: #22C55E;
+  --warning: #F59E0B;
+  --danger: #EF4444;
+  --info: #3B82F6;
+
+  --shadow-sm: 0 2px 8px rgba(15, 23, 42, 0.05);
+  --shadow-md: 0 4px 15px rgba(75, 75, 224, 0.15);
+  --shadow-lg: 0 10px 25px rgba(75, 75, 224, 0.2);
+
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+
+  /* ===============================
+     TEST BACKGROUND
+  =============================== */
+
+  --test-bg-primary: #0B0F19;
+  --test-bg-secondary: #1118279d;
+  --test-bg-card: #1F2937;
+  --test-bg-hover: #283548ce;
+  --test-bg-overlay: rgba(11, 15, 25, .75);
+
+  /* ===============================
+     TEST BRAND
+  =============================== */
+
+  --test-primary: #6366F1;
+  --test-primary-hover: #4F46E5;
+  --test-primary-light: #8B5CF6;
+  --test-primary-dark: #4C1D95;
+
+  /* ===============================
+     TEST TEXT
+  =============================== */
+
+  --test-text-primary: #F9FAFB;
+  --test-text-secondary: #CBD5E1;
+  --test-text-muted: #94A3B8;
+  --test-text-disabled: #64748B;
+
+  /* ===============================
+     TEST BORDER
+  =============================== */
+
+  --test-border: #374151;
+  --test-border-light: #4B5563;
+
+  /* ===============================
+     TEST STATUS
+  =============================== */
+
+  --test-success: #22C55E;
+  --test-success-light: #4ADE80;
+
+  --test-warning: #FACC15;
+  --test-warning-light: #F59E0B;
+
+  --test-danger: #EF4444;
+  --test-danger-light: #F87171;
+
+  --test-info: #3B82F6;
+  --test-cyan: #06B6D4;
+
+  /* ===============================
+     QUESTION NAVIGATOR
+  =============================== */
+
+  --test-question-current: #3B82F6;
+  --test-question-attempted: #22C55E;
+  --test-question-review: #FACC15;
+  --test-question-unattempted: #1F2937;
+  --test-question-correct: #22C55E;
+  --test-question-wrong: #EF4444;
+
+  /* ===============================
+     DIFFICULTY
+  =============================== */
+
+  --test-easy: #22C55E;
+  --test-medium: #F59E0B;
+  --test-hard: #EF4444;
+  --test-expert: #8B5CF6;
+
+  /* ===============================
+     BUTTONS
+  =============================== */
+
+  --test-btn-primary: #6366F1;
+  --test-btn-primary-hover: #4F46E5;
+
+  --test-btn-success: #22C55E;
+  --test-btn-warning: #F59E0B;
+  --test-btn-danger: #EF4444;
+
+  /* ===============================
+     INPUT
+  =============================== */
+
+  --test-input-bg: #111827;
+  --test-input-border: #374151;
+  --test-input-focus: #6366F1;
+
+  /* ===============================
+     SHADOW
+  =============================== */
+
+  --test-shadow-sm: 0 2px 8px rgba(0, 0, 0, .15);
+  --test-shadow-md: 0 8px 24px rgba(0, 0, 0, .25);
+  --test-shadow-lg: 0 12px 32px rgba(0, 0, 0, .35);
+
+  /* ===============================
+     GRADIENT
+  =============================== */
+
+  --test-gradient-primary: linear-gradient(90deg, #6366F1, #8B5CF6);
+  --test-gradient-success: linear-gradient(90deg, #22C55E, #4ADE80);
+  --test-gradient-danger: linear-gradient(90deg, #EF4444, #F87171);
+}

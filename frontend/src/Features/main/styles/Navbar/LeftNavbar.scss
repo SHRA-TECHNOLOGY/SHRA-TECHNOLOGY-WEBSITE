@@ -1,0 +1,468 @@
+.course-left-section{
+    
+    display: flex;
+    flex-direction: column;
+    background: var(--sidebar-bg);
+    position: sticky;
+}
+
+
+
+//logo section
+
+.course-left-section .logo{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 10px 0px 0px 0px;
+
+    gap: 0px;
+}
+
+.course-left-section .logo img{
+
+    width: 90px;
+    height: 70px;
+    flex-shrink: 0;
+}
+
+.course-left-section .logo h2{
+    color: var(--text-color);
+    font-family: "Poppins", sans-serif;
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    opacity: 0;
+    width: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    transition: .3s;
+}
+
+.course-left-section .logo h2 span{
+    color: var(--text-secondary);
+    font-family: "Poppins", sans-serif;
+    font-size: clamp(1rem, 2vw, 1.1rem);
+}
+
+.course-left-section:hover .logo{
+    justify-content: flex-start;
+}
+
+.course-left-section:hover .logo h2{
+    opacity: 1;
+    width: auto;
+}
+
+
+// left feature
+
+.left-feature , .left-setting{
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 5px;
+
+    padding: 10px 10px 20px 10px;
+}
+
+.left-setting{
+    display: flex;
+    flex-direction: column;
+
+    gap: 10px;
+
+    padding: 10px 10px;
+}
+
+.left-feature .left-link , .left-setting .left-link,.logout-link{
+    display: flex;
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 18px;
+
+    padding: 14px;
+
+    border-radius: 14px;
+
+    color: white;
+
+    text-decoration: none;
+
+    transition: .3s;
+}
+
+.logout-link{
+    background: none;
+    border: none;
+}
+
+
+.course-left-section:hover .left-link,.logout-link{
+    justify-content: flex-start;
+}
+
+
+.left-link span,.logout-link span{
+
+    color: var(--whitesmoke-color);
+
+    min-width: 22px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+}
+
+.left-feature .left-link p,.left-setting .left-link p,.logout-link p{
+    font-size: clamp(.7rem, 1vw,1rem);
+     opacity: 0;
+
+    width: 0;
+
+    overflow: hidden;
+
+    white-space: nowrap;
+
+    transition: .3s;
+}
+
+.course-left-section:hover .left-link p,.logout-link p{
+
+    opacity: 1;
+
+    width: auto;
+
+}
+
+.left-setting{
+    margin-top: -25px;
+}
+
+.left-link:hover,.logout-link:hover{
+
+    background: var(--primary-dark);
+
+    transform: translateX(5px);
+
+}
+
+.left-link.active,.logout-link.active{
+
+    background: var(--primary-dark);
+
+    border-left: 4px solid var(--primary-color);
+
+}
+
+// ==========================================
+// MOBILE HAMBURGER + SIDEBAR
+// ==========================================
+
+.mobile-menu-btn {
+    display: none;
+}
+
+
+@media (max-width: 768px) {
+
+    // ==========================================
+    // HAMBURGER
+    // ==========================================
+
+    .mobile-menu-btn {
+
+        display: flex;
+
+        position: fixed;
+
+        top: 15px;
+        left: 15px;
+
+        width: 42px;
+        height: 42px;
+
+        align-items: center;
+        justify-content: center;
+
+        z-index: 2001;
+
+        border: none;
+        border-radius: 10px;
+
+        background: var(--primary);
+        color: #ffffff;
+
+        cursor: pointer;
+
+        box-shadow:
+            0 5px 15px rgba(0, 0, 0, .15);
+
+        transition:
+            left .3s ease,
+            right .3s ease,
+            transform .2s ease;
+    }
+
+
+    .mobile-menu-btn:active {
+        transform: scale(.94);
+    }
+
+
+    // ==========================================
+    // OPEN → BUTTON RIGHT
+    // ==========================================
+
+    .mobile-menu-btn.open {
+
+        left: auto;
+
+        right: 15px;
+
+    }
+
+
+    // ==========================================
+    // SIDEBAR
+    // ==========================================
+
+    .course-left-section {
+
+        position: fixed;
+
+        top: 0;
+        left: 0;
+
+        width: min(300px, 82vw);
+
+        height: 100vh;
+
+        z-index: 1500;
+
+        transform: translateX(-100%);
+
+        transition:
+            transform .3s ease;
+
+        overflow-y: auto;
+        overflow-x: hidden;
+
+        box-sizing: border-box;
+
+        background: var(--sidebar-bg);
+    }
+
+
+    // ==========================================
+    // OPEN SIDEBAR
+    // ==========================================
+
+    .course-left-section.expand {
+
+        transform: translateX(0);
+
+    }
+
+
+    // ==========================================
+    // LOGO
+    // ==========================================
+
+    .course-left-section .logo {
+
+        width: 100%;
+
+        justify-content: flex-start;
+
+        padding: 10px 15px 0;
+
+        gap: 12px;
+
+        box-sizing: border-box;
+    }
+
+
+    .course-left-section .logo img {
+
+        width: 70px;
+
+        height: 60px;
+
+        flex-shrink: 0;
+    }
+
+
+    .course-left-section .logo h2 {
+
+        opacity: 1;
+
+        width: auto;
+
+        overflow: visible;
+
+        white-space: nowrap;
+
+        font-family: "Poppins", sans-serif;
+    }
+
+
+    // ==========================================
+    // LINKS
+    // ==========================================
+
+    .course-left-section
+    .left-feature
+    .left-link,
+
+    .course-left-section
+    .left-setting
+    .left-link,
+
+    .course-left-section
+    .logout-link {
+
+        width: 100%;
+
+        justify-content: flex-start;
+
+        gap: 18px;
+
+        padding: 14px;
+
+        box-sizing: border-box;
+    }
+
+
+    // ==========================================
+    // ICON
+    // ==========================================
+
+    .course-left-section
+    .left-link
+    span,
+
+    .course-left-section
+    .logout-link
+    span {
+
+        min-width: 22px;
+
+        flex-shrink: 0;
+
+        display: flex;
+
+        align-items: center;
+
+        justify-content: center;
+    }
+
+
+    // ==========================================
+    // TEXT
+    // ==========================================
+
+    .course-left-section
+    .left-feature
+    .left-link
+    p,
+
+    .course-left-section
+    .left-setting
+    .left-link
+    p,
+
+    .course-left-section
+    .logout-link
+    p {
+
+        display: block;
+
+        opacity: 1;
+
+        width: auto;
+
+        overflow: visible;
+
+        visibility: visible;
+
+        white-space: nowrap;
+
+        margin: 0;
+
+        font-family: "Poppins", sans-serif;
+
+        font-size: clamp(
+            .75rem,
+            3vw,
+            .85rem
+        );
+    }
+
+
+    // ==========================================
+    // SETTING
+    // ==========================================
+
+    .course-left-section .left-setting {
+
+        margin-top: 0;
+
+    }
+
+
+    // ==========================================
+    // DISABLE DESKTOP HOVER
+    // ==========================================
+
+    .course-left-section:hover {
+
+        width: min(300px, 82vw);
+
+    }
+
+
+    .course-left-section:hover .logo {
+
+        justify-content: flex-start;
+
+    }
+
+
+    .course-left-section:hover .logo h2 {
+
+        opacity: 1;
+
+        width: auto;
+
+    }
+
+
+    .course-left-section:hover .left-link,
+    .course-left-section:hover .logout-link {
+
+        justify-content: flex-start;
+
+    }
+
+
+    .course-left-section:hover
+    .left-link p,
+
+    .course-left-section:hover
+    .logout-link p {
+
+        opacity: 1;
+
+        width: auto;
+
+    }
+
+}

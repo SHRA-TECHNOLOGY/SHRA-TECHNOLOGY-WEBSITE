@@ -1,0 +1,313 @@
+// ==========================================
+// ADMIN SWITCH
+// ==========================================
+
+.admin-switch-box {
+
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+
+    gap: 5px;
+
+    margin-top: clamp(
+        18px,
+        3vw,
+        30px
+    );
+
+    padding: 5px;
+
+    border: 1px solid #e3e5eb;
+
+    border-radius: 12px;
+
+    background: #f3f4f7;
+
+    box-sizing: border-box;
+
+    font-family: "Poppins", sans-serif;
+
+    box-shadow:
+        0 2px 8px rgba(
+            15,
+            23,
+            42,
+            0.04
+        );
+}
+
+
+// ==========================================
+// BUTTON
+// ==========================================
+
+.admin-switch-box .switch-btn {
+
+    flex: 1 0 auto;
+
+    min-width: 150px;
+
+    min-height: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0 18px;
+
+    border: none;
+
+    border-radius: 9px;
+
+    background: transparent;
+
+    color: #70747e;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: clamp(
+        .68rem,
+        1.2vw,
+        .82rem
+    );
+
+    font-weight: 500;
+
+    line-height: 1.3;
+
+    white-space: nowrap;
+
+    cursor: pointer;
+
+    transition:
+        background .25s ease,
+        color .25s ease,
+        box-shadow .25s ease,
+        transform .2s ease;
+
+    box-sizing: border-box;
+}
+
+
+// ==========================================
+// HOVER
+// ==========================================
+
+.admin-switch-box .switch-btn:hover {
+
+    color: #34363d;
+
+    background: #ffffff;
+}
+
+
+// ==========================================
+// ACTIVE
+// ==========================================
+
+.admin-switch-box .switch-btn.active {
+
+    background: #ffffff;
+
+    color: var(--primary);
+
+    font-weight: 600;
+
+    box-shadow:
+        0 3px 10px rgba(
+            15,
+            23,
+            42,
+            0.10
+        );
+}
+
+
+// ==========================================
+// ACTIVE HOVER
+// ==========================================
+
+.admin-switch-box .switch-btn.active:hover {
+
+    background: #ffffff;
+
+    color: var(--primary);
+}
+
+
+// ==========================================
+// CLICK
+// ==========================================
+
+.admin-switch-box .switch-btn:active {
+
+    transform: scale(.98);
+}
+
+
+// ==========================================
+// FOCUS
+// ==========================================
+
+.admin-switch-box .switch-btn:focus-visible {
+
+    outline: 2px solid var(--primary);
+
+    outline-offset: -2px;
+}
+
+
+// ==========================================
+// TABLET
+// ==========================================
+
+@media (max-width: 768px) {
+
+    .admin-switch-box {
+
+        margin-top: 22px;
+
+        gap: 4px;
+
+        padding: 4px;
+
+        border-radius: 11px;
+
+        overflow-x: auto;
+
+        overflow-y: hidden;
+
+        scrollbar-width: thin;
+
+        -webkit-overflow-scrolling: touch;
+    }
+
+
+    .admin-switch-box::-webkit-scrollbar {
+
+        height: 4px;
+    }
+
+
+    .admin-switch-box::-webkit-scrollbar-track {
+
+        background: transparent;
+    }
+
+
+    .admin-switch-box::-webkit-scrollbar-thumb {
+
+        background: #cfd2d9;
+
+        border-radius: 20px;
+    }
+
+
+    .admin-switch-box .switch-btn {
+
+        flex: 0 0 auto;
+
+        min-width: 145px;
+
+        min-height: 40px;
+
+        padding: 0 14px;
+
+        font-size: clamp(
+            .65rem,
+            1.8vw,
+            .78rem
+        );
+    }
+
+}
+
+
+// ==========================================
+// MOBILE
+// ==========================================
+
+@media (max-width: 600px) {
+
+    .admin-switch-box {
+
+        margin-top: 18px;
+
+        gap: 4px;
+
+        padding: 4px;
+
+        border-radius: 10px;
+
+        overflow-x: auto;
+
+        overflow-y: hidden;
+
+        justify-content: flex-start;
+    }
+
+
+    .admin-switch-box .switch-btn {
+
+        flex: 0 0 auto;
+
+        min-width: 140px;
+
+        min-height: 38px;
+
+        padding: 0 12px;
+
+        border-radius: 7px;
+
+        font-size: clamp(
+            .62rem,
+            2.6vw,
+            .72rem
+        );
+    }
+
+}
+
+
+// ==========================================
+// SMALL MOBILE
+// ==========================================
+
+@media (max-width: 400px) {
+
+    .admin-switch-box {
+
+        gap: 4px;
+
+        padding: 3px;
+
+        border-radius: 9px;
+
+        scrollbar-width: none;
+    }
+
+
+    .admin-switch-box::-webkit-scrollbar {
+
+        display: none;
+    }
+
+
+    .admin-switch-box .switch-btn {
+
+        flex: 0 0 auto;
+
+        min-width: 130px;
+
+        min-height: 36px;
+
+        padding: 0 10px;
+
+        border-radius: 6px;
+
+        font-size: .62rem;
+    }
+
+}

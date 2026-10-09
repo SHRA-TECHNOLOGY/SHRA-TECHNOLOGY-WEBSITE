@@ -1,0 +1,392 @@
+// ==========================================
+// PRACTICE COURSES SECTION
+// ==========================================
+
+.practice-courses {
+
+    width: 100%;
+
+    margin-top: 20px;
+
+    padding: 0 30px 25px;
+
+    box-sizing: border-box;
+}
+
+
+// ==========================================
+// SECTION TITLE
+// ==========================================
+
+.practice-courses h2 {
+
+    margin: 0 0 15px;
+
+    font-size: clamp(1.2rem, 2vw, 1.6rem);
+
+    font-family: "Poppins", sans-serif;
+
+    font-weight: 650;
+
+    letter-spacing: -.3px;
+
+    color: #f5f6f8;
+
+    position: relative;
+}
+
+
+// Accent line
+
+.practice-courses h2::after {
+
+    content: "";
+
+    display: block;
+
+    width: 35px;
+
+    height: 3px;
+
+    margin-top: 7px;
+
+    border-radius: 999px;
+
+    background: var(--primary);
+
+    box-shadow:
+        0 0 10px rgba(124, 92, 255, .35);
+}
+
+
+// ==========================================
+// COURSE CARD
+// ==========================================
+
+.course-card {
+
+    width: 100%;
+
+    padding: 18px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #181a20,
+            #111318
+        );
+
+    border: 1px solid #292c34;
+
+    border-radius: 1rem;
+
+    box-sizing: border-box;
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, .25),
+        inset 0 1px 0 rgba(255, 255, 255, .025);
+
+    transition:
+        transform .25s ease,
+        border-color .25s ease,
+        box-shadow .25s ease;
+}
+
+
+// ==========================================
+// CARD HOVER
+// ==========================================
+
+.course-card:hover {
+
+    transform: translateY(-4px);
+
+    border-color: var(--primary);
+
+    box-shadow:
+        0 14px 35px rgba(0, 0, 0, .38),
+        0 0 20px rgba(124, 92, 255, .05);
+}
+
+
+// ==========================================
+// CARD UPPER
+// ==========================================
+
+.card-upper {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+    margin-bottom: 18px;
+
+    min-width: 0;
+}
+
+
+// ==========================================
+// CARD DATA
+// ==========================================
+
+.card-data {
+
+    min-width: 0;
+}
+
+
+.card-data h3 {
+
+    margin: 0;
+
+    color: #f3f4f6;
+
+    font-size: clamp(.9rem, 1.5vw, 1.1rem);
+
+    font-family: "Poppins", sans-serif;
+
+    font-weight: 600;
+
+    line-height: 1.4;
+
+    white-space: nowrap;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+}
+
+
+.card-data p {
+
+    margin: 4px 0 0;
+
+    color: #858994;
+
+    font-size: clamp(.7rem, 1vw, .82rem);
+
+    font-family: "Poppins", sans-serif;
+
+    font-weight: 450;
+
+    line-height: 1.5;
+}
+
+
+// ==========================================
+// CARD LOWER
+// ==========================================
+
+.card-lower {
+
+    width: 100%;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+}
+
+
+// ==========================================
+// PROGRESS TRACK
+// ==========================================
+
+.progress {
+
+    flex: 1;
+
+    height: 8px;
+
+    background: #252932;
+
+    border: 1px solid #30333c;
+
+    border-radius: 999px;
+
+    overflow: hidden;
+
+    box-shadow:
+        inset 0 2px 5px rgba(0, 0, 0, .3);
+}
+
+
+// ==========================================
+// PROGRESS FILL
+// ==========================================
+
+.fill {
+
+    height: 100%;
+
+    border-radius: inherit;
+
+    background:
+        linear-gradient(
+            90deg,
+            var(--primary),
+            #9b7cff
+        );
+
+    box-shadow:
+        0 0 10px rgba(124, 92, 255, .35);
+
+    transition: width .5s ease;
+}
+
+
+// ==========================================
+// PERCENTAGE
+// ==========================================
+
+.card-lower span {
+
+    min-width: 42px;
+
+    text-align: right;
+
+    color: #f3f4f6;
+
+    font-size: .78rem;
+
+    font-family: "Poppins", sans-serif;
+
+    font-weight: 650;
+
+    letter-spacing: .2px;
+}
+
+
+// ==========================================
+// TABLET
+// ==========================================
+
+@media (max-width: 768px) {
+
+    .practice-courses {
+
+        margin-top: 15px;
+
+        padding: 0 20px 20px;
+    }
+
+
+    .practice-courses h2 {
+
+        font-size: 1.25rem;
+    }
+
+
+    .course-card {
+
+        padding: 16px;
+
+        border-radius: .9rem;
+    }
+
+
+    .card-upper {
+
+        gap: 12px;
+
+        margin-bottom: 15px;
+    }
+
+
+    .card-data h3 {
+
+        font-size: .9rem;
+    }
+
+
+    .card-data p {
+
+        font-size: .7rem;
+    }
+}
+
+
+// ==========================================
+// MOBILE
+// ==========================================
+
+@media (max-width: 480px) {
+
+    .practice-courses {
+
+        margin-top: 12px;
+
+        padding: 0 14px 18px;
+    }
+
+
+    .practice-courses h2 {
+
+        font-size: 1.1rem;
+
+        margin-bottom: 12px;
+    }
+
+
+    .practice-courses h2::after {
+
+        width: 30px;
+
+        height: 2px;
+
+        margin-top: 6px;
+    }
+
+
+    .course-card {
+
+        padding: 14px;
+
+        border-radius: .85rem;
+    }
+
+
+    .card-upper {
+
+        gap: 10px;
+
+        margin-bottom: 14px;
+    }
+
+
+    .card-data h3 {
+
+        font-size: .82rem;
+    }
+
+
+    .card-data p {
+
+        font-size: .66rem;
+
+        margin-top: 3px;
+    }
+
+
+    .card-lower {
+
+        gap: 9px;
+    }
+
+
+    .progress {
+
+        height: 7px;
+    }
+
+
+    .card-lower span {
+
+        min-width: 38px;
+
+        font-size: .7rem;
+    }
+}

@@ -1,0 +1,1014 @@
+// ==========================================
+// CODE EDITOR SECTION
+// ==========================================
+
+.editor-section {
+    width: 100%;
+    min-width: 0;
+
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+
+    padding: 18px;
+
+    border-radius: 1rem;
+
+    background:
+        linear-gradient(
+            145deg,
+            #17191f,
+            #101216
+        );
+
+    border: 1px solid #292c34;
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, .28),
+        inset 0 1px 0 rgba(255, 255, 255, .025);
+
+    box-sizing: border-box;
+}
+
+
+// ==========================================
+// EDITOR HEADER
+// ==========================================
+
+.editor-header {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 12px;
+
+    padding-bottom: 12px;
+
+    border-bottom: 1px solid #292c34;
+}
+
+
+// ==========================================
+// LANGUAGE SELECT + HEADER BUTTON
+// ==========================================
+
+.editor-header select,
+.editor-header button {
+    min-height: 38px;
+
+    padding: 7px 13px;
+
+    outline: none;
+
+    border: 1px solid #30333c;
+
+    border-radius: 8px;
+
+    font-size: clamp(.7rem, 1vw, .82rem);
+
+    font-family: "Poppins", sans-serif;
+
+    letter-spacing: .1px;
+
+    font-weight: 550;
+
+    background: #1a1c22;
+
+    color: #e5e7eb;
+
+    cursor: pointer;
+
+    margin-bottom: 0;
+
+    transition:
+        border-color .25s ease,
+        background .25s ease,
+        color .25s ease,
+        transform .25s ease,
+        box-shadow .25s ease;
+}
+
+
+// ==========================================
+// SELECT
+// ==========================================
+
+.editor-header select {
+    min-width: 120px;
+
+    cursor: pointer;
+}
+
+
+// ==========================================
+// HEADER HOVER
+// ==========================================
+
+.editor-header select:hover,
+.editor-header button:hover {
+    background: #20232b;
+
+    border-color: var(--primary);
+
+    color: #ffffff;
+}
+
+
+// ==========================================
+// EDITOR AREA
+// ==========================================
+
+.editor-section > * {
+    min-width: 0;
+
+    max-width: 100%;
+}
+
+
+// ==========================================
+// ACTIONS
+// ==========================================
+
+.editor-actions {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    gap: 12px;
+
+    margin-top: 15px;
+
+    padding-top: 14px;
+
+    border-top: 1px solid #292c34;
+
+    box-sizing: border-box;
+}
+
+
+// ==========================================
+// ACTION BUTTON COMMON
+// ==========================================
+
+.editor-actions button {
+    min-width: 130px;
+
+    min-height: 40px;
+
+    padding: 9px 16px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+
+    border-radius: 9px;
+
+    font-size: clamp(.7rem, 1vw, .82rem);
+
+    font-family: "Poppins", sans-serif;
+
+    font-weight: 600;
+
+    letter-spacing: .1px;
+
+    cursor: pointer;
+
+    outline: none;
+
+    transition:
+        transform .25s ease,
+        background .25s ease,
+        border-color .25s ease,
+        box-shadow .25s ease,
+        filter .25s ease;
+}
+
+
+// ==========================================
+// RUN BUTTON
+// ==========================================
+
+.editor-actions .run-btn {
+    border: 1px solid #343740;
+
+    background: #1a1c22;
+
+    color: #d5d8df;
+
+    box-shadow:
+        0 5px 15px rgba(0, 0, 0, .18);
+}
+
+
+.editor-actions .run-btn:hover {
+    border-color: var(--primary);
+
+    background: rgba(124, 92, 255, .10);
+
+    color: #ffffff;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 8px 20px rgba(124, 92, 255, .12);
+}
+
+
+// ==========================================
+// SUBMIT CODE BUTTON
+// ==========================================
+
+.editor-actions .submit-code {
+    border: 1px solid rgba(34, 197, 94, .30);
+
+    background:
+        linear-gradient(
+            135deg,
+            #16a34a,
+            #22c55e
+        );
+
+    color: #ffffff;
+
+    box-shadow:
+        0 6px 18px rgba(34, 197, 94, .16);
+}
+
+
+.editor-actions .submit-code:hover {
+    transform: translateY(-2px);
+
+    filter: brightness(1.08);
+
+    box-shadow:
+        0 9px 25px rgba(34, 197, 94, .25);
+}
+
+
+// ==========================================
+// ACTIVE / CLICK
+// ==========================================
+
+.editor-actions button:active {
+    transform: translateY(0);
+
+    box-shadow: none;
+}
+
+
+// ==========================================
+// DISABLED BUTTON
+// ==========================================
+
+.editor-actions button:disabled {
+    opacity: .55;
+
+    cursor: not-allowed;
+
+    transform: none;
+
+    box-shadow: none;
+
+    filter: none;
+}
+
+
+// ==========================================
+// CODE RESULT BOX
+// ==========================================
+
+.code-result-box {
+    width: 100%;
+
+    margin-top: 14px;
+
+    border: 1px solid #292c34;
+
+    border-radius: 12px;
+
+    overflow: hidden;
+
+    background: #111318;
+
+    color: #e8eaf0;
+
+    box-sizing: border-box;
+
+    animation: resultSlideIn .3s ease;
+}
+
+
+// ==========================================
+// ACCEPTED
+// ==========================================
+
+.code-result-box.accepted {
+    border-color: rgba(34, 197, 94, .35);
+
+    .result-dot {
+        background: #22c55e;
+
+        box-shadow:
+            0 0 0 4px rgba(34, 197, 94, .10);
+    }
+
+    .result-status {
+        color: #4ade80;
+
+        background: rgba(34, 197, 94, .10);
+
+        border-color: rgba(34, 197, 94, .20);
+    }
+
+    .result-stat strong {
+        color: #4ade80;
+    }
+}
+
+
+// ==========================================
+// ERROR
+// ==========================================
+
+.code-result-box.error {
+    border-color: rgba(239, 68, 68, .35);
+
+    .result-dot {
+        background: #ef4444;
+
+        box-shadow:
+            0 0 0 4px rgba(239, 68, 68, .10);
+    }
+
+    .result-status {
+        color: #f87171;
+
+        background: rgba(239, 68, 68, .10);
+
+        border-color: rgba(239, 68, 68, .20);
+    }
+
+    .result-stat strong {
+        color: #f87171;
+    }
+}
+
+
+// ==========================================
+// EXECUTED
+// ==========================================
+
+.code-result-box.executed {
+    border-color: rgba(99, 102, 241, .35);
+
+    .result-dot {
+        background: #6366f1;
+
+        box-shadow:
+            0 0 0 4px rgba(99, 102, 241, .10);
+    }
+
+    .result-status {
+        color: #a5b4fc;
+
+        background: rgba(99, 102, 241, .10);
+
+        border-color: rgba(99, 102, 241, .20);
+    }
+}
+
+
+// ==========================================
+// LOADING
+// ==========================================
+
+.code-result-box.loading {
+    border-color: rgba(99, 102, 241, .35);
+
+    .result-dot {
+        background: #6366f1;
+
+        box-shadow:
+            0 0 0 4px rgba(99, 102, 241, .10);
+
+        animation: resultPulse 1.2s infinite;
+    }
+}
+
+
+// ==========================================
+// RESULT HEADER
+// ==========================================
+
+.code-result-header {
+    min-height: 48px;
+
+    padding: 0 14px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 12px;
+
+    background: #171920;
+
+    border-bottom: 1px solid #252936;
+
+    box-sizing: border-box;
+}
+
+
+// ==========================================
+// RESULT TITLE
+// ==========================================
+
+.result-title {
+    min-width: 0;
+
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    color: #f1f3f7;
+
+    font-size: .82rem;
+
+    font-weight: 600;
+
+    line-height: 1.2;
+}
+
+
+// ==========================================
+// RESULT DOT
+// ==========================================
+
+.result-dot {
+    width: 8px;
+    height: 8px;
+
+    flex: 0 0 8px;
+
+    border-radius: 50%;
+
+    background: #6366f1;
+}
+
+
+// ==========================================
+// STATUS BADGE
+// ==========================================
+
+.result-status {
+    flex-shrink: 0;
+
+    padding: 6px 10px;
+
+    border: 1px solid #303440;
+
+    border-radius: 7px;
+
+    color: #aeb4c2;
+
+    background: #20232b;
+
+    font-size: .7rem;
+
+    font-weight: 600;
+
+    line-height: 1;
+
+    white-space: nowrap;
+}
+
+
+// ==========================================
+// RESULT BODY
+// ==========================================
+
+.code-result-body {
+    width: 100%;
+
+    min-height: 80px;
+
+    padding: 16px;
+
+    box-sizing: border-box;
+}
+
+
+// ==========================================
+// PRACTICE RESULT CONTENT
+// ==========================================
+
+.practice-result-content {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+}
+
+
+// ==========================================
+// TEST CASE STAT
+// ==========================================
+
+.result-stat {
+    display: flex;
+    flex-direction: column;
+
+    gap: 5px;
+
+    flex-shrink: 0;
+}
+
+
+.result-stat-label {
+    color: #858b99;
+
+    font-size: .68rem;
+
+    font-weight: 500;
+
+    text-transform: uppercase;
+
+    letter-spacing: .5px;
+}
+
+
+.result-stat strong {
+    color: #e5e7eb;
+
+    font-size: 1rem;
+
+    font-weight: 700;
+
+    line-height: 1.2;
+}
+
+
+.result-stat strong span {
+    color: #737987;
+
+    font-weight: 500;
+}
+
+
+// ==========================================
+// RESULT MESSAGE
+// ==========================================
+
+.result-message {
+    flex: 1;
+
+    min-width: 0;
+
+    color: #aeb4c2;
+
+    font-size: .76rem;
+
+    line-height: 1.5;
+
+    text-align: right;
+
+    word-break: break-word;
+}
+
+
+// ==========================================
+// LOADING
+// ==========================================
+
+.result-loading {
+    min-height: 50px;
+
+    display: flex;
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    color: #aeb4c2;
+
+    font-size: .78rem;
+}
+
+
+// ==========================================
+// LOADING SPINNER
+// ==========================================
+
+.loading-spinner {
+    width: 15px;
+    height: 15px;
+
+    flex: 0 0 15px;
+
+    border: 2px solid #343846;
+
+    border-top-color: #6366f1;
+
+    border-radius: 50%;
+
+    animation: resultSpin .7s linear infinite;
+}
+
+
+// ==========================================
+// RESULT ANIMATION
+// ==========================================
+
+@keyframes resultSlideIn {
+
+    from {
+        opacity: 0;
+
+        transform: translateY(6px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform: translateY(0);
+    }
+}
+
+
+@keyframes resultSpin {
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+@keyframes resultPulse {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: .4;
+    }
+}
+
+
+// ==========================================
+// TABLET
+// ==========================================
+
+@media (max-width: 768px) {
+
+    .editor-section {
+        padding: 15px;
+
+        border-radius: .9rem;
+    }
+
+
+    // ------------------------------------------
+    // HEADER
+    // ------------------------------------------
+
+    .editor-header {
+        gap: 8px;
+
+        padding-bottom: 10px;
+    }
+
+
+    .editor-header select,
+    .editor-header button {
+        min-height: 36px;
+
+        padding: 6px 10px;
+
+        font-size: .7rem;
+    }
+
+
+    .editor-header select {
+        min-width: 105px;
+    }
+
+
+    // ------------------------------------------
+    // ACTIONS
+    // ------------------------------------------
+
+    .editor-actions {
+        gap: 9px;
+
+        margin-top: 12px;
+
+        padding-top: 12px;
+    }
+
+
+    .editor-actions button {
+        min-width: 110px;
+
+        min-height: 38px;
+
+        padding: 8px 12px;
+
+        font-size: .7rem;
+    }
+
+
+    // ------------------------------------------
+    // RESULT
+    // ------------------------------------------
+
+    .code-result-box {
+        margin-top: 12px;
+
+        border-radius: 10px;
+    }
+
+
+    .code-result-header {
+        min-height: 44px;
+
+        padding: 0 12px;
+
+        gap: 10px;
+    }
+
+
+    .result-title {
+        font-size: .76rem;
+
+        gap: 8px;
+    }
+
+
+    .result-status {
+        padding: 5px 8px;
+
+        font-size: .66rem;
+    }
+
+
+    .code-result-body {
+        padding: 13px;
+    }
+
+
+    .practice-result-content {
+        gap: 15px;
+    }
+
+
+    .result-stat-label {
+        font-size: .64rem;
+    }
+
+
+    .result-stat strong {
+        font-size: .92rem;
+    }
+
+
+    .result-message {
+        font-size: .72rem;
+    }
+}
+
+
+// ==========================================
+// MOBILE
+// ==========================================
+
+@media (max-width: 480px) {
+
+    .editor-section {
+        padding: 12px;
+
+        border-radius: .8rem;
+    }
+
+
+    // ------------------------------------------
+    // HEADER
+    // ------------------------------------------
+
+    .editor-header {
+        flex-wrap: wrap;
+
+        align-items: center;
+    }
+
+
+    .editor-header select,
+    .editor-header button {
+        min-height: 34px;
+
+        padding: 6px 9px;
+
+        font-size: .65rem;
+
+        border-radius: 7px;
+    }
+
+
+    .editor-header select {
+        min-width: 95px;
+
+        flex: 1;
+    }
+
+
+    // ------------------------------------------
+    // ACTIONS
+    // ------------------------------------------
+
+    .editor-actions {
+        display: grid;
+
+        grid-template-columns: 1fr 1fr;
+
+        gap: 8px;
+
+        margin-top: 10px;
+
+        padding-top: 10px;
+    }
+
+
+    .editor-actions button {
+        width: 100%;
+
+        min-width: 0;
+
+        min-height: 38px;
+
+        padding: 8px 10px;
+
+        font-size: .65rem;
+
+        border-radius: 8px;
+    }
+
+
+    // ------------------------------------------
+    // RESULT
+    // ------------------------------------------
+
+    .code-result-box {
+        margin-top: 10px;
+
+        border-radius: 9px;
+    }
+
+
+    .code-result-header {
+        min-height: 42px;
+
+        padding: 0 10px;
+    }
+
+
+    .result-title {
+        font-size: .72rem;
+
+        gap: 7px;
+    }
+
+
+    .result-dot {
+        width: 7px;
+        height: 7px;
+
+        flex-basis: 7px;
+    }
+
+
+    .result-status {
+        padding: 5px 7px;
+
+        font-size: .61rem;
+    }
+
+
+    .code-result-body {
+        padding: 11px;
+    }
+
+
+    .practice-result-content {
+        align-items: flex-start;
+
+        flex-direction: column;
+
+        gap: 10px;
+    }
+
+
+    .result-message {
+        width: 100%;
+
+        text-align: left;
+
+        font-size: .7rem;
+    }
+
+
+    .result-loading {
+        min-height: 45px;
+
+        font-size: .7rem;
+    }
+}
+
+
+// ==========================================
+// VERY SMALL PHONE
+// ==========================================
+
+@media (max-width: 360px) {
+
+    .editor-section {
+        padding: 10px;
+    }
+
+
+    // ------------------------------------------
+    // HEADER
+    // ------------------------------------------
+
+    .editor-header select,
+    .editor-header button {
+        font-size: .6rem;
+
+        padding: 5px 8px;
+    }
+
+
+    // ------------------------------------------
+    // ACTIONS
+    // ------------------------------------------
+
+    .editor-actions button {
+        min-height: 36px;
+
+        font-size: .6rem;
+    }
+
+
+    // ------------------------------------------
+    // RESULT
+    // ------------------------------------------
+
+    .code-result-header {
+        padding: 0 9px;
+    }
+
+
+    .result-title {
+        font-size: .68rem;
+    }
+
+
+    .result-status {
+        padding: 4px 6px;
+
+        font-size: .58rem;
+    }
+
+
+    .code-result-body {
+        padding: 10px;
+    }
+
+
+    .result-stat-label {
+        font-size: .6rem;
+    }
+
+
+    .result-stat strong {
+        font-size: .86rem;
+    }
+
+
+    .result-message {
+        font-size: .66rem;
+    }
+}

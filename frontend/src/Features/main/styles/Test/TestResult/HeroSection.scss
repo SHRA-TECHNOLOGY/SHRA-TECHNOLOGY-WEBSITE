@@ -1,0 +1,779 @@
+// ==========================================
+// RESULT HERO / MAIN CONTAINER
+// ==========================================
+
+.Hero-Section {
+
+    width: 100%;
+    min-width: 0;
+
+    display: flex;
+    flex-direction: column;
+
+    padding: 20px;
+
+    background:
+        radial-gradient(
+            circle at top right,
+            rgba(124, 92, 255, .08),
+            transparent 32%
+        ),
+        linear-gradient(
+            145deg,
+            #181a20,
+            #111318
+        );
+
+    border: 1px solid #292c34;
+
+    border-radius: 1rem;
+
+    color: #fff;
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, .28),
+        inset 0 1px 0 rgba(255, 255, 255, .025);
+
+    box-sizing: border-box;
+
+    overflow: hidden;
+}
+
+
+// ==========================================
+// RESULT HERO WRAPPER
+// ==========================================
+
+.result-hero-wrapper {
+
+    width: 100%;
+    min-width: 0;
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 3fr)
+        minmax(220px, 1fr);
+
+    gap: 18px;
+
+    box-sizing: border-box;
+}
+
+
+// ==========================================
+// RESULT HERO
+// ==========================================
+
+.result-hero {
+
+    min-width: 0;
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(170px, 1fr)
+        minmax(0, 3fr);
+
+    align-items: center;
+
+    gap: 20px;
+
+    overflow: hidden;
+
+    box-sizing: border-box;
+}
+
+
+// ==========================================
+// HERO LEFT / SCORE
+// ==========================================
+
+.result-hero .hero-left {
+
+    min-width: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+
+// ==========================================
+// SCORE CIRCLE
+// ==========================================
+
+.result-hero .hero-left .score-circle {
+
+    width: 175px;
+    height: 175px;
+
+    position: relative;
+
+    flex-shrink: 0;
+}
+
+.score-circle svg {
+
+    width: 100%;
+    height: 100%;
+
+    transform: rotate(-90deg);
+}
+
+.score-circle circle {
+
+    fill: none;
+
+    stroke-width: 9;
+}
+
+.score-circle .bg {
+
+    stroke: #252932;
+}
+
+.score-circle .progress {
+
+    stroke: #22c55e;
+
+    stroke-linecap: round;
+
+    stroke-dasharray: 327;
+
+    transition:
+        stroke-dashoffset .6s ease;
+}
+
+
+// ==========================================
+// SCORE CONTENT
+// ==========================================
+
+.score-circle .score-content {
+
+    position: absolute;
+
+    inset: 0;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+.score-circle .score-content h2 {
+
+    margin: 0;
+
+    font-size: clamp(1.5rem, 3vw, 2rem);
+
+    font-family: "Poppins", sans-serif;
+
+    font-weight: 700;
+
+    letter-spacing: -.5px;
+
+    color: #f5f6f8;
+
+    line-height: 1.2;
+}
+
+.score-circle .score-content p {
+
+    margin: 4px 0 0;
+
+    color: #777c87;
+
+    font-size: .68rem;
+
+    font-family: "Poppins", sans-serif;
+
+    font-weight: 500;
+
+    line-height: 1.4;
+}
+
+
+// ==========================================
+// HERO CENTER
+// ==========================================
+
+.result-hero .hero-center {
+
+    min-width: 0;
+
+    display: flex;
+
+    flex-direction: column;
+}
+
+.result-hero .hero-center h2 {
+
+    min-width: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    gap: 9px;
+
+    margin: 0 0 6px;
+
+    font-size: clamp(1rem, 2vw, 1.4rem);
+
+    font-family: "Poppins", sans-serif;
+
+    font-weight: 650;
+
+    letter-spacing: -.3px;
+
+    color: #f1f3f5;
+
+    line-height: 1.4;
+}
+
+.result-hero .hero-center > p {
+
+    margin: 0;
+
+    color: #858994;
+
+    font-size: clamp(.68rem, 1vw, .78rem);
+
+    font-family: "Poppins", sans-serif;
+
+    font-weight: 450;
+
+    line-height: 1.6;
+}
+
+
+// ==========================================
+// DIFFICULTY BADGE
+// ==========================================
+
+.result-hero .hero-center .difficulty-badge {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 5px 9px;
+
+    border-radius: 7px;
+
+    background:
+        rgba(124, 92, 255, .10);
+
+    border: 1px solid
+        rgba(124, 92, 255, .22);
+
+    color: #a996ff;
+
+    font-size: .62rem;
+
+    font-family: "Poppins", sans-serif;
+
+    font-weight: 600;
+
+    white-space: nowrap;
+}
+
+
+// ==========================================
+// RESULT STATS
+// ==========================================
+
+.result-hero .hero-center .stats {
+
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, minmax(0, 1fr));
+
+    margin-top: 18px;
+
+    border-top: 1px solid #292c34;
+
+    box-sizing: border-box;
+}
+
+
+// ==========================================
+// STAT BOX
+// ==========================================
+
+.result-hero .hero-center .stats .stat-box {
+
+    min-width: 0;
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 9px;
+
+    padding: 14px 12px;
+
+    box-sizing: border-box;
+}
+
+.result-hero .hero-center .stats .stat-box:not(:last-child) {
+
+    border-right: 1px solid #292c34;
+}
+
+.result-hero .hero-center .stats .stat-box svg {
+
+    width: 18px;
+
+    height: 18px;
+
+    flex-shrink: 0;
+
+    margin-top: 2px;
+
+    color: #8068ff;
+
+    stroke-width: 1.8;
+}
+
+.result-hero .hero-center .stats .stat-box span {
+
+    display: block;
+
+    color: #777c87;
+
+    font-size: .62rem;
+
+    font-family: "Poppins", sans-serif;
+
+    font-weight: 500;
+
+    line-height: 1.4;
+}
+
+.result-hero .hero-center .stats .stat-box h3 {
+
+    margin: 3px 0 0;
+
+    color: #f1f3f5;
+
+    font-size: clamp(.8rem, 1.5vw, 1rem);
+
+    font-family: "Poppins", sans-serif;
+
+    font-weight: 650;
+
+    line-height: 1.35;
+}
+
+.result-hero .hero-center .stats .stat-box small {
+
+    display: block;
+
+    margin-top: 2px;
+
+    color: #777c87;
+
+    font-size: .58rem;
+
+    font-family: "Poppins", sans-serif;
+
+    line-height: 1.4;
+}
+
+
+// ==========================================
+// HERO RIGHT
+// ==========================================
+
+.hero-right {
+
+    min-width: 0;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 15px;
+
+    background:
+        #13151a;
+
+    border: 1px solid #292c34;
+
+    border-radius: 14px;
+
+    box-sizing: border-box;
+}
+
+.hero-right img {
+
+    width: 135px;
+
+    max-width: 100%;
+
+    height: auto;
+
+    object-fit: contain;
+
+    margin-bottom: 10px;
+}
+
+
+// ==========================================
+// RESULT STATUS
+// ==========================================
+
+.hero-right .result-status {
+
+    width: 100%;
+
+    max-width: 150px;
+
+    padding: 8px 12px;
+
+    text-align: center;
+
+    border-radius: 8px;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: .72rem;
+
+    font-weight: 650;
+
+    margin-bottom: 7px;
+
+    box-sizing: border-box;
+}
+
+.hero-right .result-status.pass {
+
+    background:
+        rgba(34, 197, 94, .10);
+
+    border: 1px solid
+        rgba(34, 197, 94, .25);
+
+    color: #4ade80;
+}
+
+.hero-right .result-status.fail {
+
+    background:
+        rgba(239, 68, 68, .10);
+
+    border: 1px solid
+        rgba(239, 68, 68, .25);
+
+    color: #f87171;
+}
+
+.hero-right p {
+
+    max-width: 190px;
+
+    margin: 0;
+
+    color: #777c87;
+
+    font-size: .62rem;
+
+    font-family: "Poppins", sans-serif;
+
+    line-height: 1.55;
+
+    text-align: center;
+}
+
+
+// ==========================================
+// LARGE TABLET
+// ==========================================
+
+@media (max-width: 1200px) {
+
+    .result-hero-wrapper {
+
+        grid-template-columns: 1fr;
+    }
+
+    .hero-right {
+
+        width: 100%;
+
+        min-height: 170px;
+
+        flex-direction: row;
+
+        gap: 18px;
+    }
+
+    .hero-right img {
+
+        width: 100px;
+
+        margin-bottom: 0;
+    }
+
+    .hero-right .result-status {
+
+        width: 150px;
+
+        margin-bottom: 5px;
+    }
+}
+
+
+// ==========================================
+// TABLET
+// ==========================================
+
+@media (max-width: 900px) {
+
+    .Hero-Section {
+
+        padding: 16px;
+
+        border-radius: .9rem;
+    }
+
+    .result-hero {
+
+        grid-template-columns: 1fr;
+
+        gap: 15px;
+    }
+
+    .hero-left {
+
+        padding: 5px 0;
+    }
+
+    .result-hero .hero-center .stats {
+
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+    .result-hero .hero-center .stats .stat-box {
+
+        border-bottom: 1px solid #292c34;
+    }
+
+    .result-hero .hero-center .stats .stat-box:nth-child(2n) {
+
+        border-right: none;
+    }
+
+    .result-hero .hero-center .stats .stat-box:nth-last-child(-n + 2) {
+
+        border-bottom: none;
+    }
+}
+
+
+// ==========================================
+// MOBILE
+// ==========================================
+
+@media (max-width: 600px) {
+
+    .Hero-Section {
+
+        padding: 12px;
+
+        border-radius: .85rem;
+    }
+
+    .result-hero-wrapper {
+
+        gap: 10px;
+    }
+
+    .result-hero {
+
+        gap: 12px;
+    }
+
+    .result-hero .hero-left .score-circle {
+
+        width: 145px;
+
+        height: 145px;
+    }
+
+    .score-circle .score-content h2 {
+
+        font-size: 1.5rem;
+    }
+
+    .score-circle .score-content p {
+
+        font-size: .6rem;
+    }
+
+    .result-hero .hero-center h2 {
+
+        font-size: .9rem;
+
+        align-items: flex-start;
+    }
+
+    .result-hero .hero-center > p {
+
+        font-size: .63rem;
+    }
+
+    .result-hero .hero-center .difficulty-badge {
+
+        font-size: .57rem;
+
+        padding: 4px 7px;
+    }
+
+    .result-hero .hero-center .stats {
+
+        grid-template-columns: 1fr;
+
+        margin-top: 13px;
+    }
+
+    .result-hero .hero-center .stats .stat-box {
+
+        padding: 11px 10px;
+
+        border-right: none !important;
+
+        border-bottom: 1px solid #292c34;
+    }
+
+    .result-hero .hero-center .stats .stat-box:last-child {
+
+        border-bottom: none;
+    }
+
+    .result-hero .hero-center .stats .stat-box svg {
+
+        width: 17px;
+
+        height: 17px;
+    }
+
+    .result-hero .hero-center .stats .stat-box h3 {
+
+        font-size: .85rem;
+    }
+
+    .result-hero .hero-center .stats .stat-box span {
+
+        font-size: .58rem;
+    }
+
+    .result-hero .hero-center .stats .stat-box small {
+
+        font-size: .55rem;
+    }
+
+    .hero-right {
+
+        min-height: 145px;
+
+        padding: 12px;
+
+        flex-direction: column;
+
+        gap: 4px;
+    }
+
+    .hero-right img {
+
+        width: 85px;
+
+        margin-bottom: 4px;
+    }
+
+    .hero-right .result-status {
+
+        width: 100%;
+
+        max-width: 180px;
+
+        padding: 7px;
+
+        font-size: .65rem;
+    }
+
+    .hero-right p {
+
+        font-size: .58rem;
+    }
+}
+
+
+// ==========================================
+// SMALL PHONE
+// ==========================================
+
+@media (max-width: 380px) {
+
+    .Hero-Section {
+
+        padding: 9px;
+    }
+
+    .result-hero .hero-left .score-circle {
+
+        width: 125px;
+
+        height: 125px;
+    }
+
+    .score-circle .score-content h2 {
+
+        font-size: 1.3rem;
+    }
+
+    .score-circle .score-content p {
+
+        font-size: .55rem;
+    }
+
+    .result-hero .hero-center h2 {
+
+        font-size: .82rem;
+    }
+
+    .result-hero .hero-center > p {
+
+        font-size: .59rem;
+    }
+
+    .hero-right {
+
+        padding: 10px;
+    }
+
+    .hero-right img {
+
+        width: 75px;
+    }
+}

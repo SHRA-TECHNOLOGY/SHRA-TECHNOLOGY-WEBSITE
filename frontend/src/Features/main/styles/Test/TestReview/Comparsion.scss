@@ -1,0 +1,515 @@
+// ==========================================
+// ANSWER COMPARISON
+// ==========================================
+
+.answer-comparison {
+
+    width: 100%;
+    min-width: 0;
+
+    margin-top: 16px;
+
+    padding: 16px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #181a20,
+            #111318
+        );
+
+    border: 1px solid #292c34;
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 8px 24px rgba(0, 0, 0, .22),
+        inset 0 1px 0
+        rgba(255, 255, 255, .02);
+
+    box-sizing: border-box;
+}
+
+
+// ==========================================
+// ANSWERS
+// ==========================================
+
+.answer-comparison .answers {
+
+    width: 100%;
+    min-width: 0;
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1fr)
+        minmax(0, 1fr);
+
+    gap: 12px;
+
+    align-items: stretch;
+}
+
+
+// ==========================================
+// ANSWER BOX
+// ==========================================
+
+.answer-comparison .answer-box {
+
+    min-width: 0;
+
+    padding: 13px;
+
+    background: #15171d;
+
+    border: 1px solid #292c34;
+
+    border-radius: 9px;
+
+    box-sizing: border-box;
+
+    transition:
+        background .2s ease,
+        border-color .2s ease;
+}
+
+.answer-comparison .answer-box:hover {
+
+    background: #1a1c22;
+
+    border-color: #353945;
+}
+
+
+// ==========================================
+// ANSWER HEADING
+// ==========================================
+
+.answer-comparison .answer-box h4 {
+
+    margin: 0 0 10px;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: .68rem;
+
+    font-weight: 650;
+
+    line-height: 1.4;
+}
+
+.answer-comparison .answer-box:first-child h4 {
+
+    color: #f87171;
+}
+
+.answer-comparison .answer-box:last-child h4 {
+
+    color: #4ade80;
+}
+
+
+// ==========================================
+// ANSWER ITEM
+// ==========================================
+
+.answer-comparison .answer-box .answer-item {
+
+    min-width: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 9px;
+}
+
+
+// ==========================================
+// LABEL
+// ==========================================
+
+.answer-comparison .answer-box .answer-item .label {
+
+    width: 34px;
+    height: 34px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    color: #f3f4f6;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: .68rem;
+
+    font-weight: 650;
+}
+
+.answer-comparison .answer-box.wrong .answer-item .label {
+
+    background:
+        rgba(239, 68, 68, .09);
+
+    border: 1px solid
+        rgba(239, 68, 68, .45);
+
+    color: #f87171;
+}
+
+.answer-comparison .answer-box.correct .answer-item .label {
+
+    background:
+        rgba(34, 197, 94, .09);
+
+    border: 1px solid
+        rgba(34, 197, 94, .45);
+
+    color: #4ade80;
+}
+
+
+// ==========================================
+// ANSWER TEXT
+// ==========================================
+
+.answer-comparison .answer-box .answer-item p {
+
+    min-width: 0;
+
+    margin: 0;
+
+    color: #d7dae1;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: .65rem;
+
+    font-weight: 450;
+
+    line-height: 1.55;
+
+    overflow-wrap: anywhere;
+}
+
+
+// ==========================================
+// STATUS
+// ==========================================
+
+.answer-comparison .status {
+
+    width: 100%;
+    min-width: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    margin-top: 13px;
+
+    padding-top: 13px;
+
+    border-top: 1px solid #292c34;
+
+    color: #858994;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: .65rem;
+
+    font-weight: 450;
+
+    line-height: 1.5;
+
+    box-sizing: border-box;
+}
+
+.answer-comparison .status svg {
+
+    width: 16px;
+    height: 16px;
+
+    flex-shrink: 0;
+}
+
+.answer-comparison .status span {
+
+    font-weight: 650;
+
+    text-transform: capitalize;
+}
+
+.answer-comparison .status span.correct {
+
+    color: #4ade80;
+}
+
+.answer-comparison .status span.wrong {
+
+    color: #f87171;
+}
+
+.answer-comparison .status span.unattempted {
+
+    color: #fbbf24;
+}
+
+
+// ==========================================
+// EXPLANATION SECTION
+// ==========================================
+
+.explanation-section {
+
+    width: 100%;
+    min-width: 0;
+
+    margin-top: 16px;
+
+    padding: 16px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #181a20,
+            #111318
+        );
+
+    border: 1px solid #292c34;
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 8px 24px rgba(0, 0, 0, .22),
+        inset 0 1px 0
+        rgba(255, 255, 255, .02);
+
+    box-sizing: border-box;
+}
+
+
+// ==========================================
+// EXPLANATION HEADING
+// ==========================================
+
+.explanation-section h3 {
+
+    margin: 0 0 9px;
+
+    color: #f1f3f5;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: clamp(
+        .82rem,
+        1.5vw,
+        1rem
+    );
+
+    font-weight: 650;
+
+    line-height: 1.4;
+}
+
+
+// ==========================================
+// EXPLANATION TEXT
+// ==========================================
+
+.explanation-section p {
+
+    margin: 0;
+
+    color: #858994;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: clamp(
+        .62rem,
+        1vw,
+        .72rem
+    );
+
+    font-weight: 450;
+
+    line-height: 1.75;
+
+    overflow-wrap: anywhere;
+}
+
+
+// ==========================================
+// TABLET
+// ==========================================
+
+@media (max-width: 768px) {
+
+    .answer-comparison,
+    .explanation-section {
+
+        padding: 13px;
+
+        border-radius: 10px;
+    }
+
+    .answer-comparison .answers {
+
+        gap: 9px;
+    }
+
+    .answer-comparison .answer-box {
+
+        padding: 11px;
+    }
+}
+
+
+// ==========================================
+// MOBILE
+// ==========================================
+
+@media (max-width: 600px) {
+
+    .answer-comparison {
+
+        margin-top: 12px;
+
+        padding: 11px;
+    }
+
+    .answer-comparison .answers {
+
+        grid-template-columns: 1fr;
+
+        gap: 7px;
+    }
+
+    .answer-comparison .answer-box {
+
+        padding: 10px;
+
+        border-radius: 8px;
+    }
+
+    .answer-comparison .answer-box h4 {
+
+        margin-bottom: 8px;
+
+        font-size: .62rem;
+    }
+
+    .answer-comparison .answer-box .answer-item {
+
+        gap: 8px;
+    }
+
+    .answer-comparison .answer-box .answer-item .label {
+
+        width: 30px;
+        height: 30px;
+
+        font-size: .61rem;
+    }
+
+    .answer-comparison .answer-box .answer-item p {
+
+        font-size: .59rem;
+    }
+
+    .answer-comparison .status {
+
+        margin-top: 10px;
+
+        padding-top: 10px;
+
+        font-size: .59rem;
+    }
+
+    .explanation-section {
+
+        margin-top: 12px;
+
+        padding: 11px;
+
+        border-radius: 10px;
+    }
+
+    .explanation-section h3 {
+
+        margin-bottom: 7px;
+
+        font-size: .78rem;
+    }
+
+    .explanation-section p {
+
+        font-size: .58rem;
+
+        line-height: 1.65;
+    }
+}
+
+
+// ==========================================
+// SMALL PHONE
+// ==========================================
+
+@media (max-width: 380px) {
+
+    .answer-comparison,
+    .explanation-section {
+
+        padding: 9px;
+
+        border-radius: 8px;
+    }
+
+    .answer-comparison .answer-box {
+
+        padding: 8px;
+    }
+
+    .answer-comparison .answer-box h4 {
+
+        font-size: .58rem;
+    }
+
+    .answer-comparison .answer-box .answer-item .label {
+
+        width: 27px;
+        height: 27px;
+
+        font-size: .55rem;
+    }
+
+    .answer-comparison .answer-box .answer-item p {
+
+        font-size: .55rem;
+    }
+
+    .answer-comparison .status {
+
+        font-size: .55rem;
+    }
+
+    .explanation-section h3 {
+
+        font-size: .72rem;
+    }
+
+    .explanation-section p {
+
+        font-size: .54rem;
+    }
+}

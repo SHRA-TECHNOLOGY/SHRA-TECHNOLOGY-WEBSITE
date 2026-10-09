@@ -1,0 +1,1137 @@
+// =====================================================
+// MAIN PAGE
+// =====================================================
+
+.admin-recorded-class-page {
+    width: 100%;
+    min-height: calc(100vh - 70px);
+    padding: 30px;
+    background: #ffffff;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+
+// =====================================================
+// HEADER
+// =====================================================
+
+.admin-recorded-class-header {
+    width: 100%;
+    margin-bottom: 25px;
+}
+
+.admin-recorded-class-heading {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+}
+
+.admin-recorded-class-icon {
+    width: 48px;
+    height: 48px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    border-radius: 12px;
+
+    background: #f4f1ff;
+    color: var(--primary);
+}
+
+.admin-recorded-class-heading h2 {
+    margin: 0;
+
+    color: #202124;
+
+    font-family: "Poppins", sans-serif;
+    font-size: clamp(1.15rem, 2vw, 1.5rem);
+    font-weight: 700;
+
+    line-height: 1.3;
+}
+
+.admin-recorded-class-heading p {
+    margin: 4px 0 0;
+
+    color: #7a7d87;
+
+    font-family: "Poppins", sans-serif;
+    font-size: clamp(.65rem, 1vw, .75rem);
+
+    line-height: 1.5;
+}
+
+
+// =====================================================
+// SEARCH
+// =====================================================
+
+.admin-recorded-search {
+    width: 100%;
+    max-width: 520px;
+
+    height: 44px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    margin-bottom: 22px;
+
+    padding: 0 14px;
+
+    border: 1px solid #e3e5ea;
+    border-radius: 9px;
+
+    background: #fafbfc;
+
+    box-sizing: border-box;
+
+    transition:
+        border-color .2s ease,
+        box-shadow .2s ease,
+        background .2s ease;
+}
+
+.admin-recorded-search svg {
+    flex-shrink: 0;
+    color: #92959e;
+}
+
+.admin-recorded-search input {
+    width: 100%;
+    height: 100%;
+
+    border: none;
+    outline: none;
+
+    background: transparent;
+
+    color: #292a2e;
+
+    font-family: "Poppins", sans-serif;
+    font-size: clamp(.68rem, 1vw, .76rem);
+}
+
+.admin-recorded-search input::placeholder {
+    color: #a5a8b0;
+}
+
+.admin-recorded-search:focus-within {
+    border-color: var(--primary);
+
+    background: #ffffff;
+
+    box-shadow:
+        0 0 0 3px rgba(124, 92, 255, .08);
+}
+
+
+// =====================================================
+// CLASS LIST
+// =====================================================
+
+.admin-recorded-class-list {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 14px;
+}
+
+
+// =====================================================
+// CLASS CARD
+// =====================================================
+
+.admin-recorded-class-card {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 25px;
+
+    padding: 17px;
+
+    border: 1px solid #e7e8ed;
+    border-radius: 14px;
+
+    background: #ffffff;
+
+    box-shadow:
+        0 7px 22px rgba(15, 23, 42, .035);
+
+    box-sizing: border-box;
+
+    transition:
+        transform .25s ease,
+        border-color .25s ease,
+        box-shadow .25s ease;
+}
+
+.admin-recorded-class-card:hover {
+    transform: translateY(-2px);
+
+    border-color: #d9d4ff;
+
+    box-shadow:
+        0 12px 28px rgba(15, 23, 42, .07);
+}
+
+
+// =====================================================
+// LEFT
+// =====================================================
+
+.admin-recorded-class-left {
+    min-width: 0;
+
+    display: flex;
+    align-items: center;
+
+    gap: 15px;
+
+    flex: 1;
+}
+
+
+// =====================================================
+// THUMBNAIL
+// =====================================================
+
+.admin-recorded-class-thumbnail {
+    width: 100px;
+    height: 72px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+
+    border-radius: 9px;
+
+    background: #f5f3ff;
+    color: var(--primary);
+}
+
+.admin-recorded-class-thumbnail img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+}
+
+
+// =====================================================
+// INFORMATION
+// =====================================================
+
+.admin-recorded-class-info {
+    min-width: 0;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 4px;
+}
+
+.admin-recorded-course {
+    width: fit-content;
+
+    color: var(--primary);
+
+    font-family: "Poppins", sans-serif;
+    font-size: clamp(.6rem, .9vw, .7rem);
+    font-weight: 600;
+
+    line-height: 1.3;
+}
+
+.admin-recorded-class-info h3 {
+    max-width: 650px;
+
+    margin: 0;
+
+    overflow: hidden;
+
+    color: #25262b;
+
+    font-family: "Poppins", sans-serif;
+    font-size: clamp(.85rem, 1.3vw, 1rem);
+    font-weight: 600;
+
+    line-height: 1.4;
+
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+
+// =====================================================
+// META
+// =====================================================
+
+.admin-recorded-meta {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+    gap: 7px 13px;
+
+    margin-top: 3px;
+}
+
+.admin-recorded-meta span {
+    display: inline-flex;
+    align-items: center;
+
+    gap: 4px;
+
+    color: #858891;
+
+    font-family: "Poppins", sans-serif;
+    font-size: clamp(.58rem, .85vw, .67rem);
+    font-weight: 500;
+}
+
+.admin-recorded-meta svg {
+    flex-shrink: 0;
+}
+
+
+// =====================================================
+// RIGHT
+// =====================================================
+
+.admin-recorded-class-right {
+    flex-shrink: 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+    gap: 9px;
+}
+
+
+// =====================================================
+// RECORDING STATUS
+// =====================================================
+
+.recording-status {
+    display: inline-flex;
+    align-items: center;
+
+    gap: 5px;
+
+    padding: 5px 9px;
+
+    border-radius: 20px;
+
+    font-family: "Poppins", sans-serif;
+    font-size: clamp(.55rem, .8vw, .64rem);
+    font-weight: 600;
+
+    white-space: nowrap;
+}
+
+.recording-status.available {
+    color: #15803d;
+    background: #f0fdf4;
+
+    border: 1px solid #bbf7d0;
+}
+
+.recording-status.pending {
+    color: #a16207;
+    background: #fffbeb;
+
+    border: 1px solid #fde68a;
+}
+
+
+// =====================================================
+// MANAGE BUTTON
+// =====================================================
+
+.recording-manage-btn {
+    min-height: 38px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 6px;
+
+    padding: 0 14px;
+
+    border: none;
+    border-radius: 8px;
+
+    background: var(--primary);
+    color: #ffffff;
+
+    font-family: "Poppins", sans-serif;
+    font-size: clamp(.62rem, .9vw, .7rem);
+    font-weight: 600;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 5px 13px rgba(124, 92, 255, .15);
+
+    transition:
+        transform .2s ease,
+        box-shadow .2s ease,
+        background .2s ease;
+}
+
+.recording-manage-btn:hover {
+    transform: translateY(-1px);
+
+    background: var(--primary-light);
+
+    box-shadow:
+        0 8px 18px rgba(124, 92, 255, .22);
+}
+
+
+// =====================================================
+// EMPTY STATE
+// =====================================================
+
+.recorded-class-empty {
+    width: 100%;
+    min-height: 300px;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 35px 20px;
+
+    text-align: center;
+
+    border: 1px dashed #dfe1e7;
+    border-radius: 14px;
+
+    background: #fafbfc;
+
+    box-sizing: border-box;
+}
+
+.recorded-class-empty-icon {
+    width: 58px;
+    height: 58px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 15px;
+
+    border-radius: 50%;
+
+    background: #f4f1ff;
+    color: var(--primary);
+}
+
+.recorded-class-empty h3 {
+    margin: 0;
+
+    color: #292a2f;
+
+    font-family: "Poppins", sans-serif;
+    font-size: clamp(.9rem, 1.5vw, 1.05rem);
+    font-weight: 600;
+}
+
+.recorded-class-empty p {
+    max-width: 350px;
+
+    margin: 7px 0 0;
+
+    color: #898c95;
+
+    font-family: "Poppins", sans-serif;
+    font-size: clamp(.62rem, 1vw, .72rem);
+
+    line-height: 1.6;
+}
+
+
+// =====================================================
+// STATE
+// =====================================================
+
+.recorded-class-state {
+    width: 100%;
+    min-height: 400px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 25px;
+
+    background: #ffffff;
+
+    box-sizing: border-box;
+
+    font-family: "Poppins", sans-serif;
+}
+
+.recorded-class-state-card {
+    width: min(430px, 100%);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 38px 28px;
+
+    text-align: center;
+
+    border: 1px solid #e7e8ed;
+    border-radius: 16px;
+
+    background: #ffffff;
+
+    box-shadow:
+        0 12px 35px rgba(15, 23, 42, .06);
+
+    box-sizing: border-box;
+}
+
+.recorded-class-state-card h3 {
+    margin: 0;
+
+    color: #292a2e;
+
+    font-family: "Poppins", sans-serif;
+    font-size: clamp(.95rem, 1.8vw, 1.15rem);
+    font-weight: 600;
+}
+
+.recorded-class-state-card p {
+    max-width: 340px;
+
+    margin: 7px 0 0;
+
+    color: #858891;
+
+    font-family: "Poppins", sans-serif;
+    font-size: clamp(.62rem, 1vw, .72rem);
+
+    line-height: 1.6;
+}
+
+
+// =====================================================
+// LOADING SPINNER
+// =====================================================
+
+.recorded-class-spinner {
+    width: 42px;
+    height: 42px;
+
+    margin-bottom: 17px;
+
+    border: 4px solid #eeeef5;
+    border-top-color: var(--primary);
+
+    border-radius: 50%;
+
+    animation:
+        recordedClassSpin .8s linear infinite;
+}
+
+@keyframes recordedClassSpin {
+
+    to {
+        transform: rotate(360deg);
+    }
+
+}
+
+
+// =====================================================
+// ERROR
+// =====================================================
+
+.recorded-class-state-card.error {
+    border-color: #f1dddd;
+}
+
+.recorded-class-error-icon {
+    width: 50px;
+    height: 50px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 16px;
+
+    border: 1px solid #fecaca;
+    border-radius: 50%;
+
+    background: #fff1f2;
+
+    color: #dc2626;
+
+    font-size: 23px;
+    font-weight: 700;
+}
+
+.recorded-class-state-card.error button {
+    min-height: 40px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 6px;
+
+    margin-top: 20px;
+
+    padding: 0 18px;
+
+    border: none;
+    border-radius: 8px;
+
+    background: var(--primary);
+    color: #ffffff;
+
+    font-family: "Poppins", sans-serif;
+    font-size: clamp(.62rem, .9vw, .7rem);
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: .2s ease;
+}
+
+.recorded-class-state-card.error button:hover {
+    transform: translateY(-1px);
+}
+
+
+// =====================================================
+// MODAL OVERLAY
+// =====================================================
+
+.recording-modal-overlay {
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 3000;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px;
+
+    background: rgba(15, 23, 42, .48);
+
+    backdrop-filter: blur(5px);
+
+    box-sizing: border-box;
+
+    animation:
+        recordingOverlayIn .2s ease;
+}
+
+@keyframes recordingOverlayIn {
+
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+
+}
+
+
+// =====================================================
+// MODAL
+// =====================================================
+
+.recording-modal {
+    width: min(560px, 100%);
+
+    overflow: hidden;
+
+    border: 1px solid #e5e7eb;
+    border-radius: 16px;
+
+    background: #ffffff;
+
+    box-shadow:
+        0 25px 70px rgba(15, 23, 42, .18);
+
+    animation:
+        recordingModalIn .25s ease;
+
+    font-family: "Poppins", sans-serif;
+}
+
+@keyframes recordingModalIn {
+
+    from {
+        opacity: 0;
+        transform: translateY(12px) scale(.98);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+
+}
+
+
+// =====================================================
+// MODAL HEADER
+// =====================================================
+
+.recording-modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 15px;
+
+    padding: 20px 22px;
+
+    border-bottom: 1px solid #eeeeF1;
+}
+
+.recording-modal-header h3 {
+    margin: 0;
+
+    color: #242529;
+
+    font-family: "Poppins", sans-serif;
+    font-size: clamp(.9rem, 1.5vw, 1rem);
+    font-weight: 600;
+}
+
+.recording-modal-header p {
+    max-width: 400px;
+
+    overflow: hidden;
+
+    margin: 4px 0 0;
+
+    color: #858891;
+
+    font-family: "Poppins", sans-serif;
+    font-size: clamp(.6rem, .9vw, .68rem);
+
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.recording-modal-header > button {
+    width: 34px;
+    height: 34px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+
+    background: #ffffff;
+    color: #777b84;
+
+    cursor: pointer;
+
+    transition: .2s ease;
+}
+
+.recording-modal-header > button:hover {
+    background: #f8f9fa;
+    color: #292a2e;
+}
+
+
+// =====================================================
+// MODAL FORM
+// =====================================================
+
+.recording-modal form {
+    padding: 22px;
+}
+
+
+// =====================================================
+// FIELD
+// =====================================================
+
+.recording-modal-field {
+    display: flex;
+    flex-direction: column;
+
+    gap: 7px;
+}
+
+.recording-modal-field label {
+    color: #3c3e44;
+
+    font-family: "Poppins", sans-serif;
+    font-size: clamp(.65rem, .9vw, .72rem);
+    font-weight: 600;
+}
+
+.recording-input-wrapper {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+}
+
+.recording-input-wrapper svg {
+    position: absolute;
+
+    left: 12px;
+
+    color: #92959e;
+
+    pointer-events: none;
+}
+
+.recording-input-wrapper input {
+    width: 100%;
+    height: 44px;
+
+    padding: 0 12px 0 38px;
+
+    border: 1px solid #e1e3e8;
+    border-radius: 8px;
+
+    outline: none;
+
+    background: #fafbfc;
+    color: #292a2e;
+
+    font-family: "Poppins", sans-serif;
+    font-size: clamp(.65rem, 1vw, .72rem);
+
+    box-sizing: border-box;
+
+    transition:
+        border-color .2s ease,
+        box-shadow .2s ease,
+        background .2s ease;
+}
+
+.recording-input-wrapper input:focus {
+    border-color: var(--primary);
+
+    background: #ffffff;
+
+    box-shadow:
+        0 0 0 3px rgba(124, 92, 255, .08);
+}
+
+.recording-input-wrapper input::placeholder {
+    color: #a6a9b1;
+}
+
+.recording-modal-field small {
+    color: #9699a2;
+
+    font-family: "Poppins", sans-serif;
+    font-size: clamp(.55rem, .8vw, .62rem);
+
+    line-height: 1.5;
+}
+
+
+// =====================================================
+// MODAL ACTIONS
+// =====================================================
+
+.recording-modal-actions {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    gap: 9px;
+
+    margin-top: 25px;
+    padding-top: 20px;
+
+    border-top: 1px solid #eeeeF1;
+}
+
+.recording-cancel-btn,
+.recording-save-btn {
+    min-height: 41px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 6px;
+
+    padding: 0 17px;
+
+    border-radius: 8px;
+
+    font-family: "Poppins", sans-serif;
+    font-size: clamp(.62rem, .9vw, .7rem);
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: .2s ease;
+}
+
+.recording-cancel-btn {
+    border: 1px solid #e1e3e8;
+
+    background: #ffffff;
+
+    color: #666970;
+}
+
+.recording-cancel-btn:hover {
+    background: #f8f9fa;
+}
+
+.recording-save-btn {
+    border: none;
+
+    background: var(--primary);
+
+    color: #ffffff;
+
+    box-shadow:
+        0 6px 15px rgba(124, 92, 255, .16);
+}
+
+.recording-save-btn:hover:not(:disabled) {
+    transform: translateY(-1px);
+
+    box-shadow:
+        0 9px 20px rgba(124, 92, 255, .22);
+}
+
+.recording-cancel-btn:disabled,
+.recording-save-btn:disabled {
+    opacity: .55;
+
+    cursor: not-allowed;
+}
+
+
+// =====================================================
+// SAVE SPINNER
+// =====================================================
+
+.recording-save-spinner {
+    width: 14px;
+    height: 14px;
+
+    border: 2px solid rgba(255, 255, 255, .4);
+    border-top-color: #ffffff;
+
+    border-radius: 50%;
+
+    animation:
+        recordedClassSpin .7s linear infinite;
+}
+
+
+// =====================================================
+// TABLET
+// =====================================================
+
+@media (max-width: 900px) {
+
+    .admin-recorded-class-page {
+        padding: 24px 20px;
+    }
+
+    .admin-recorded-class-card {
+        gap: 15px;
+    }
+
+}
+
+
+// =====================================================
+// MOBILE
+// =====================================================
+
+@media (max-width: 700px) {
+
+    .admin-recorded-class-page {
+        padding: 20px 15px;
+    }
+
+    .admin-recorded-class-card {
+        align-items: stretch;
+
+        flex-direction: column;
+
+        padding: 15px;
+    }
+
+    .admin-recorded-class-left {
+        width: 100%;
+    }
+
+    .admin-recorded-class-right {
+        width: 100%;
+
+        align-items: stretch;
+
+        padding-top: 12px;
+
+        border-top: 1px solid #eeeeF1;
+    }
+
+    .recording-status {
+        width: fit-content;
+    }
+
+    .recording-manage-btn {
+        width: 100%;
+    }
+
+    .admin-recorded-class-thumbnail {
+        width: 85px;
+        height: 65px;
+    }
+
+}
+
+
+// =====================================================
+// SMALL MOBILE
+// =====================================================
+
+@media (max-width: 500px) {
+
+    .admin-recorded-class-page {
+        padding: 17px 12px;
+    }
+
+    .admin-recorded-class-heading {
+        gap: 10px;
+    }
+
+    .admin-recorded-class-icon {
+        width: 42px;
+        height: 42px;
+        border-radius: 10px;
+    }
+
+    .admin-recorded-class-info h3 {
+        white-space: normal;
+
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+
+        overflow: hidden;
+    }
+
+    .admin-recorded-class-left {
+        align-items: flex-start;
+    }
+
+    .admin-recorded-class-thumbnail {
+        width: 75px;
+        height: 58px;
+    }
+
+    .admin-recorded-meta {
+        gap: 5px 9px;
+    }
+
+    .recording-modal-overlay {
+        padding: 12px;
+    }
+
+    .recording-modal {
+        border-radius: 13px;
+    }
+
+    .recording-modal-header {
+        padding: 17px 15px;
+    }
+
+    .recording-modal form {
+        padding: 17px 15px;
+    }
+
+    .recording-modal-actions {
+        flex-direction: column-reverse;
+
+        align-items: stretch;
+    }
+
+    .recording-cancel-btn,
+    .recording-save-btn {
+        width: 100%;
+    }
+
+}
+
+
+// =====================================================
+// VERY SMALL MOBILE
+// =====================================================
+
+@media (max-width: 360px) {
+
+    .admin-recorded-class-page {
+        padding: 14px 10px;
+    }
+
+    .admin-recorded-class-card {
+        padding: 12px;
+    }
+
+    .admin-recorded-class-thumbnail {
+        width: 65px;
+        height: 52px;
+    }
+
+    .admin-recorded-class-heading h2 {
+        font-size: 1rem;
+    }
+
+    .admin-recorded-class-heading p {
+        font-size: .58rem;
+    }
+
+}

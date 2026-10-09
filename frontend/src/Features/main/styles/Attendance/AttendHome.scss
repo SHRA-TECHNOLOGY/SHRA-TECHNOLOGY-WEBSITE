@@ -1,0 +1,13 @@
+.calender-overall{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    margin-top: 20px;
+}
+
+@media (max-width: 992px){
+    .calender-overall{
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+}

@@ -1,0 +1,814 @@
+// ==========================================
+// RECENT ACTIVITY / ACTIVITY SECTION
+// ==========================================
+
+.recent-dashboard,
+.activity-section {
+
+    width: 100%;
+    min-width: 0;
+
+    max-height: 500px;
+
+    margin-top: 20px;
+
+    padding: 20px;
+
+    background: #ffffff;
+
+    border: 1px solid #e8eaf0;
+
+    border-radius: 14px;
+
+    box-shadow: 0 8px 20px rgba(91, 76, 243, 0.25);
+
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    scrollbar-width: none;
+
+    box-sizing: border-box;
+
+    transition:
+        border-color .25s ease,
+        box-shadow .25s ease;
+}
+
+.recent-dashboard::-webkit-scrollbar,
+.activity-section::-webkit-scrollbar {
+
+    display: none;
+}
+
+.recent-dashboard:hover,
+.activity-section:hover {
+
+    border-color:
+        rgba(99, 102, 241, .20);
+
+    
+    box-shadow: 0 12px 30px rgba(91, 76, 243, 0.30);
+}
+
+
+// ==========================================
+// ACTIVITY HEADER
+// ==========================================
+
+.activity-header {
+
+    width: 100%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 12px;
+
+    margin-bottom: 5px;
+}
+
+.activity-header h2 {
+
+    margin: 0;
+
+    color: #20232b;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: clamp(
+        .95rem,
+        2vw,
+        1.2rem
+    );
+
+    font-weight: 650;
+
+    letter-spacing: -.2px;
+
+    line-height: 1.4;
+}
+
+.activity-header button {
+
+    flex-shrink: 0;
+
+    padding: 6px 10px;
+
+    border: none;
+
+    border-radius: 7px;
+
+    background:
+        rgba(99, 102, 241, .07);
+
+    color: #6366f1;
+
+    cursor: pointer;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: .61rem;
+
+    font-weight: 650;
+
+    transition:
+        background .2s ease,
+        transform .2s ease;
+}
+
+.activity-header button:hover {
+
+    background:
+        rgba(99, 102, 241, .12);
+
+    transform: translateY(-1px);
+}
+
+
+// ==========================================
+// ACTIVITY LIST
+// ==========================================
+
+.activity-list {
+
+    width: 100%;
+
+    display: flex;
+
+    flex-direction: column;
+}
+
+
+// ==========================================
+// ACTIVITY ITEM
+// ==========================================
+
+.activity-item {
+
+    width: 100%;
+    min-width: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 13px 0;
+
+    border-bottom: 1px solid #edf0f4;
+
+    box-sizing: border-box;
+
+    transition:
+        background .2s ease;
+}
+
+.activity-item:last-child {
+
+    border-bottom: none;
+}
+
+.activity-item:hover {
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(99, 102, 241, .025),
+            transparent
+        );
+}
+
+
+// ==========================================
+// ACTIVITY ICON
+// ==========================================
+
+.activity-icon {
+
+    width: 42px;
+    height: 42px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 11px;
+
+    color: #6366f1;
+
+    background:
+        rgba(99, 102, 241, .09);
+
+    border: 1px solid
+        rgba(99, 102, 241, .10);
+
+    font-size: 18px;
+
+    box-sizing: border-box;
+
+    transition:
+        transform .2s ease,
+        background .2s ease;
+}
+
+.activity-item:hover .activity-icon {
+
+    transform: scale(1.04);
+
+    background:
+        rgba(99, 102, 241, .13);
+}
+
+.activity-icon svg {
+
+    width: 19px;
+    height: 19px;
+
+    stroke-width: 1.9;
+}
+
+
+// ==========================================
+// ACTIVITY CONTENT
+// ==========================================
+
+.activity-content {
+
+    flex: 1;
+
+    min-width: 0;
+}
+
+.activity-content h4 {
+
+    margin: 0 0 3px;
+
+    color: #292c34;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: clamp(
+        .66rem,
+        1.5vw,
+        .78rem
+    );
+
+    font-weight: 650;
+
+    line-height: 1.4;
+
+    overflow-wrap: anywhere;
+}
+
+.activity-content p {
+
+    margin: 0;
+
+    color: #858a95;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: clamp(
+        .55rem,
+        1vw,
+        .63rem
+    );
+
+    font-weight: 450;
+
+    line-height: 1.5;
+
+    overflow-wrap: anywhere;
+}
+
+
+// ==========================================
+// ACTIVITY TIME
+// ==========================================
+
+.activity-time {
+
+    flex-shrink: 0;
+
+    color: #9aa0aa;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: .55rem;
+
+    font-weight: 550;
+
+    line-height: 1.4;
+
+    white-space: nowrap;
+}
+
+
+// ==========================================
+// ACTIVITY MODAL
+// ==========================================
+
+.activity-modal {
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 999;
+
+    display: flex;
+
+    align-items: flex-start;
+
+    justify-content: center;
+
+    padding: 35px 20px;
+
+    background:
+        rgba(15, 18, 25, .42);
+
+    backdrop-filter: blur(7px);
+
+    box-sizing: border-box;
+
+    overflow-y: auto;
+}
+
+
+// ==========================================
+// MODAL BOX
+// ==========================================
+
+.modal-box {
+
+    width: 100%;
+
+    max-width: 850px;
+
+    max-height: 85vh;
+
+    padding: 22px;
+
+    background: #ffffff;
+
+    border: 1px solid #e8eaf0;
+
+    border-radius: 14px;
+
+    box-shadow:
+        0 20px 60px rgba(0, 0, 0, .16);
+
+    overflow-y: auto;
+
+    scrollbar-width: none;
+
+    box-sizing: border-box;
+}
+
+.modal-box::-webkit-scrollbar {
+
+    display: none;
+}
+
+
+// ==========================================
+// MODAL HEADER
+// ==========================================
+
+.modal-header {
+
+    width: 100%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 12px;
+
+    margin-bottom: 15px;
+}
+
+.modal-header h2 {
+
+    margin: 0;
+
+    color: #20232b;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: clamp(
+        .9rem,
+        2vw,
+        1.15rem
+    );
+
+    font-weight: 650;
+}
+
+.modal-header button {
+
+    width: 34px;
+    height: 34px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 0;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 8px;
+
+    background: #f7f8fa;
+
+    color: #606570;
+
+    cursor: pointer;
+
+    font-size: .8rem;
+
+    transition:
+        color .2s ease,
+        background .2s ease,
+        border-color .2s ease;
+}
+
+.modal-header button:hover {
+
+    color: #ef4444;
+
+    background: #fff1f2;
+
+    border-color:
+        rgba(239, 68, 68, .20);
+}
+
+
+// ==========================================
+// EMPTY ACTIVITY
+// ==========================================
+
+.activity-section {
+
+    max-height: 300px;
+}
+
+
+// ==========================================
+// EMPTY CONTENT
+// ==========================================
+
+.activity-section .empty-content {
+
+    width: 100%;
+    min-height: 180px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 12px;
+
+    text-align: center;
+
+    box-sizing: border-box;
+}
+
+.activity-section .empty-content svg {
+
+    width: 42px;
+    height: 42px;
+
+    color: #6366f1;
+
+    padding: 10px;
+
+    border-radius: 12px;
+
+    background:
+        rgba(99, 102, 241, .08);
+
+    box-sizing: content-box;
+}
+
+.activity-section .empty-content p {
+
+    max-width: 450px;
+
+    margin: 0;
+
+    color: #777d89;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: clamp(
+        .62rem,
+        1vw,
+        .72rem
+    );
+
+    font-weight: 500;
+
+    letter-spacing: .1px;
+
+    line-height: 1.6;
+}
+
+.activity-section .empty-content button {
+
+    min-height: 38px;
+
+    padding: 7px 14px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    color: #ffffff;
+
+    background:
+        linear-gradient(
+            135deg,
+            #6366f1,
+            #7c3aed
+        );
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: .62rem;
+
+    font-weight: 650;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 6px 16px
+        rgba(99, 102, 241, .18);
+
+    transition:
+        transform .2s ease,
+        box-shadow .2s ease;
+}
+
+.activity-section .empty-content button:hover {
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 10px 22px
+        rgba(99, 102, 241, .25);
+}
+
+
+// ==========================================
+// TABLET
+// ==========================================
+
+@media (max-width: 768px) {
+
+    .recent-dashboard,
+    .activity-section {
+
+        padding: 16px;
+
+        margin-top: 15px;
+
+        border-radius: 12px;
+    }
+
+    .activity-item {
+
+        gap: 10px;
+
+        padding: 11px 0;
+    }
+
+    .activity-icon {
+
+        width: 38px;
+        height: 38px;
+
+        border-radius: 9px;
+
+        font-size: 16px;
+    }
+
+    .activity-icon svg {
+
+        width: 17px;
+        height: 17px;
+    }
+
+    .activity-time {
+
+        font-size: .52rem;
+    }
+}
+
+
+// ==========================================
+// MOBILE
+// ==========================================
+
+@media (max-width: 600px) {
+
+    .recent-dashboard,
+    .activity-section {
+
+        padding: 13px;
+
+        margin-top: 13px;
+
+        border-radius: 10px;
+    }
+
+    .activity-header h2 {
+
+        font-size: .82rem;
+    }
+
+    .activity-header button {
+
+        padding: 5px 8px;
+
+        font-size: .55rem;
+    }
+
+    .activity-item {
+
+        align-items: flex-start;
+
+        padding: 10px 0;
+    }
+
+    .activity-icon {
+
+        width: 34px;
+        height: 34px;
+
+        border-radius: 8px;
+    }
+
+    .activity-content h4 {
+
+        font-size: .62rem;
+    }
+
+    .activity-content p {
+
+        font-size: .53rem;
+
+        line-height: 1.5;
+    }
+
+    .activity-time {
+
+        font-size: .49rem;
+    }
+
+    // Modal
+
+    .activity-modal {
+
+        padding: 15px 10px;
+
+        align-items: center;
+    }
+
+    .modal-box {
+
+        max-height: 90vh;
+
+        padding: 14px;
+
+        border-radius: 11px;
+    }
+
+    .modal-header {
+
+        margin-bottom: 12px;
+    }
+
+    .modal-header button {
+
+        width: 30px;
+        height: 30px;
+    }
+
+    // Empty
+
+    .activity-section {
+
+        max-height: 260px;
+    }
+
+    .activity-section .empty-content {
+
+        min-height: 170px;
+
+        gap: 10px;
+    }
+
+    .activity-section .empty-content p {
+
+        font-size: .56rem;
+    }
+
+    .activity-section .empty-content button {
+
+        min-height: 36px;
+
+        font-size: .58rem;
+    }
+}
+
+
+// ==========================================
+// SMALL PHONE
+// ==========================================
+
+@media (max-width: 380px) {
+
+    .recent-dashboard,
+    .activity-section {
+
+        padding: 10px;
+
+        border-radius: 9px;
+    }
+
+    .activity-header h2 {
+
+        font-size: .74rem;
+    }
+
+    .activity-header button {
+
+        font-size: .51rem;
+    }
+
+    .activity-item {
+
+        gap: 8px;
+
+        padding: 8px 0;
+    }
+
+    .activity-icon {
+
+        width: 30px;
+        height: 30px;
+
+        border-radius: 7px;
+    }
+
+    .activity-icon svg {
+
+        width: 15px;
+        height: 15px;
+    }
+
+    .activity-content h4 {
+
+        font-size: .58rem;
+    }
+
+    .activity-content p {
+
+        font-size: .49rem;
+    }
+
+    .activity-time {
+
+        font-size: .46rem;
+    }
+
+    .activity-section .empty-content p {
+
+        font-size: .52rem;
+    }
+
+    .activity-section .empty-content button {
+
+        padding: 6px 11px;
+
+        font-size: .54rem;
+    }
+}

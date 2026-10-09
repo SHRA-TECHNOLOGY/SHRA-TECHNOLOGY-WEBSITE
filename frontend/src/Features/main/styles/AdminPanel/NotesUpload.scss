@@ -1,0 +1,328 @@
+/* =========================================
+   NOTES PDF UPLOAD
+========================================= */
+
+.upload-box {
+    width: 100%;
+    min-height: 210px;
+
+    border: 2px dashed var(--border);
+    border-radius: 18px;
+
+    padding: 28px 24px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: var(--card-bg);
+
+    margin-top: 15px;
+
+    box-sizing: border-box;
+
+    cursor: pointer;
+
+    transition:
+        border-color 0.25s ease,
+        background 0.25s ease,
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+
+    position: relative;
+    overflow: hidden;
+}
+
+
+/* =========================================
+   HOVER
+========================================= */
+
+.upload-box:hover {
+    border-color: #6366f1;
+    background: rgba(99, 102, 241, 0.05);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+}
+
+
+/* =========================================
+   ACTIVE / CLICK
+========================================= */
+
+.upload-box:active {
+    transform: scale(0.99);
+}
+
+
+/* =========================================
+   UPLOADED STATE
+========================================= */
+
+.upload-box.uploaded {
+    border-color: #22c55e;
+    background: rgba(34, 197, 94, 0.07);
+
+    box-shadow: 0 8px 25px rgba(34, 197, 94, 0.08);
+}
+
+
+/* =========================================
+   LABEL
+========================================= */
+
+.upload-box label {
+    width: 100%;
+    min-height: 150px;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: 10px;
+
+    text-align: center;
+
+    cursor: pointer;
+
+    user-select: none;
+}
+
+
+/* =========================================
+   UPLOAD ICON
+========================================= */
+
+.upload-box label svg {
+    width: 48px;
+    height: 48px;
+
+    margin-bottom: 4px;
+
+    transition:
+        transform 0.25s ease,
+        color 0.25s ease;
+}
+
+.upload-box:hover label svg {
+    transform: translateY(-4px);
+}
+
+.upload-box.uploaded label svg {
+    color: #22c55e !important;
+}
+
+
+/* =========================================
+   UPLOAD HINT
+========================================= */
+
+.upload-box label .upload-hint {
+    margin: 0;
+
+    max-width: 520px;
+
+    font-size: clamp(0.82rem, 1.5vw, 1rem);
+
+    line-height: 1.6;
+
+    font-family: "Poppins", sans-serif;
+
+    font-weight: 500;
+
+    color: var(--text-secondary);
+
+    word-break: break-word;
+}
+
+
+/* =========================================
+   FILE NAME
+========================================= */
+
+.upload-box.uploaded .upload-hint {
+    color: #16a34a;
+
+    font-weight: 600;
+
+    max-width: 90%;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================
+   FILE SIZE / FORMAT
+========================================= */
+
+.upload-size {
+    margin: 0;
+
+    color: var(--muted-text);
+
+    font-size: clamp(0.75rem, 1.2vw, 0.9rem);
+
+    line-height: 1.5;
+
+    font-family: "Poppins", sans-serif;
+
+    font-weight: 500;
+}
+
+
+/* =========================================
+   UPLOADED FILE SIZE
+========================================= */
+
+.upload-box.uploaded .upload-size {
+    color: var(--muted-text);
+}
+
+
+/* =========================================
+   FOCUS ACCESSIBILITY
+========================================= */
+
+.upload-box:focus-within {
+    border-color: #6366f1;
+
+    box-shadow:
+        0 0 0 3px rgba(99, 102, 241, 0.12);
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 768px) {
+
+    .upload-box {
+        min-height: 190px;
+
+        padding: 24px 18px;
+
+        border-radius: 16px;
+    }
+
+    .upload-box label {
+        min-height: 135px;
+
+        gap: 8px;
+    }
+
+    .upload-box label svg {
+        width: 44px;
+        height: 44px;
+    }
+
+    .upload-box label .upload-hint {
+        max-width: 90%;
+    }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+    .upload-box {
+        min-height: 170px;
+
+        padding: 20px 14px;
+
+        margin-top: 12px;
+
+        border-radius: 14px;
+    }
+
+    .upload-box label {
+        min-height: 125px;
+
+        gap: 7px;
+    }
+
+    .upload-box label svg {
+        width: 40px;
+        height: 40px;
+    }
+
+    .upload-box label .upload-hint {
+        max-width: 95%;
+
+        font-size: 0.82rem;
+
+        line-height: 1.5;
+    }
+
+    .upload-size {
+        font-size: 0.75rem;
+    }
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 400px) {
+
+    .upload-box {
+        min-height: 155px;
+
+        padding: 16px 10px;
+
+        border-radius: 12px;
+    }
+
+    .upload-box label {
+        min-height: 115px;
+    }
+
+    .upload-box label svg {
+        width: 36px;
+        height: 36px;
+    }
+
+    .upload-box label .upload-hint {
+        font-size: 0.76rem;
+    }
+
+    .upload-size {
+        font-size: 0.7rem;
+    }
+}
+
+
+/* =========================================
+   VERY SMALL DEVICES
+========================================= */
+
+@media (max-width: 340px) {
+
+    .upload-box {
+        min-height: 145px;
+
+        padding: 14px 8px;
+    }
+
+    .upload-box label {
+        min-height: 105px;
+    }
+
+    .upload-box label svg {
+        width: 32px;
+        height: 32px;
+    }
+
+    .upload-box label .upload-hint {
+        font-size: 0.72rem;
+    }
+}   

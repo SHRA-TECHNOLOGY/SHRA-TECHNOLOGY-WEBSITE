@@ -1,0 +1,172 @@
+/* ==========================================
+   Recent Activity - Empty State
+========================================== */
+
+.activity-section {
+  
+  width:100%;
+  min-height: 500px;
+  overflow: auto;
+  scrollbar-width: none;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  padding: 2.5rem 2rem;
+
+  background: #ffffff;
+  border-radius: 20px;
+
+  text-align: center;
+
+  box-shadow: 0 8px 20px rgba(91, 76, 243, 0.25);
+}
+
+
+/* ==========================================
+   Empty Icon
+========================================== */
+
+.activity-empty-icon {
+  width: 72px;
+  height: 72px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 1rem;
+
+  border-radius: 50%;
+
+  background: #f0edff;
+
+  font-size: 2rem;
+}
+
+
+/* ==========================================
+   Content
+========================================== */
+
+.empty-content {
+  max-width: 520px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.empty-content h2 {
+  margin: 0 0 5px;
+
+  color: #202020;
+
+  font-size: clamp(1.2rem,2vw,1.7rem);
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+}
+
+.empty-content p {
+  margin: 0 0 5px;
+
+  font-size: clamp(.6rem,1vw,1.7rem);
+  font-family: "Poppins", sans-serif;
+  letter-spacing: .3px;
+  font-weight: 500;
+  color: #595a5c;
+  line-height:1.4;
+}
+
+.empty-content span {
+  margin-bottom: 5px;
+
+  color: #888;
+
+  font-size: clamp(.6rem,1vw,1.7rem);
+  font-family: "Poppins", sans-serif;
+}
+
+
+/* ==========================================
+   Explore Button
+========================================== */
+
+.empty-content button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 11px 20px;
+
+  border: none;
+  border-radius: 10px;
+
+  background: #6c4dff;
+  color: #ffffff;
+
+  font-size: 0.95rem;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.empty-content button:hover {
+  background: #5b3bea;
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 8px 18px rgba(108, 77, 255, 0.25);
+}
+
+.empty-content button:active {
+  transform: translateY(0);
+}
+
+
+/* ==========================================
+   Mobile
+========================================== */
+
+@media (max-width: 576px) {
+
+  .activity-section {
+    min-height: 300px;
+
+    padding: 2rem 1.25rem;
+
+    border-radius: 16px;
+  }
+
+  .activity-empty-icon {
+    width: 62px;
+    height: 62px;
+
+    font-size: 1.7rem;
+  }
+
+  .empty-content h2 {
+    font-size: 1.3rem;
+  }
+
+  .empty-content p {
+    font-size: 0.9rem;
+  }
+
+  .empty-content span {
+    font-size: 0.82rem;
+  }
+
+  .empty-content button {
+    width: 100%;
+    max-width: 220px;
+  }
+}

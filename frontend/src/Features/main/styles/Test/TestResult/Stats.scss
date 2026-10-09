@@ -1,0 +1,411 @@
+// ==========================================
+// RESULT STATS
+// ==========================================
+
+.result-stats {
+
+    width: 100%;
+    min-width: 0;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(5, minmax(0, 1fr));
+
+    gap: 10px;
+
+    margin-top: 18px;
+
+    box-sizing: border-box;
+}
+
+
+// ==========================================
+// STAT CARD
+// ==========================================
+
+.stat-card {
+
+    width: 100%;
+    min-width: 0;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 15px 10px;
+
+    border: 1px solid #292c34;
+
+    border-radius: 11px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #181a20,
+            #111318
+        );
+
+    box-shadow:
+        0 8px 22px rgba(0, 0, 0, .22),
+        inset 0 1px 0
+        rgba(255, 255, 255, .02);
+
+    box-sizing: border-box;
+
+    cursor: pointer;
+
+    transition:
+        transform .25s ease,
+        border-color .25s ease,
+        background .25s ease,
+        box-shadow .25s ease;
+}
+
+.stat-card:hover {
+
+    transform: translateY(-3px);
+
+    border-color:
+        rgba(124, 92, 255, .40);
+
+    background:
+        linear-gradient(
+            145deg,
+            #1b1d24,
+            #13151a
+        );
+
+    box-shadow:
+        0 14px 28px rgba(0, 0, 0, .30),
+        0 0 18px
+        rgba(124, 92, 255, .04);
+}
+
+
+// ==========================================
+// CARD HEADER
+// ==========================================
+
+.stat-card .card-header {
+
+    width: 100%;
+    min-width: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 6px;
+
+    margin-bottom: 8px;
+}
+
+.stat-card .card-header svg {
+
+    width: 17px;
+    height: 17px;
+
+    flex-shrink: 0;
+
+    color: #8068ff;
+
+    stroke-width: 1.8;
+}
+
+.stat-card .card-header h4 {
+
+    min-width: 0;
+
+    margin: 0;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+
+    white-space: nowrap;
+
+    color: #9da1ab;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: .63rem;
+
+    font-weight: 550;
+
+    line-height: 1.4;
+}
+
+
+// ==========================================
+// MAIN VALUE
+// ==========================================
+
+.stat-card h2 {
+
+    margin: 0 0 3px;
+
+    color: #f3f4f6;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: clamp(
+        1.2rem,
+        2.5vw,
+        1.65rem
+    );
+
+    font-weight: 700;
+
+    letter-spacing: -.5px;
+
+    line-height: 1.2;
+}
+
+
+// ==========================================
+// DESCRIPTION
+// ==========================================
+
+.stat-card p {
+
+    margin: 0;
+
+    color: #777c87;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: .58rem;
+
+    font-weight: 450;
+
+    line-height: 1.45;
+}
+
+
+// ==========================================
+// OPTIONAL COLOR VARIANTS
+// ==========================================
+
+.stat-card.success {
+
+    border-color:
+        rgba(34, 197, 94, .22);
+}
+
+.stat-card.success .card-header svg {
+
+    color: #22c55e;
+}
+
+.stat-card.danger {
+
+    border-color:
+        rgba(239, 68, 68, .22);
+}
+
+.stat-card.danger .card-header svg {
+
+    color: #f87171;
+}
+
+.stat-card.warning {
+
+    border-color:
+        rgba(251, 191, 36, .22);
+}
+
+.stat-card.warning .card-header svg {
+
+    color: #fbbf24;
+}
+
+
+// ==========================================
+// LARGE TABLET
+// ==========================================
+
+@media (max-width: 1200px) {
+
+    .result-stats {
+
+        grid-template-columns:
+            repeat(3, minmax(0, 1fr));
+
+        gap: 10px;
+    }
+
+    .stat-card {
+
+        padding: 14px 10px;
+    }
+}
+
+
+// ==========================================
+// TABLET
+// ==========================================
+
+@media (max-width: 768px) {
+
+    .result-stats {
+
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        gap: 9px;
+
+        margin-top: 15px;
+    }
+
+    .stat-card {
+
+        padding: 13px 9px;
+
+        border-radius: 9px;
+    }
+
+    .stat-card .card-header {
+
+        margin-bottom: 6px;
+    }
+
+    .stat-card .card-header svg {
+
+        width: 16px;
+        height: 16px;
+    }
+
+    .stat-card .card-header h4 {
+
+        font-size: .6rem;
+    }
+
+    .stat-card h2 {
+
+        font-size: 1.3rem;
+    }
+
+    .stat-card p {
+
+        font-size: .56rem;
+    }
+}
+
+
+// ==========================================
+// MOBILE
+// ==========================================
+
+@media (max-width: 500px) {
+
+    .result-stats {
+
+        grid-template-columns: 1fr;
+
+        gap: 7px;
+
+        margin-top: 13px;
+    }
+
+    .stat-card {
+
+        min-height: 64px;
+
+        display: grid;
+
+        grid-template-columns:
+            1fr auto 1fr;
+
+        align-items: center;
+
+        text-align: left;
+
+        padding: 10px 12px;
+
+        border-radius: 8px;
+    }
+
+    .stat-card .card-header {
+
+        justify-content: flex-start;
+
+        margin: 0;
+
+    }
+
+    .stat-card .card-header h4 {
+
+        font-size: .62rem;
+    }
+
+    .stat-card h2 {
+
+        margin: 0;
+
+        text-align: center;
+
+        font-size: 1.15rem;
+    }
+
+    .stat-card p {
+
+        text-align: right;
+
+        font-size: .55rem;
+    }
+}
+
+
+// ==========================================
+// SMALL PHONE
+// ==========================================
+
+@media (max-width: 380px) {
+
+    .result-stats {
+
+        gap: 6px;
+    }
+
+    .stat-card {
+
+        min-height: 58px;
+
+        padding: 8px 9px;
+    }
+
+    .stat-card .card-header {
+
+        gap: 5px;
+    }
+
+    .stat-card .card-header svg {
+
+        width: 14px;
+        height: 14px;
+    }
+
+    .stat-card .card-header h4 {
+
+        font-size: .55rem;
+    }
+
+    .stat-card h2 {
+
+        font-size: 1rem;
+    }
+
+    .stat-card p {
+
+        font-size: .5rem;
+    }
+}

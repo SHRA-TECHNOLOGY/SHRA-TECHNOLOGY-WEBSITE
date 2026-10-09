@@ -1,0 +1,261 @@
+/* =========================================================
+   ADMIN ROUTE AUTHORIZATION STATE
+========================================================= */
+
+.admin-route-state {
+    width: 100%;
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 24px;
+
+    background: #f8f9fc;
+
+    font-family: "Poppins", sans-serif;
+}
+
+
+/* =========================================================
+   CARD
+========================================================= */
+
+.admin-route-card {
+    width: min(430px, 100%);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 42px 30px;
+
+    text-align: center;
+
+    background: #ffffff;
+
+    border: 1px solid #e8eaf0;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 20px 55px rgba(15, 23, 42, 0.08);
+
+    animation: adminRouteAppear 0.35s ease;
+}
+
+
+/* =========================================================
+   SPINNER
+========================================================= */
+
+.admin-route-spinner {
+    width: 48px;
+    height: 48px;
+
+    margin-bottom: 20px;
+
+    border: 4px solid #eeeef5;
+
+    border-top-color: var(--primary);
+
+    border-radius: 50%;
+
+    animation: adminRouteSpin 0.8s linear infinite;
+}
+
+
+/* =========================================================
+   TITLE
+========================================================= */
+
+.admin-route-card h3 {
+    margin: 0;
+
+    color: #202124;
+
+    font-size: 20px;
+
+    font-weight: 700;
+
+    letter-spacing: -0.3px;
+}
+
+
+/* =========================================================
+   DESCRIPTION
+========================================================= */
+
+.admin-route-card p {
+    max-width: 340px;
+
+    margin: 8px 0 0;
+
+    color: #777b87;
+
+    font-size: 13px;
+
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   LOADING LINE
+========================================================= */
+
+.admin-route-loading-line {
+    width: 100%;
+    max-width: 280px;
+
+    height: 5px;
+
+    margin-top: 25px;
+
+    overflow: hidden;
+
+    border-radius: 20px;
+
+    background: #eeeef4;
+}
+
+
+.admin-route-loading-line span {
+    display: block;
+
+    width: 40%;
+    height: 100%;
+
+    border-radius: inherit;
+
+    background: var(--gradient-primary);
+
+    animation: adminRouteProgress 1.4s ease-in-out infinite;
+}
+
+
+/* =========================================================
+   ANIMATIONS
+========================================================= */
+
+@keyframes adminRouteSpin {
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+@keyframes adminRouteProgress {
+
+    0% {
+        transform: translateX(-120%);
+    }
+
+    50% {
+        transform: translateX(150%);
+    }
+
+    100% {
+        transform: translateX(300%);
+    }
+}
+
+
+@keyframes adminRouteAppear {
+
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .admin-route-state {
+        padding: 20px;
+    }
+
+
+    .admin-route-card {
+        padding: 36px 25px;
+
+        border-radius: 16px;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .admin-route-state {
+        padding: 15px;
+    }
+
+
+    .admin-route-card {
+        width: 100%;
+
+        padding: 32px 20px;
+
+        border-radius: 14px;
+    }
+
+
+    .admin-route-spinner {
+        width: 42px;
+        height: 42px;
+
+        border-width: 3px;
+    }
+
+
+    .admin-route-card h3 {
+        font-size: 18px;
+    }
+
+
+    .admin-route-card p {
+        font-size: 12px;
+    }
+
+
+    .admin-route-loading-line {
+        max-width: 240px;
+    }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 400px) {
+
+    .admin-route-card {
+        padding: 28px 16px;
+    }
+
+
+    .admin-route-card h3 {
+        font-size: 17px;
+    }
+
+
+    .admin-route-card p {
+        font-size: 11px;
+    }
+}

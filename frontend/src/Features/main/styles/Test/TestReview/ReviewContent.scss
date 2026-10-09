@@ -1,0 +1,202 @@
+// ==========================================
+// REVIEW HEADER
+// ==========================================
+
+.review-header {
+
+    width: 100%;
+    min-width: 0;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    justify-content: center;
+
+    gap: 4px;
+
+    padding: 17px 18px;
+
+    background:
+        radial-gradient(
+            circle at top right,
+            rgba(124, 92, 255, .07),
+            transparent 35%
+        ),
+        linear-gradient(
+            145deg,
+            #181a20,
+            #111318
+        );
+
+    border: 1px solid #292c34;
+
+    border-radius: 1rem;
+
+    box-shadow:
+        0 10px 28px rgba(0, 0, 0, .25),
+        inset 0 1px 0
+        rgba(255, 255, 255, .025);
+
+    box-sizing: border-box;
+
+    overflow: hidden;
+
+    transition:
+        border-color .25s ease,
+        box-shadow .25s ease;
+}
+
+.review-header:hover {
+
+    border-color:
+        rgba(124, 92, 255, .30);
+
+    box-shadow:
+        0 14px 32px rgba(0, 0, 0, .30);
+}
+
+
+// ==========================================
+// TITLE
+// ==========================================
+
+.review-header h2 {
+
+    width: 100%;
+    min-width: 0;
+
+    margin: 0;
+
+    color: #f1f3f5;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: clamp(
+        1rem,
+        2.5vw,
+        1.35rem
+    );
+
+    font-weight: 650;
+
+    letter-spacing: -.3px;
+
+    line-height: 1.35;
+
+    overflow-wrap: anywhere;
+}
+
+
+// ==========================================
+// DESCRIPTION
+// ==========================================
+
+.review-header p {
+
+    width: 100%;
+    max-width: 750px;
+
+    margin: 0;
+
+    color: #858994;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: clamp(
+        .63rem,
+        1vw,
+        .74rem
+    );
+
+    font-weight: 450;
+
+    line-height: 1.65;
+
+    overflow-wrap: anywhere;
+}
+
+
+// ==========================================
+// TABLET
+// ==========================================
+
+@media (max-width: 768px) {
+
+    .review-header {
+
+        padding: 14px 15px;
+
+        border-radius: .9rem;
+
+        gap: 3px;
+    }
+
+    .review-header h2 {
+
+        font-size: 1rem;
+    }
+
+    .review-header p {
+
+        font-size: .62rem;
+
+        line-height: 1.6;
+    }
+}
+
+
+// ==========================================
+// MOBILE
+// ==========================================
+
+@media (max-width: 520px) {
+
+    .review-header {
+
+        padding: 12px;
+
+        border-radius: .85rem;
+    }
+
+    .review-header h2 {
+
+        font-size: .86rem;
+
+        letter-spacing: -.15px;
+    }
+
+    .review-header p {
+
+        font-size: .58rem;
+
+        line-height: 1.55;
+    }
+}
+
+
+// ==========================================
+// SMALL PHONE
+// ==========================================
+
+@media (max-width: 380px) {
+
+    .review-header {
+
+        padding: 10px;
+
+        border-radius: 8px;
+    }
+
+    .review-header h2 {
+
+        font-size: .78rem;
+    }
+
+    .review-header p {
+
+        font-size: .54rem;
+    }
+}

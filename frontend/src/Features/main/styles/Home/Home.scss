@@ -1,0 +1,30 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+.home-upper-section{
+
+    background:
+    radial-gradient(circle at 80% 20%,
+        rgba(109,74,255,.25),
+        transparent 25%),
+    linear-gradient(
+        135deg,
+        #03154F,
+        #081D73,
+        #1C2FD8
+    );
+
+    
+}
+
+.content-section{
+    width: 100%;
+    background: var(--bg-light);
+    
+    padding: 30px 30px 0px 30px;
+}

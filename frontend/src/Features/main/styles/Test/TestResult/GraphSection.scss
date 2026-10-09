@@ -1,0 +1,556 @@
+// ==========================================
+// GRAPH SECTION
+// ==========================================
+
+.graph-section {
+
+    width: 100%;
+    min-width: 0;
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1fr)
+        minmax(0, 1fr);
+
+    gap: 16px;
+
+    margin-top: 18px;
+
+    position: relative;
+
+    box-sizing: border-box;
+}
+
+
+// ==========================================
+// RIGHT / GRAPH CARD
+// ==========================================
+
+.graph-section .right {
+
+    width: 100%;
+    min-width: 0;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 14px;
+
+    height: fit-content;
+
+    padding: 18px;
+
+    background:
+        radial-gradient(
+            circle at top right,
+            rgba(124, 92, 255, .07),
+            transparent 35%
+        ),
+        linear-gradient(
+            145deg,
+            #181a20,
+            #111318
+        );
+
+    border: 1px solid #292c34;
+
+    border-radius: 1rem;
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, .26),
+        inset 0 1px 0 rgba(255, 255, 255, .025);
+
+    box-sizing: border-box;
+
+    transition:
+        border-color .25s ease,
+        transform .25s ease,
+        box-shadow .25s ease;
+}
+
+.graph-section .right:hover {
+
+    border-color:
+        rgba(124, 92, 255, .45);
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 16px 35px rgba(0, 0, 0, .34),
+        0 0 20px rgba(124, 92, 255, .05);
+}
+
+.graph-section .right h2 {
+
+    margin: 0;
+
+    font-size: clamp(.95rem, 1.5vw, 1.2rem);
+
+    font-family: "Poppins", sans-serif;
+
+    font-weight: 650;
+
+    letter-spacing: -.2px;
+
+    color: #f1f3f5;
+
+    line-height: 1.4;
+}
+
+
+// ==========================================
+// SECTIONAL CONTAINER
+// ==========================================
+
+.sectional-container {
+
+    width: 100%;
+    min-width: 0;
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(180px, 1fr)
+        minmax(0, 3fr);
+
+    align-items: center;
+
+    gap: 16px;
+
+    box-sizing: border-box;
+}
+
+
+// ==========================================
+// CHART WRAPPER
+// ==========================================
+
+.sectional-container .chart-wrapper {
+
+    width: min(100%, 220px);
+
+    aspect-ratio: 1 / 1;
+
+    height: auto;
+
+    position: relative;
+
+    justify-self: center;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+
+// ==========================================
+// CHART CENTER
+// ==========================================
+
+.sectional-container .chart-center {
+
+    position: absolute;
+
+    inset: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    flex-direction: column;
+
+    pointer-events: none;
+}
+
+.sectional-container .chart-center p {
+
+    margin: 0;
+
+    font-size: clamp(.7rem, 1vw, .82rem);
+
+    font-family: "Poppins", sans-serif;
+
+    font-weight: 600;
+
+    color: #d8dae0;
+
+    text-align: center;
+
+    line-height: 1.5;
+}
+
+
+// ==========================================
+// RIGHT SECTIONAL
+// ==========================================
+
+.right-sectional {
+
+    width: 100%;
+    min-width: 0;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 12px;
+}
+
+
+// ==========================================
+// INFO SECTION
+// ==========================================
+
+.right-sectional .info-section {
+
+    width: 100%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 7px;
+}
+
+
+// ==========================================
+// SINGLE LIST
+// ==========================================
+
+.right-sectional .info-section .single-list {
+
+    width: 100%;
+    min-width: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 12px;
+
+    padding: 9px 10px;
+
+    background: #15171d;
+
+    border: 1px solid #292c34;
+
+    border-radius: 8px;
+
+    box-sizing: border-box;
+
+    transition:
+        background .2s ease,
+        border-color .2s ease;
+}
+
+.right-sectional .info-section .single-list:hover {
+
+    background: #1a1c22;
+
+    border-color: #353945;
+}
+
+
+// ==========================================
+// LIST LEFT
+// ==========================================
+
+.right-sectional .info-section .single-list .left {
+
+    min-width: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+}
+
+.right-sectional .info-section .single-list .left h3 {
+
+    min-width: 0;
+
+    margin: 0;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+
+    white-space: nowrap;
+
+    font-size: clamp(.68rem, 1vw, .76rem);
+
+    font-family: "Poppins", sans-serif;
+
+    font-weight: 500;
+
+    color: #b8bcc6;
+
+    line-height: 1.4;
+}
+
+
+// ==========================================
+// LIST VALUE
+// ==========================================
+
+.right-sectional .info-section .single-list p {
+
+    flex-shrink: 0;
+
+    margin: 0;
+
+    font-size: clamp(.68rem, 1vw, .78rem);
+
+    font-family: "Poppins", sans-serif;
+
+    font-weight: 650;
+
+    color: #f1f3f5;
+
+    line-height: 1.4;
+}
+
+
+// ==========================================
+// TIP CARD
+// ==========================================
+
+.right-sectional .tip-card {
+
+    width: 100%;
+    min-width: 0;
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 9px;
+
+    margin-top: 2px;
+
+    padding: 11px;
+
+    background:
+        rgba(124, 92, 255, .08);
+
+    border: 1px solid
+        rgba(124, 92, 255, .20);
+
+    border-radius: 9px;
+
+    box-sizing: border-box;
+}
+
+.right-sectional .tip-card svg {
+
+    width: 17px;
+
+    height: 17px;
+
+    flex-shrink: 0;
+
+    margin-top: 2px;
+
+    color: #a996ff;
+}
+
+.right-sectional .tip-card span {
+
+    min-width: 0;
+
+    font-size: clamp(.63rem, 1vw, .72rem);
+
+    font-family: "Poppins", sans-serif;
+
+    font-weight: 450;
+
+    color: #bfc2ca;
+
+    line-height: 1.6;
+}
+
+
+// ==========================================
+// TABLET
+// ==========================================
+
+@media (max-width: 1024px) {
+
+    .graph-section {
+
+        grid-template-columns: 1fr;
+
+        gap: 14px;
+    }
+
+    .sectional-container {
+
+        grid-template-columns:
+            minmax(180px, 1fr)
+            minmax(0, 2fr);
+    }
+}
+
+
+// ==========================================
+// SMALL TABLET
+// ==========================================
+
+@media (max-width: 768px) {
+
+    .graph-section {
+
+        margin-top: 15px;
+
+        gap: 12px;
+    }
+
+    .graph-section .right {
+
+        padding: 15px;
+
+        border-radius: .9rem;
+    }
+
+    .sectional-container {
+
+        grid-template-columns: 1fr;
+
+        gap: 14px;
+    }
+
+    .sectional-container .chart-wrapper {
+
+        width: min(100%, 200px);
+    }
+
+    .right-sectional {
+
+        gap: 10px;
+    }
+}
+
+
+// ==========================================
+// MOBILE
+// ==========================================
+
+@media (max-width: 520px) {
+
+    .graph-section {
+
+        gap: 10px;
+    }
+
+    .graph-section .right {
+
+        padding: 12px;
+
+        gap: 11px;
+
+        border-radius: .85rem;
+    }
+
+    .graph-section .right h2 {
+
+        font-size: .85rem;
+    }
+
+    .sectional-container {
+
+        gap: 11px;
+    }
+
+    .sectional-container .chart-wrapper {
+
+        width: min(100%, 170px);
+    }
+
+    .sectional-container .chart-center p {
+
+        font-size: .63rem;
+    }
+
+    .right-sectional .info-section {
+
+        gap: 6px;
+    }
+
+    .right-sectional .info-section .single-list {
+
+        padding: 8px;
+
+        gap: 8px;
+
+        border-radius: 7px;
+    }
+
+    .right-sectional .info-section .single-list .left h3 {
+
+        font-size: .62rem;
+    }
+
+    .right-sectional .info-section .single-list p {
+
+        font-size: .62rem;
+    }
+
+    .right-sectional .tip-card {
+
+        padding: 9px;
+
+        gap: 7px;
+    }
+
+    .right-sectional .tip-card span {
+
+        font-size: .59rem;
+
+        line-height: 1.55;
+    }
+}
+
+
+// ==========================================
+// SMALL PHONE
+// ==========================================
+
+@media (max-width: 380px) {
+
+    .graph-section .right {
+
+        padding: 10px;
+    }
+
+    .sectional-container .chart-wrapper {
+
+        width: min(100%, 145px);
+    }
+
+    .right-sectional .info-section .single-list {
+
+        padding: 7px;
+    }
+
+    .right-sectional .info-section .single-list .left h3,
+    .right-sectional .info-section .single-list p {
+
+        font-size: .57rem;
+    }
+
+    .right-sectional .tip-card span {
+
+        font-size: .55rem;
+    }
+}

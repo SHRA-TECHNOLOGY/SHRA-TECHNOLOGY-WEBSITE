@@ -1,0 +1,528 @@
+/* ==========================================================
+   FORGOT LEFT
+========================================================== */
+
+.forgot-left {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 50px 42px;
+
+    background: #ffffff;
+
+    opacity: 0;
+    animation: leftSide 0.7s ease forwards;
+    animation-delay: 0.2s;
+}
+
+
+/* ==========================================================
+   INNER CONTAINER
+========================================================== */
+
+.forgot-left-container {
+    width: 100%;
+    max-width: 440px;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 0;
+}
+
+
+/* ==========================================================
+   IMAGE
+========================================================== */
+
+.left-image {
+    width: 100%;
+    height: 190px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 28px;
+}
+
+.left-image img {
+    width: min(100%, 500px);
+    height: 100%;
+
+    object-fit: contain;
+
+    filter: drop-shadow(
+        0 12px 20px rgba(15, 23, 42, 0.08)
+    );
+
+    animation: imageFloat 4s ease-in-out infinite;
+}
+
+@keyframes imageFloat {
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-7px);
+    }
+}
+
+
+/* ==========================================================
+   TITLE
+========================================================== */
+
+.forgot-title-section {
+    display: flex;
+    flex-direction: column;
+
+    gap: 12px;
+
+    margin-bottom: 25px;
+}
+
+.forgot-title-section .welTitle {
+    margin: 0;
+
+    font-size: clamp(2.25rem, 4vw, 3.5rem);
+
+    font-family:
+        Inter,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+
+    font-weight: 750;
+
+    line-height: 1.05;
+
+    letter-spacing: -1.8px;
+
+    color: #111827;
+}
+
+.forgot-title-section .welTitle .backTitle {
+    font-size: inherit;
+
+    font-family: inherit;
+
+    font-weight: inherit;
+
+    background: linear-gradient(
+        90deg,
+        #ec4899 0%,
+        #f43f5e 100%
+    );
+
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+
+    color: transparent;
+}
+
+
+/* ==========================================================
+   DESCRIPTION
+========================================================== */
+
+.forgot-title-section .forgot-description {
+    max-width: 410px;
+
+    margin: 0;
+
+    color: #6b7280;
+
+    font-size: 15px;
+
+    font-family:
+        Inter,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+
+    font-weight: 400;
+
+    letter-spacing: 0;
+
+    line-height: 1.7;
+}
+
+
+/* ==========================================================
+   PROPERTIES
+========================================================== */
+
+.forgot-properties {
+    display: flex;
+    flex-direction: column;
+
+    gap: 10px;
+
+    margin-top: 4px;
+}
+
+.forgot-properties .property {
+    min-height: 54px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 14px;
+
+    padding: 10px 13px;
+
+    border: 1px solid #f1f5f9;
+
+    border-radius: 12px;
+
+    background: #fafafa;
+
+    transition:
+        transform 0.25s ease,
+        border-color 0.25s ease,
+        background 0.25s ease,
+        box-shadow 0.25s ease;
+
+    opacity: 0;
+    animation: fadeUp 0.5s ease forwards;
+}
+
+.forgot-properties .property:hover {
+    transform: translateX(4px);
+
+    background: #ffffff;
+
+    border-color: #fce7f3;
+
+    box-shadow:
+        0 6px 18px rgba(15, 23, 42, 0.06);
+}
+
+
+/* ==========================================================
+   PROPERTY ICON
+========================================================== */
+
+.property .p-icon {
+    width: 34px;
+    height: 34px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 9px;
+
+    color: #ec4899;
+
+    background: #fdf2f8;
+
+    border: 1px solid #fce7f3;
+}
+
+.property .p-icon svg {
+    width: 17px;
+    height: 17px;
+
+    stroke-width: 2;
+}
+
+
+/* ==========================================================
+   PROPERTY TITLE
+========================================================== */
+
+.property .p-title {
+    margin: 0;
+
+    color: #374151;
+
+    font-size: 14px;
+
+    font-family:
+        Inter,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+
+    font-weight: 500;
+
+    line-height: 1.4;
+}
+
+
+/* ==========================================================
+   STAGGER ANIMATION
+========================================================== */
+
+.property:nth-child(1) {
+    animation-delay: 0.65s;
+}
+
+.property:nth-child(2) {
+    animation-delay: 0.8s;
+}
+
+.property:nth-child(3) {
+    animation-delay: 0.95s;
+}
+
+
+/* ==========================================================
+   BACK BUTTON
+========================================================== */
+
+.back-btn {
+    width: fit-content;
+
+    display: flex;
+    align-items: center;
+
+    gap: 6px;
+
+    margin-top: 25px;
+
+    color: #6b7280;
+
+    font-size: 14px;
+
+    font-family:
+        Inter,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+
+    font-weight: 500;
+
+    line-height: 1;
+
+    transition:
+        color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.back-btn svg {
+    width: 17px;
+    height: 17px;
+
+    stroke-width: 2;
+}
+
+.back-btn:hover {
+    color: #111827;
+
+    transform: translateX(-3px);
+}
+
+.back-btn a {
+    color: #ec4899;
+
+    font-weight: 600;
+
+    text-decoration: none;
+
+    transition: color 0.2s ease;
+}
+
+.back-btn a:hover {
+    color: #db2777;
+}
+
+
+/* ==========================================================
+   ANIMATIONS
+========================================================== */
+
+@keyframes leftSide {
+    from {
+        opacity: 0;
+        transform: translateX(-25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(14px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* ==========================================================
+   TABLET
+========================================================== */
+
+@media (max-width: 900px) {
+
+    .forgot-left {
+        padding: 42px 35px;
+    }
+
+    .forgot-left-container {
+        max-width: 560px;
+    }
+
+    .left-image {
+        height: 170px;
+
+        margin-bottom: 22px;
+    }
+
+    .left-image img {
+        width: 190px;
+    }
+
+    .forgot-title-section {
+        align-items: center;
+
+        text-align: center;
+    }
+
+    .forgot-title-section .forgot-description {
+        max-width: 520px;
+    }
+
+    .forgot-properties {
+        width: 100%;
+        max-width: 520px;
+
+        margin: 8px auto 0;
+    }
+
+    .back-btn {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+
+/* ==========================================================
+   MOBILE
+========================================================== */
+
+@media (max-width: 600px) {
+
+    .forgot-left {
+        padding: 32px 22px;
+    }
+
+    .forgot-left-container {
+        max-width: 100%;
+    }
+
+    .left-image {
+        height: 145px;
+
+        margin-bottom: 20px;
+    }
+
+    .left-image img {
+        width: 165px;
+    }
+
+    .forgot-title-section {
+        gap: 10px;
+
+        margin-bottom: 20px;
+    }
+
+    .forgot-title-section .welTitle {
+        font-size: 2.25rem;
+
+        letter-spacing: -1px;
+    }
+
+    .forgot-title-section .forgot-description {
+        font-size: 14px;
+
+        line-height: 1.6;
+    }
+
+    .forgot-properties {
+        gap: 8px;
+    }
+
+    .forgot-properties .property {
+        min-height: 52px;
+
+        padding: 9px 11px;
+
+        border-radius: 11px;
+    }
+
+    .property .p-icon {
+        width: 32px;
+        height: 32px;
+    }
+
+    .property .p-title {
+        font-size: 13px;
+    }
+
+    .back-btn {
+        margin-top: 21px;
+
+        font-size: 13px;
+    }
+}
+
+
+/* ==========================================================
+   SMALL MOBILE
+========================================================== */
+
+@media (max-width: 380px) {
+
+    .forgot-left {
+        padding: 28px 16px;
+    }
+
+    .left-image {
+        height: 125px;
+    }
+
+    .left-image img {
+        width: 145px;
+    }
+
+    .forgot-title-section .welTitle {
+        font-size: 2rem;
+    }
+
+    .forgot-title-section .forgot-description {
+        font-size: 13px;
+    }
+
+    .forgot-properties .property {
+        gap: 11px;
+    }
+
+    .property .p-title {
+        font-size: 12.5px;
+    }
+}

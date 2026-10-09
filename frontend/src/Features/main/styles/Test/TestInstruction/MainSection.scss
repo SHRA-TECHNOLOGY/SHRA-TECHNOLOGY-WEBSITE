@@ -1,0 +1,1176 @@
+// ==========================================
+// TEST INSTRUCTIONS PAGE
+// ==========================================
+
+.test-instructions-page {
+
+    width: 100%;
+    min-width: 0;
+
+    padding: 22px;
+
+    background:
+        radial-gradient(
+            circle at top right,
+            rgba(124, 92, 255, .07),
+            transparent 32%
+        ),
+        #0f1116;
+
+    border: 1px solid #292c34;
+
+    border-radius: 1rem;
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, .28),
+        inset 0 1px 0 rgba(255, 255, 255, .025);
+
+    box-sizing: border-box;
+}
+
+
+// ==========================================
+// INSTRUCTION HEADER
+// ==========================================
+
+.instruction-header {
+
+    margin-bottom: 18px;
+
+    h2 {
+
+        margin: 0 0 6px;
+
+        font-size: clamp(1.2rem, 2.5vw, 1.7rem);
+
+        font-family: "Poppins", sans-serif;
+
+        font-weight: 650;
+
+        letter-spacing: -.4px;
+
+        color: #f3f4f6;
+
+        line-height: 1.3;
+    }
+
+    p {
+
+        max-width: 750px;
+
+        margin: 0;
+
+        font-size: clamp(.7rem, 1vw, .84rem);
+
+        font-family: "Poppins", sans-serif;
+
+        font-weight: 450;
+
+        color: #858994;
+
+        line-height: 1.7;
+    }
+}
+
+
+// ==========================================
+// MAIN INSTRUCTION CARD
+// ==========================================
+
+.instruction-card {
+
+    width: 100%;
+
+    min-width: 0;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            145deg,
+            #181a20,
+            #111318
+        );
+
+    border: 1px solid #292c34;
+
+    border-radius: 1rem;
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, .24),
+        inset 0 1px 0 rgba(255, 255, 255, .02);
+
+    box-sizing: border-box;
+}
+
+
+// ==========================================
+// TOP SECTION
+// ==========================================
+
+.instruction-top {
+
+    padding: 18px;
+
+    border-bottom: 1px solid #292c34;
+
+    background:
+        rgba(255, 255, 255, .008);
+}
+
+
+// ==========================================
+// TEST BASIC INFO
+// ==========================================
+
+.test-basic-info {
+
+    min-width: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+}
+
+
+// ==========================================
+// TEST ICON
+// ==========================================
+
+.test-icon {
+
+    width: 64px;
+
+    height: 64px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 15px;
+
+    background:
+        rgba(124, 92, 255, .11);
+
+    border: 1px solid
+        rgba(124, 92, 255, .20);
+
+    color: #9b87ff;
+
+    box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, .03);
+
+    transition:
+        transform .25s ease,
+        background .25s ease;
+}
+
+.instruction-card:hover .test-icon {
+
+    transform: scale(1.04);
+
+    background:
+        rgba(124, 92, 255, .16);
+}
+
+
+// ==========================================
+// TITLE ROW
+// ==========================================
+
+.title-row {
+
+    min-width: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    gap: 9px;
+
+    margin-bottom: 5px;
+}
+
+.title-row h3 {
+
+    min-width: 0;
+
+    margin: 0;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+
+    font-size: clamp(1rem, 2vw, 1.3rem);
+
+    font-family: "Poppins", sans-serif;
+
+    font-weight: 650;
+
+    letter-spacing: -.2px;
+
+    color: #f1f3f5;
+
+    line-height: 1.35;
+}
+
+
+// ==========================================
+// DIFFICULTY
+// ==========================================
+
+.difficulty {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    min-width: 68px;
+
+    padding: 5px 9px;
+
+    border-radius: 7px;
+
+    font-size: .65rem;
+
+    font-family: "Poppins", sans-serif;
+
+    font-weight: 600;
+
+    line-height: 1.2;
+
+    white-space: nowrap;
+}
+
+
+// Optional states
+.difficulty.easy {
+
+    color: #4ade80;
+
+    background:
+        rgba(34, 197, 94, .10);
+
+    border: 1px solid
+        rgba(34, 197, 94, .22);
+}
+
+.difficulty.medium {
+
+    color: #fbbf24;
+
+    background:
+        rgba(245, 158, 11, .10);
+
+    border: 1px solid
+        rgba(245, 158, 11, .22);
+}
+
+.difficulty.hard {
+
+    color: #f87171;
+
+    background:
+        rgba(239, 68, 68, .10);
+
+    border: 1px solid
+        rgba(239, 68, 68, .22);
+}
+
+
+// ==========================================
+// TEST DESCRIPTION
+// ==========================================
+
+.test-basic-info p {
+
+    max-width: 650px;
+
+    margin: 0;
+
+    font-size: clamp(.68rem, 1vw, .78rem);
+
+    font-family: "Poppins", sans-serif;
+
+    font-weight: 450;
+
+    color: #858994;
+
+    line-height: 1.65;
+}
+
+
+// ==========================================
+// STATS
+// ==========================================
+
+.instruction-stats {
+
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(5, minmax(0, 1fr));
+
+    border-bottom: 1px solid #292c34;
+
+    box-sizing: border-box;
+}
+
+
+// ==========================================
+// SINGLE STAT
+// ==========================================
+
+.single-stat {
+
+    min-width: 0;
+
+    padding: 18px 12px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    gap: 3px;
+
+    border-right: 1px solid #292c34;
+
+    box-sizing: border-box;
+
+    transition:
+        background .25s ease;
+}
+
+.single-stat:last-child {
+
+    border-right: none;
+}
+
+.single-stat:hover {
+
+    background:
+        rgba(124, 92, 255, .035);
+}
+
+.single-stat svg {
+
+    width: 21px;
+
+    height: 21px;
+
+    margin-bottom: 5px;
+
+    color: var(--primary);
+
+    stroke-width: 1.8;
+}
+
+.single-stat span {
+
+    margin: 0;
+
+    font-size: .62rem;
+
+    font-family: "Poppins", sans-serif;
+
+    font-weight: 500;
+
+    color: #777c87;
+
+    line-height: 1.4;
+}
+
+.single-stat h3 {
+
+    margin: 0;
+
+    font-size: clamp(.9rem, 1.5vw, 1.15rem);
+
+    font-family: "Poppins", sans-serif;
+
+    font-weight: 650;
+
+    color: #f1f3f5;
+
+    line-height: 1.35;
+}
+
+.single-stat p {
+
+    margin: 0;
+
+    font-size: .62rem;
+
+    font-family: "Poppins", sans-serif;
+
+    font-weight: 450;
+
+    color: #777c87;
+
+    line-height: 1.4;
+}
+
+
+// ==========================================
+// RULES SECTION
+// ==========================================
+
+.rules-section {
+
+    padding: 20px;
+}
+
+.rules-section h3 {
+
+    margin: 0 0 15px;
+
+    font-size: clamp(1rem, 2vw, 1.3rem);
+
+    font-family: "Poppins", sans-serif;
+
+    font-weight: 650;
+
+    letter-spacing: -.2px;
+
+    color: #f1f3f5;
+
+    line-height: 1.4;
+}
+
+
+// ==========================================
+// RULE LIST
+// ==========================================
+
+.rules-list {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 8px;
+}
+
+
+// ==========================================
+// SINGLE RULE
+// ==========================================
+
+.single-rule {
+
+    min-width: 0;
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 10px;
+
+    padding: 11px 13px;
+
+    background: #13151a;
+
+    border: 1px solid #292c34;
+
+    border-radius: 9px;
+
+    transition:
+        background .25s ease,
+        border-color .25s ease,
+        transform .25s ease;
+}
+
+.single-rule:hover {
+
+    background: #171920;
+
+    border-color:
+        rgba(124, 92, 255, .28);
+
+    transform: translateX(2px);
+}
+
+.single-rule svg {
+
+    width: 17px;
+
+    height: 17px;
+
+    flex-shrink: 0;
+
+    margin-top: 3px;
+
+    color: var(--primary);
+}
+
+.single-rule p {
+
+    min-width: 0;
+
+    margin: 0;
+
+    font-size: clamp(.68rem, 1vw, .78rem);
+
+    font-family: "Poppins", sans-serif;
+
+    font-weight: 450;
+
+    color: #b8bcc6;
+
+    letter-spacing: .1px;
+
+    line-height: 1.65;
+}
+
+
+// ==========================================
+// IMPORTANT NOTE
+// ==========================================
+
+.important-note {
+
+    margin: 0 20px 20px;
+
+    padding: 13px 15px;
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 11px;
+
+    background:
+        rgba(251, 191, 36, .07);
+
+    border: 1px solid
+        rgba(251, 191, 36, .22);
+
+    border-radius: 10px;
+
+    box-sizing: border-box;
+}
+
+.important-note svg {
+
+    flex-shrink: 0;
+
+    margin-top: 3px;
+
+    color: #fbbf24;
+}
+
+.important-note h4 {
+
+    margin: 0 0 3px;
+
+    color: #fbbf24;
+
+    font-size: .78rem;
+
+    font-family: "Poppins", sans-serif;
+
+    font-weight: 650;
+}
+
+.important-note p {
+
+    margin: 0;
+
+    font-size: clamp(.65rem, 1vw, .74rem);
+
+    font-family: "Poppins", sans-serif;
+
+    font-weight: 450;
+
+    color: #bfc2c9;
+
+    letter-spacing: .05px;
+
+    line-height: 1.6;
+}
+
+
+// ==========================================
+// FOOTER
+// ==========================================
+
+.instruction-footer {
+
+    margin-top: 18px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 15px;
+}
+
+.instruction-footer label {
+
+    width: 100%;
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 9px;
+
+    font-size: clamp(.68rem, 1vw, .78rem);
+
+    font-family: "Poppins", sans-serif;
+
+    font-weight: 450;
+
+    color: #9da1ab;
+
+    letter-spacing: .05px;
+
+    line-height: 1.6;
+
+    cursor: pointer;
+}
+
+.instruction-footer label input {
+
+    width: 17px;
+
+    height: 17px;
+
+    flex-shrink: 0;
+
+    margin-top: 3px;
+
+    accent-color: #6d55ff;
+
+    cursor: pointer;
+}
+
+
+// ==========================================
+// START TEST BUTTON
+// ==========================================
+
+.instruction-footer button {
+
+    width: 280px;
+
+    min-height: 44px;
+
+    padding: 10px 18px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 8px;
+
+    border: 1px solid
+        rgba(124, 92, 255, .25);
+
+    outline: none;
+
+    border-radius: 9px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #5b3df5,
+            #8068ff
+        );
+
+    font-size: .78rem;
+
+    font-family: "Poppins", sans-serif;
+
+    font-weight: 600;
+
+    color: #fff;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 7px 20px
+        rgba(91, 61, 245, .20);
+
+    transition:
+        transform .25s ease,
+        box-shadow .25s ease,
+        filter .25s ease;
+}
+
+.instruction-footer button:hover:not(:disabled) {
+
+    transform: translateY(-2px);
+
+    filter: brightness(1.08);
+
+    box-shadow:
+        0 11px 28px
+        rgba(91, 61, 245, .32);
+}
+
+.instruction-footer button:active:not(:disabled) {
+
+    transform: translateY(0);
+
+    box-shadow:
+        0 5px 15px
+        rgba(91, 61, 245, .18);
+}
+
+.instruction-footer button:disabled {
+
+    opacity: .45;
+
+    cursor: not-allowed;
+
+    box-shadow: none;
+}
+
+
+// ==========================================
+// TABLET
+// ==========================================
+
+@media (max-width: 1000px) {
+
+    .test-instructions-page {
+
+        padding: 18px;
+    }
+
+    .instruction-stats {
+
+        grid-template-columns:
+            repeat(3, minmax(0, 1fr));
+    }
+
+    .single-stat {
+
+        border-bottom: 1px solid #292c34;
+    }
+
+    .single-stat:nth-child(3) {
+
+        border-right: none;
+    }
+
+    .single-stat:nth-child(4),
+    .single-stat:nth-child(5) {
+
+        border-bottom: none;
+    }
+}
+
+
+// ==========================================
+// MOBILE TABLET
+// ==========================================
+
+@media (max-width: 768px) {
+
+    .test-instructions-page {
+
+        padding: 14px;
+
+        border-radius: .9rem;
+    }
+
+    .instruction-top {
+
+        padding: 15px;
+    }
+
+    .test-basic-info {
+
+        align-items: flex-start;
+
+        gap: 12px;
+    }
+
+    .test-icon {
+
+        width: 55px;
+
+        height: 55px;
+
+        border-radius: 13px;
+    }
+
+    .title-row {
+
+        align-items: flex-start;
+
+        gap: 6px;
+    }
+
+    .title-row h3 {
+
+        font-size: 1rem;
+    }
+
+    .test-basic-info p {
+
+        font-size: .68rem;
+    }
+
+    .instruction-stats {
+
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+    .single-stat {
+
+        min-height: 95px;
+
+        padding: 14px 10px;
+
+        border-right: 1px solid #292c34;
+
+        border-bottom: 1px solid #292c34;
+    }
+
+    .single-stat:nth-child(2n) {
+
+        border-right: none;
+    }
+
+    .single-stat:nth-last-child(-n + 2) {
+
+        border-bottom: none;
+    }
+
+    .rules-section {
+
+        padding: 15px;
+    }
+
+    .important-note {
+
+        margin: 0 15px 15px;
+    }
+
+    .instruction-footer {
+
+        margin-top: 15px;
+    }
+
+    .instruction-footer button {
+
+        width: 100%;
+    }
+}
+
+
+// ==========================================
+// MOBILE
+// ==========================================
+
+@media (max-width: 520px) {
+
+    .test-instructions-page {
+
+        padding: 10px;
+
+        border: none;
+
+        background: transparent;
+
+        box-shadow: none;
+    }
+
+    .instruction-header {
+
+        margin-bottom: 13px;
+    }
+
+    .instruction-header h2 {
+
+        font-size: 1.1rem;
+    }
+
+    .instruction-header p {
+
+        font-size: .65rem;
+    }
+
+    .instruction-card {
+
+        border-radius: .85rem;
+    }
+
+    .instruction-top {
+
+        padding: 13px;
+    }
+
+    .test-basic-info {
+
+        gap: 10px;
+    }
+
+    .test-icon {
+
+        width: 48px;
+
+        height: 48px;
+
+        border-radius: 11px;
+    }
+
+    .title-row h3 {
+
+        font-size: .9rem;
+    }
+
+    .difficulty {
+
+        min-width: 60px;
+
+        padding: 4px 7px;
+
+        font-size: .58rem;
+    }
+
+    .test-basic-info p {
+
+        font-size: .62rem;
+
+        line-height: 1.55;
+    }
+
+
+    // Stats
+
+    .instruction-stats {
+
+        grid-template-columns: 1fr;
+    }
+
+    .single-stat {
+
+        min-height: 70px;
+
+        flex-direction: row;
+
+        align-items: center;
+
+        justify-content: flex-start;
+
+        gap: 10px;
+
+        padding: 11px 13px;
+
+        text-align: left;
+
+        border-right: none;
+
+        border-bottom: 1px solid #292c34;
+    }
+
+    .single-stat:last-child {
+
+        border-bottom: none;
+    }
+
+    .single-stat svg {
+
+        width: 19px;
+
+        height: 19px;
+
+        margin: 0;
+    }
+
+    .single-stat span {
+
+        font-size: .58rem;
+    }
+
+    .single-stat h3 {
+
+        font-size: .85rem;
+    }
+
+    .single-stat p {
+
+        font-size: .58rem;
+    }
+
+
+    // Rules
+
+    .rules-section {
+
+        padding: 13px;
+    }
+
+    .rules-section h3 {
+
+        margin-bottom: 11px;
+
+        font-size: .95rem;
+    }
+
+    .rules-list {
+
+        gap: 7px;
+    }
+
+    .single-rule {
+
+        padding: 9px 10px;
+
+        gap: 8px;
+
+        border-radius: 8px;
+    }
+
+    .single-rule svg {
+
+        width: 15px;
+
+        height: 15px;
+    }
+
+    .single-rule p {
+
+        font-size: .62rem;
+
+        line-height: 1.6;
+    }
+
+
+    // Important note
+
+    .important-note {
+
+        margin: 0 13px 13px;
+
+        padding: 11px;
+
+        gap: 8px;
+
+        border-radius: 8px;
+    }
+
+    .important-note h4 {
+
+        font-size: .7rem;
+    }
+
+    .important-note p {
+
+        font-size: .6rem;
+
+        line-height: 1.55;
+    }
+
+
+    // Footer
+
+    .instruction-footer {
+
+        gap: 12px;
+    }
+
+    .instruction-footer label {
+
+        font-size: .62rem;
+
+        gap: 7px;
+    }
+
+    .instruction-footer label input {
+
+        width: 16px;
+
+        height: 16px;
+    }
+
+    .instruction-footer button {
+
+        min-height: 42px;
+
+        font-size: .7rem;
+
+        border-radius: 8px;
+    }
+}
+
+
+// ==========================================
+// SMALL PHONE
+// ==========================================
+
+@media (max-width: 360px) {
+
+    .test-instructions-page {
+
+        padding: 8px;
+    }
+
+    .instruction-top {
+
+        padding: 11px;
+    }
+
+    .test-icon {
+
+        width: 43px;
+
+        height: 43px;
+    }
+
+    .title-row h3 {
+
+        font-size: .82rem;
+    }
+
+    .difficulty {
+
+        font-size: .55rem;
+
+        padding: 4px 6px;
+    }
+
+    .single-stat {
+
+        min-height: 64px;
+
+        padding: 9px 11px;
+    }
+
+    .rules-section {
+
+        padding: 11px;
+    }
+
+    .important-note {
+
+        margin: 0 11px 11px;
+    }
+}

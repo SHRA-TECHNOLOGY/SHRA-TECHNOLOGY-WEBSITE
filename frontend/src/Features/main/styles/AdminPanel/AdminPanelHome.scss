@@ -1,0 +1,204 @@
+// ==========================================
+// ADMIN MAIN CONTENT
+// ==========================================
+
+.admin-main-content {
+
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 12px;
+
+    padding: 0 30px;
+
+    box-sizing: border-box;
+}
+
+
+// ==========================================
+// ADMIN HERO SECTION
+// ==========================================
+
+.admin-hero-section {
+
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 5px;
+
+    padding: 25px 0 15px;
+
+    position: relative;
+}
+
+
+// ==========================================
+// TITLE
+// ==========================================
+
+.admin-hero-section h3 {
+
+    margin: 0;
+
+    font-size: clamp(1.4rem, 3vw, 2rem);
+
+    font-family: "Poppins", sans-serif;
+
+    font-weight: 650;
+
+    color: #202124;
+
+    letter-spacing: -0.5px;
+
+    line-height: 1.25;
+
+    position: relative;
+}
+
+
+// Small purple accent
+
+.admin-hero-section h3::after {
+
+    content: "";
+
+    display: block;
+
+    width: 45px;
+    height: 3px;
+
+    margin-top: 9px;
+
+    border-radius: 999px;
+
+    background: var(--primary);
+}
+
+
+// ==========================================
+// DESCRIPTION
+// ==========================================
+
+.admin-hero-section p {
+
+    max-width: 700px;
+
+    margin: 2px 0 0;
+
+    font-size: clamp(0.78rem, 1.2vw, 0.95rem);
+
+    font-family: "Poppins", sans-serif;
+
+    letter-spacing: 0.2px;
+
+    font-weight: 450;
+
+    color: #737580;
+
+    line-height: 1.7;
+}
+
+
+// ==========================================
+// TABLET
+// ==========================================
+
+@media (max-width: 900px) {
+
+    .admin-main-content {
+
+        padding: 0 22px;
+    }
+
+    .admin-hero-section {
+
+        padding: 22px 0 13px;
+    }
+
+    .admin-hero-section h3 {
+
+        font-size: 1.55rem;
+    }
+
+    .admin-hero-section p {
+
+        font-size: 0.82rem;
+    }
+}
+
+
+// ==========================================
+// MOBILE
+// ==========================================
+
+@media (max-width: 600px) {
+
+    .admin-main-content {
+
+        padding: 0 14px;
+
+        gap: 8px;
+    }
+
+    .admin-hero-section {
+
+        padding: 18px 0 10px;
+
+        gap: 4px;
+    }
+
+    .admin-hero-section h3 {
+
+        font-size: 1.3rem;
+
+        letter-spacing: -0.2px;
+    }
+
+    .admin-hero-section h3::after {
+
+        width: 35px;
+
+        height: 2px;
+
+        margin-top: 7px;
+    }
+
+    .admin-hero-section p {
+
+        font-size: 0.75rem;
+
+        line-height: 1.6;
+    }
+}
+
+
+// ==========================================
+// SMALL MOBILE
+// ==========================================
+
+@media (max-width: 380px) {
+
+    .admin-main-content {
+
+        padding: 0 10px;
+    }
+
+    .admin-hero-section {
+
+        padding-top: 15px;
+    }
+
+    .admin-hero-section h3 {
+
+        font-size: 1.15rem;
+    }
+
+    .admin-hero-section p {
+
+        font-size: 0.7rem;
+    }
+}

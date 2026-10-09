@@ -1,0 +1,332 @@
+// ==========================================
+// PRACTICE SUMMARY CARD - BLACK MODERN
+// ==========================================
+
+.practice-summary-card {
+
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns: 80px 1fr;
+
+    align-items: center;
+
+    gap: 16px;
+
+    padding: 16px;
+
+    background: linear-gradient(
+        145deg,
+        #17191f,
+        #101216
+    );
+
+    border: 1px solid #292c34;
+
+    border-radius: 1rem;
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, .30),
+        inset 0 1px 0 rgba(255, 255, 255, .025);
+
+    box-sizing: border-box;
+
+    transition:
+        transform .25s ease,
+        border-color .25s ease,
+        box-shadow .25s ease;
+}
+
+
+// ==========================================
+// HOVER
+// ==========================================
+
+.practice-summary-card:hover {
+
+    transform: translateY(-4px);
+
+    border-color: var(--primary);
+
+    box-shadow:
+        0 15px 35px rgba(0, 0, 0, .40),
+        0 0 0 1px rgba(124, 92, 255, .08);
+}
+
+
+// ==========================================
+// LEFT PART
+// ==========================================
+
+.practice-summary-card .left {
+
+    width: 80px;
+
+    height: 80px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+
+// ==========================================
+// ICON CONTAINER
+// ==========================================
+
+.practice-summary-card .left span {
+
+    width: 68px;
+
+    height: 68px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 18px;
+
+    background: rgba(124, 92, 255, .12);
+
+    border: 1px solid rgba(124, 92, 255, .20);
+
+    color: var(--primary);
+
+    box-shadow:
+        0 8px 20px rgba(0, 0, 0, .25),
+        inset 0 1px 0 rgba(255, 255, 255, .04);
+
+    transition:
+        transform .25s ease,
+        background .25s ease,
+        border-color .25s ease;
+}
+
+
+// ==========================================
+// ICON
+// ==========================================
+
+.practice-summary-card .left svg {
+
+    width: 34px;
+
+    height: 34px;
+
+    color: var(--primary);
+
+    stroke-width: 1.8;
+
+    transition: transform .25s ease;
+}
+
+
+// ==========================================
+// ICON HOVER
+// ==========================================
+
+.practice-summary-card:hover .left span {
+
+    transform: scale(1.06);
+
+    background: rgba(124, 92, 255, .17);
+
+    border-color: rgba(124, 92, 255, .35);
+}
+
+
+.practice-summary-card:hover .left svg {
+
+    transform: scale(1.08);
+}
+
+
+// ==========================================
+// RIGHT PART
+// ==========================================
+
+.practice-summary-card .right {
+
+    min-width: 0;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 5px;
+}
+
+
+// ==========================================
+// LABEL
+// ==========================================
+
+.practice-summary-card .right p {
+
+    margin: 0;
+
+    font-size: clamp(.72rem, 1vw, .88rem);
+
+    font-family: "Poppins", sans-serif;
+
+    letter-spacing: .2px;
+
+    font-weight: 500;
+
+    color: #8f939d;
+
+    line-height: 1.5;
+}
+
+
+// ==========================================
+// VALUE
+// ==========================================
+
+.practice-summary-card .right h2 {
+
+    margin: 0;
+
+    font-size: clamp(1.2rem, 2vw, 1.7rem);
+
+    font-family: "Poppins", sans-serif;
+
+    font-weight: 650;
+
+    letter-spacing: -.3px;
+
+    color: #f5f6f8;
+
+    line-height: 1.3;
+}
+
+
+// ==========================================
+// TABLET
+// ==========================================
+
+@media (max-width: 768px) {
+
+    .practice-summary-card {
+
+        grid-template-columns: 65px 1fr;
+
+        gap: 13px;
+
+        padding: 14px;
+
+        border-radius: .9rem;
+    }
+
+
+    .practice-summary-card .left {
+
+        width: 65px;
+
+        height: 65px;
+    }
+
+
+    .practice-summary-card .left span {
+
+        width: 58px;
+
+        height: 58px;
+
+        border-radius: 15px;
+    }
+
+
+    .practice-summary-card .left svg {
+
+        width: 29px;
+
+        height: 29px;
+    }
+
+
+    .practice-summary-card .right p {
+
+        font-size: .72rem;
+    }
+
+
+    .practice-summary-card .right h2 {
+
+        font-size: 1.15rem;
+    }
+}
+
+
+// ==========================================
+// MOBILE
+// ==========================================
+
+@media (max-width: 480px) {
+
+    .practice-summary-card {
+
+        grid-template-columns: 55px 1fr;
+
+        gap: 11px;
+
+        padding: 12px;
+
+        border-radius: .85rem;
+    }
+
+
+    .practice-summary-card .left {
+
+        width: 55px;
+
+        height: 55px;
+    }
+
+
+    .practice-summary-card .left span {
+
+        width: 50px;
+
+        height: 50px;
+
+        border-radius: 13px;
+    }
+
+
+    .practice-summary-card .left svg {
+
+        width: 25px;
+
+        height: 25px;
+    }
+
+
+    .practice-summary-card .right {
+
+        gap: 3px;
+    }
+
+
+    .practice-summary-card .right p {
+
+        font-size: .68rem;
+
+        color: #858994;
+    }
+
+
+    .practice-summary-card .right h2 {
+
+        font-size: 1rem;
+
+        color: #f3f4f6;
+
+        letter-spacing: 0;
+    }
+}

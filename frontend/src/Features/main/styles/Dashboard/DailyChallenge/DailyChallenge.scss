@@ -1,0 +1,493 @@
+/* ==========================================
+   CHALLENGE CARD
+========================================== */
+
+.challenge-card {
+
+    width: 100%;
+    min-width: 0;
+
+    margin-top: 20px;
+    padding: 20px;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 14px;
+
+    background: #ffffff;
+
+    border: 1px solid #e8eaf0;
+
+    border-radius: 14px;
+
+    box-shadow:
+        0 8px 20px rgba(91, 76, 243, 0.25);
+
+    box-sizing: border-box;
+
+    overflow: hidden;
+
+    transition:
+        transform .25s ease,
+        box-shadow .25s ease,
+        border-color .25s ease;
+}
+
+.challenge-card:hover {
+
+    transform: translateY(-2px);
+
+    border-color:
+        rgba(91, 76, 243, .18);
+
+    box-shadow:
+        0 12px 28px rgba(91, 76, 243, .28);
+}
+
+
+/* ==========================================
+   TITLE SECTION
+========================================== */
+
+.challenge-card .title {
+
+    width: 100%;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 12px;
+}
+
+.challenge-card .title h3 {
+
+    margin: 0;
+
+    color: #20232b;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: clamp(
+        .95rem,
+        2vw,
+        1.15rem
+    );
+
+    font-weight: 650;
+
+    line-height: 1.4;
+}
+
+
+/* ==========================================
+   ADD CHALLENGE
+========================================== */
+
+.challenge-card .title .add-challenge {
+
+    flex-shrink: 0;
+
+    padding: 6px 10px;
+
+    border: none;
+
+    border-radius: 7px;
+
+    background:
+        rgba(99, 102, 241, .07);
+
+    color: #6c4dff;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: .6rem;
+
+    font-weight: 650;
+
+    cursor: pointer;
+
+    transition:
+        background .2s ease,
+        transform .2s ease;
+}
+
+.challenge-card .title .add-challenge:hover {
+
+    background:
+        rgba(99, 102, 241, .13);
+
+    transform: translateY(-1px);
+}
+
+
+/* ==========================================
+   BASIC INFO
+========================================== */
+
+.challenge-card .basic-info {
+
+    width: 100%;
+    min-width: 0;
+
+    display: grid;
+
+    grid-template-columns:
+        80px minmax(0, 1fr);
+
+    align-items: center;
+
+    gap: 15px;
+
+    padding: 14px;
+
+    background:
+        rgba(245, 159, 11, .07);
+
+    border: 1px solid
+        rgba(245, 159, 11, .20);
+
+    border-radius: 10px;
+
+    box-sizing: border-box;
+}
+
+
+/* ==========================================
+   BASIC INFO RIGHT
+========================================== */
+
+.basic-info .basic-info-right {
+
+    width: 100%;
+    min-width: 0;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 15px;
+}
+
+
+/* ==========================================
+   INFO CONTENT
+========================================== */
+
+.basic-info-right .info-right {
+
+    min-width: 0;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 4px;
+}
+
+.info-right h3 {
+
+    margin: 0;
+
+    color: #292c34;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: clamp(
+        .72rem,
+        1.8vw,
+        .9rem
+    );
+
+    font-weight: 650;
+
+    line-height: 1.4;
+
+    overflow-wrap: anywhere;
+}
+
+.info-right p {
+
+    margin: 0;
+
+    color: #777d89;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: clamp(
+        .55rem,
+        1.2vw,
+        .63rem
+    );
+
+    font-weight: 500;
+
+    line-height: 1.5;
+
+    overflow-wrap: anywhere;
+}
+
+
+/* ==========================================
+   WARNING / CHALLENGE VALUE
+========================================== */
+
+.basic-info-right > span {
+
+    flex-shrink: 0;
+
+    color: #d97706;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: clamp(
+        .65rem,
+        1.5vw,
+        .78rem
+    );
+
+    font-weight: 650;
+
+    white-space: nowrap;
+}
+
+
+/* ==========================================
+   CHALLENGE BUTTON
+========================================== */
+
+.challenge-card > button {
+
+    width: fit-content;
+
+    min-height: 35px;
+
+    padding: 7px 15px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 6px;
+
+    border: none;
+    outline: none;
+
+    border-radius: 8px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #6c4dff,
+            #5b3bea
+        );
+
+    color: #ffffff;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: .61rem;
+
+    font-weight: 650;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 5px 14px
+        rgba(108, 77, 255, .20);
+
+    transition:
+        transform .2s ease,
+        box-shadow .2s ease,
+        filter .2s ease;
+}
+
+.challenge-card > button:hover {
+
+    transform: translateY(-2px);
+
+    filter: brightness(1.03);
+
+    box-shadow:
+        0 8px 20px
+        rgba(108, 77, 255, .27);
+}
+
+.challenge-card > button:active {
+
+    transform: translateY(0);
+}
+
+.challenge-card > button svg {
+
+    width: 14px;
+    height: 14px;
+}
+
+
+/* ==========================================
+   TABLET
+========================================== */
+
+@media (max-width: 768px) {
+
+    .challenge-card {
+
+        padding: 17px;
+
+        gap: 12px;
+
+        border-radius: 12px;
+    }
+
+    .challenge-card .title h3 {
+
+        font-size: .88rem;
+    }
+
+    .challenge-card .title .add-challenge {
+
+        padding: 5px 8px;
+
+        font-size: .55rem;
+    }
+
+    .challenge-card .basic-info {
+
+        grid-template-columns:
+            65px minmax(0, 1fr);
+
+        padding: 12px;
+
+        gap: 12px;
+    }
+}
+
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 600px) {
+
+    .challenge-card {
+
+        margin-top: 15px;
+
+        padding: 13px;
+
+        gap: 10px;
+
+        border-radius: 11px;
+    }
+
+    .challenge-card .title h3 {
+
+        font-size: .78rem;
+    }
+
+    .challenge-card .title .add-challenge {
+
+        padding: 5px 7px;
+
+        font-size: .51rem;
+    }
+
+    .challenge-card .basic-info {
+
+        grid-template-columns: 1fr;
+
+        gap: 9px;
+
+        padding: 11px;
+    }
+
+    .basic-info .basic-info-right {
+
+        align-items: flex-start;
+
+        gap: 10px;
+    }
+
+    .info-right h3 {
+
+        font-size: .65rem;
+    }
+
+    .info-right p {
+
+        font-size: .51rem;
+    }
+
+    .basic-info-right > span {
+
+        font-size: .57rem;
+    }
+
+    .challenge-card > button {
+
+        width: 100%;
+
+        min-height: 34px;
+
+        font-size: .57rem;
+    }
+}
+
+
+/* ==========================================
+   SMALL MOBILE
+========================================== */
+
+@media (max-width: 380px) {
+
+    .challenge-card {
+
+        padding: 10px;
+
+        border-radius: 9px;
+    }
+
+    .challenge-card .title h3 {
+
+        font-size: .71rem;
+    }
+
+    .challenge-card .title .add-challenge {
+
+        font-size: .48rem;
+
+        padding: 4px 6px;
+    }
+
+    .challenge-card .basic-info {
+
+        padding: 9px;
+    }
+
+    .info-right h3 {
+
+        font-size: .59rem;
+    }
+
+    .info-right p {
+
+        font-size: .48rem;
+    }
+
+    .basic-info-right > span {
+
+        font-size: .52rem;
+    }
+
+    .challenge-card > button {
+
+        min-height: 31px;
+
+        font-size: .53rem;
+    }
+}

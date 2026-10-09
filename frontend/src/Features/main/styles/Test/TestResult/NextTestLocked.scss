@@ -1,0 +1,786 @@
+// ==========================================
+// UNLOCK CARD
+// ==========================================
+
+.unlock-card {
+
+    width: 100%;
+    min-width: 0;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 16px;
+
+    padding: 20px;
+
+    color: #f3f4f6;
+
+    background:
+        radial-gradient(
+            circle at top right,
+            rgba(124, 92, 255, .08),
+            transparent 35%
+        ),
+        linear-gradient(
+            145deg,
+            #181a20,
+            #111318
+        );
+
+    border: 1px solid #292c34;
+
+    border-radius: 1rem;
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, .28),
+        inset 0 1px 0 rgba(255, 255, 255, .025);
+
+    box-sizing: border-box;
+
+    transition:
+        transform .25s ease,
+        border-color .25s ease,
+        box-shadow .25s ease;
+}
+
+.unlock-card:hover {
+
+    transform: translateY(-3px);
+
+    border-color:
+        rgba(124, 92, 255, .40);
+
+    box-shadow:
+        0 16px 38px rgba(0, 0, 0, .34),
+        0 0 20px rgba(124, 92, 255, .05);
+}
+
+
+// ==========================================
+// UNLOCK HEADER
+// ==========================================
+
+.unlock-header {
+
+    width: 100%;
+    min-width: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 13px;
+
+    box-sizing: border-box;
+}
+
+.unlock-header .icon-box {
+
+    width: 54px;
+    height: 54px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 14px;
+
+    color: #fff;
+
+    background:
+        linear-gradient(
+            135deg,
+            #5b3df5,
+            #8068ff
+        );
+
+    border: 1px solid
+        rgba(255, 255, 255, .08);
+
+    box-shadow:
+        0 8px 20px
+        rgba(91, 61, 245, .20);
+}
+
+.unlock-header .icon-box svg {
+
+    width: 24px;
+    height: 24px;
+
+    stroke-width: 1.8;
+}
+
+.unlock-header > div:last-child {
+
+    min-width: 0;
+}
+
+.unlock-header h2 {
+
+    margin: 0 0 3px;
+
+    color: #f3f4f6;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: clamp(
+        .95rem,
+        2vw,
+        1.2rem
+    );
+
+    font-weight: 650;
+
+    letter-spacing: -.25px;
+
+    line-height: 1.35;
+}
+
+.unlock-header p {
+
+    margin: 0;
+
+    color: #858994;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: clamp(
+        .6rem,
+        1vw,
+        .7rem
+    );
+
+    font-weight: 450;
+
+    line-height: 1.55;
+}
+
+
+// ==========================================
+// NEXT TEST
+// ==========================================
+
+.next-test {
+
+    width: 100%;
+    min-width: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 12px;
+
+    padding: 12px;
+
+    background: #15171d;
+
+    border: 1px solid #292c34;
+
+    border-radius: 10px;
+
+    box-sizing: border-box;
+
+    transition:
+        background .2s ease,
+        border-color .2s ease;
+}
+
+.next-test:hover {
+
+    background: #1a1c22;
+
+    border-color: #353945;
+}
+
+.next-test h3 {
+
+    min-width: 0;
+
+    margin: 0;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+
+    white-space: nowrap;
+
+    color: #f1f3f5;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: clamp(
+        .72rem,
+        1.5vw,
+        .9rem
+    );
+
+    font-weight: 650;
+
+    line-height: 1.4;
+}
+
+.next-test .difficulty {
+
+    flex-shrink: 0;
+
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 4px 9px;
+
+    border-radius: 999px;
+
+    color: #a996ff;
+
+    background:
+        rgba(124, 92, 255, .10);
+
+    border: 1px solid
+        rgba(124, 92, 255, .20);
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: .57rem;
+
+    font-weight: 650;
+
+    white-space: nowrap;
+}
+
+
+// ==========================================
+// REQUIREMENT
+// ==========================================
+
+.requirement {
+
+    width: 100%;
+    min-width: 0;
+
+    padding: 12px;
+
+    background:
+        rgba(251, 191, 36, .035);
+
+    border: 1px solid
+        rgba(251, 191, 36, .14);
+
+    border-radius: 10px;
+
+    box-sizing: border-box;
+}
+
+.requirement .title {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    margin-bottom: 6px;
+
+    color: #fbbf24;
+}
+
+.requirement .title svg {
+
+    width: 17px;
+    height: 17px;
+
+    flex-shrink: 0;
+}
+
+.requirement .title span {
+
+    color: #c5c8d0;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: .65rem;
+
+    font-weight: 650;
+
+    line-height: 1.4;
+}
+
+.requirement p {
+
+    margin: 0;
+
+    color: #858994;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: .63rem;
+
+    font-weight: 450;
+
+    line-height: 1.65;
+}
+
+
+// ==========================================
+// SCORE BOX
+// ==========================================
+
+.score-box {
+
+    width: 100%;
+    min-width: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 12px;
+
+    padding: 13px;
+
+    border-radius: 10px;
+
+    box-sizing: border-box;
+}
+
+
+// SUCCESS
+
+.score-box.success {
+
+    background:
+        rgba(34, 197, 94, .07);
+
+    border: 1px solid
+        rgba(34, 197, 94, .28);
+}
+
+
+// DANGER
+
+.score-box.danger {
+
+    background:
+        rgba(239, 68, 68, .07);
+
+    border: 1px solid
+        rgba(239, 68, 68, .28);
+}
+
+
+// SCORE LEFT
+
+.score-box .left {
+
+    min-width: 0;
+}
+
+.score-box .left span {
+
+    display: block;
+
+    margin: 0;
+
+    color: #777c87;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: .62rem;
+
+    font-weight: 500;
+
+    line-height: 1.4;
+}
+
+.score-box .left h2 {
+
+    margin: 3px 0 0;
+
+    color: #f3f4f6;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: clamp(
+        1rem,
+        3vw,
+        1.5rem
+    );
+
+    font-weight: 700;
+
+    line-height: 1.25;
+}
+
+
+// SCORE RIGHT
+
+.score-box .right {
+
+    max-width: 100px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 6px;
+
+    padding: 10px  0;
+
+    color: #d7dae1;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: .65rem;
+
+    font-weight: 600;
+}
+
+.score-box.success .right {
+
+    color: #4ade80;
+}
+
+.score-box.danger .right {
+
+    color: #f87171;
+}
+
+.score-box .right svg {
+
+    width: 17px;
+    height: 17px;
+
+    flex-shrink: 0;
+}
+
+
+// ==========================================
+// START BUTTON
+// ==========================================
+
+.start-btn {
+
+    width: 100%;
+
+    min-height: 45px;
+
+    padding: 9px 14px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+
+    border: 1px solid
+        rgba(124, 92, 255, .25);
+
+    outline: none;
+
+    border-radius: 9px;
+
+    color: #fff;
+
+    background:
+        linear-gradient(
+            135deg,
+            #5b3df5,
+            #8068ff
+        );
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: clamp(
+        .65rem,
+        1vw,
+        .72rem
+    );
+
+    font-weight: 650;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 6px 18px
+        rgba(91, 61, 245, .18);
+
+    box-sizing: border-box;
+
+    transition:
+        transform .25s ease,
+        box-shadow .25s ease,
+        filter .25s ease;
+}
+
+.start-btn:hover {
+
+    transform: translateY(-2px);
+
+    filter: brightness(1.08);
+
+    box-shadow:
+        0 10px 25px
+        rgba(91, 61, 245, .30);
+}
+
+.start-btn:active {
+
+    transform: translateY(0);
+
+    box-shadow: none;
+}
+
+.start-btn svg {
+
+    width: 17px;
+    height: 17px;
+
+    flex-shrink: 0;
+}
+
+
+// ==========================================
+// DISABLED
+// ==========================================
+
+.start-btn.disabled {
+
+    background: #181b22;
+
+    border-color: #292c34;
+
+    color: #646975;
+
+    cursor: not-allowed;
+
+    box-shadow: none;
+
+    transform: none;
+
+    filter: none;
+}
+
+
+// ==========================================
+// TABLET
+// ==========================================
+
+@media (max-width: 768px) {
+
+    .unlock-card {
+
+        padding: 16px;
+
+        gap: 13px;
+
+        border-radius: .9rem;
+    }
+
+    .unlock-header {
+
+        align-items: flex-start;
+    }
+
+    .unlock-header .icon-box {
+
+        width: 48px;
+        height: 48px;
+
+        border-radius: 12px;
+    }
+
+    .unlock-header .icon-box svg {
+
+        width: 21px;
+        height: 21px;
+    }
+
+    .next-test {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+    .next-test h3 {
+
+        white-space: normal;
+    }
+
+    .score-box {
+
+        align-items: flex-start;
+    }
+}
+
+
+// ==========================================
+// MOBILE
+// ==========================================
+
+@media (max-width: 520px) {
+
+    .unlock-card {
+
+        padding: 13px;
+
+        gap: 11px;
+
+        border-radius: .85rem;
+    }
+
+    .unlock-header {
+
+        gap: 10px;
+    }
+
+    .unlock-header .icon-box {
+
+        width: 42px;
+        height: 42px;
+
+        border-radius: 10px;
+    }
+
+    .unlock-header .icon-box svg {
+
+        width: 19px;
+        height: 19px;
+    }
+
+    .unlock-header h2 {
+
+        font-size: .85rem;
+    }
+
+    .unlock-header p {
+
+        font-size: .56rem;
+    }
+
+    .next-test,
+    .requirement,
+    .score-box {
+
+        padding: 10px;
+    }
+
+    .next-test h3 {
+
+        font-size: .68rem;
+    }
+
+    .next-test .difficulty {
+
+        padding: 3px 7px;
+
+        font-size: .52rem;
+    }
+
+    .requirement .title span {
+
+        font-size: .59rem;
+    }
+
+    .requirement p {
+
+        font-size: .57rem;
+    }
+
+    .score-box .left span {
+
+        font-size: .57rem;
+    }
+
+    .score-box .left h2 {
+
+        font-size: 1rem;
+    }
+
+    .score-box .right {
+
+        font-size: .58rem;
+    }
+
+    .start-btn {
+
+        min-height: 41px;
+
+        font-size: .62rem;
+
+        border-radius: 8px;
+    }
+}
+
+
+// ==========================================
+// SMALL PHONE
+// ==========================================
+
+@media (max-width: 380px) {
+
+    .unlock-card {
+
+        padding: 10px;
+
+        gap: 9px;
+    }
+
+    .unlock-header .icon-box {
+
+        width: 38px;
+        height: 38px;
+    }
+
+    .unlock-header h2 {
+
+        font-size: .78rem;
+    }
+
+    .unlock-header p {
+
+        font-size: .52rem;
+    }
+
+    .next-test,
+    .requirement,
+    .score-box {
+
+        padding: 8px;
+    }
+
+    .score-box {
+
+        gap: 8px;
+    }
+
+    .score-box .left h2 {
+
+        font-size: .9rem;
+    }
+
+    .score-box .right {
+
+        font-size: .54rem;
+    }
+
+    .start-btn {
+
+        min-height: 38px;
+
+        font-size: .58rem;
+    }
+}

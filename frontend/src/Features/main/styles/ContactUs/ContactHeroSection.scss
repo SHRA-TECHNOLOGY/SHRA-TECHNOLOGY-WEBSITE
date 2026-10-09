@@ -1,0 +1,154 @@
+// ==========================================
+// CONTACT HERO SECTION
+// ==========================================
+
+.contact-hero-section {
+
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 35px 20px 20px;
+
+    position: relative;
+}
+
+
+// ==========================================
+// HERO TITLE
+// ==========================================
+
+.contact-hero-section h2 {
+
+    margin: 0;
+
+    font-size: clamp(1.5rem, 3vw, 2.1rem);
+
+    font-family: "Poppins", sans-serif;
+
+    font-weight: 650;
+
+    color: #202124;
+
+    letter-spacing: -0.5px;
+
+    line-height: 1.25;
+
+    position: relative;
+}
+
+
+// Small accent line
+
+.contact-hero-section h2::after {
+
+    content: "";
+
+    display: block;
+
+    width: 45px;
+    height: 3px;
+
+    margin: 10px auto 0;
+
+    border-radius: 999px;
+
+    background: var(--primary);
+}
+
+
+// ==========================================
+// HERO DESCRIPTION
+// ==========================================
+
+.contact-hero-section p {
+
+    max-width: 650px;
+
+    margin: 12px auto 0;
+
+    font-size: clamp(0.78rem, 1.2vw, 0.95rem);
+
+    font-family: "Poppins", sans-serif;
+
+    letter-spacing: 0.2px;
+
+    font-weight: 450;
+
+    color: #6b6d76;
+
+    line-height: 1.7;
+}
+
+
+// ==========================================
+// TABLET
+// ==========================================
+
+@media (max-width: 775px) {
+
+    .contact-hero-section {
+
+        padding: 25px 16px 15px;
+    }
+
+    .contact-hero-section h2 {
+
+        font-size: 1.4rem;
+    }
+
+    .contact-hero-section p {
+
+        max-width: 550px;
+
+        margin-top: 10px;
+
+        font-size: 0.82rem;
+
+        line-height: 1.6;
+    }
+}
+
+
+// ==========================================
+// MOBILE
+// ==========================================
+
+@media (max-width: 480px) {
+
+    .contact-hero-section {
+
+        padding: 20px 14px 12px;
+    }
+
+    .contact-hero-section h2 {
+
+        font-size: 1.25rem;
+
+        letter-spacing: -0.2px;
+    }
+
+    .contact-hero-section h2::after {
+
+        width: 35px;
+
+        height: 2px;
+
+        margin-top: 8px;
+    }
+
+    .contact-hero-section p {
+
+        margin-top: 8px;
+
+        font-size: 0.75rem;
+
+        line-height: 1.55;
+    }
+}

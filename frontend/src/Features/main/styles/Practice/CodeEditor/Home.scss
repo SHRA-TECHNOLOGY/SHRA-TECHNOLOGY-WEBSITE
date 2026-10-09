@@ -1,0 +1,107 @@
+// ==========================================
+// ALL CODE SETUP
+// ==========================================
+
+.all-code-setup {
+
+    width: 100%;
+
+    min-width: 0;
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1fr)
+        minmax(0, 1fr);
+
+    gap: 16px;
+
+    padding: 14px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #111318,
+            #0d0f13
+        );
+
+    border: 1px solid #292c34;
+
+    border-radius: 1rem;
+
+    box-sizing: border-box;
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, .25),
+        inset 0 1px 0 rgba(255, 255, 255, .02);
+}
+
+
+// ==========================================
+// DIRECT CHILDREN
+// ==========================================
+
+.all-code-setup > * {
+
+    min-width: 0;
+
+    max-width: 100%;
+}
+
+
+// ==========================================
+// TABLET
+// ==========================================
+
+@media (max-width: 900px) {
+
+    .all-code-setup {
+
+        grid-template-columns:
+            minmax(0, 1fr)
+            minmax(0, 1fr);
+
+        gap: 12px;
+
+        padding: 12px;
+
+        border-radius: .9rem;
+    }
+}
+
+
+// ==========================================
+// MOBILE
+// ==========================================
+
+@media (max-width: 775px) {
+
+    .all-code-setup {
+
+        grid-template-columns:
+            minmax(0, 1fr);
+
+        gap: 12px;
+
+        padding: 10px;
+
+        border-radius: .85rem;
+    }
+}
+
+
+// ==========================================
+// SMALL MOBILE
+// ==========================================
+
+@media (max-width: 480px) {
+
+    .all-code-setup {
+
+        gap: 10px;
+
+        padding: 8px;
+
+        border-radius: .75rem;
+    }
+}

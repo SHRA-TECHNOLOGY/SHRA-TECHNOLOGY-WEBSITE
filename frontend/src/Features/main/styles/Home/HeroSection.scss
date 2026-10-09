@@ -1,0 +1,150 @@
+.home-heroSec{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 55% 45% ;
+    align-items:center;
+    padding-bottom: 30px;
+}
+
+// left part here
+
+.home-leftHero{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 50px;
+    height: 100%;
+    padding-left: 50px;
+    padding-bottom: 20px;
+    
+}
+
+.home-leftHero .left-title-section{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 40px;
+}
+
+.home-leftHero .left-title-section h2{
+    font-size: clamp(1rem, 2vw, 2rem);
+    font-weight: 600;
+    color: var(--text-color);
+    font-family: "Poppins", sans-serif;
+}
+
+.home-leftHero .left-title-section h1{
+    font-size: clamp(3rem, 2vw, 3rem);
+    line-height: 1.1;
+    font-weight: 700;
+    color: var(--text-color);
+    font-family: "Poppins", sans-serif;
+}
+
+.home-leftHero p{
+    
+    line-height: 1.5;
+    letter-spacing: .3;
+    font-size: clamp(1rem, 2vw, 1.5rem);
+    color: var(--muted-text);
+    font-family: "Poppins", sans-serif;
+}
+
+.home-leftHero .left-btn{
+    display: flex;
+    gap: 50px;
+    
+}
+
+.home-leftHero .left-btn button{
+    width: 180px;
+    height: 60px;
+    border-radius: 1rem;
+    background: transparent;
+    border: 2px solid var(--border-light);
+    color: var(--text-color);
+    font-size: clamp(1rem,1vw,2rem);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.home-leftHero .left-btn button:hover{
+    background: var(--bg-light);
+    color: var(--primary);
+}
+
+//Right part here
+
+.home-rightHHero{
+    // max-height: 100px;
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+}
+
+.home-rightHHero img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+//mobile responsive 
+
+@media (max-width:600px){
+
+    .home-heroSec{
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .home-rightHHero{
+        order: 1;
+        display: flex;
+        justify-content: center;
+    }
+
+    .home-rightHHero img{
+        width: 75%;
+        max-width: 250px;
+        height: auto;
+        object-fit: contain;
+    }
+
+    .home-leftHero{
+        order: 2;
+        padding: 0;
+        align-items: center;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .home-leftHero .left-title-section{
+        margin-top: 0;
+    }
+
+    .home-leftHero .left-title-section h1{
+        font-size: 2.5rem;
+    }
+
+    .home-leftHero p{
+        font-size: 1rem;
+        max-width: 90%;
+    }
+
+    .home-leftHero .left-btn{
+        flex-direction: column;
+        gap: 15px;
+        width: 100%;
+        align-items: center;
+    }
+
+    .home-leftHero .left-btn button{
+        width: 100%;
+        max-width: 280px;
+        height: 55px;
+    }
+}

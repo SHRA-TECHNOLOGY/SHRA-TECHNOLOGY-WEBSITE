@@ -1,0 +1,300 @@
+// ==========================================
+// USER PROGRESS
+// ==========================================
+
+.user-progress-section {
+
+    h2 {
+        margin: 0;
+
+        font-size: clamp(1.1rem, 2vw, 1.5rem);
+
+        font-family: "Poppins", sans-serif;
+
+        color: #202124;
+
+        font-weight: 650;
+
+        letter-spacing: -0.2px;
+    }
+}
+
+
+// ==========================================
+// PROGRESS LIST
+// ==========================================
+
+.progress-list,
+.activity-list {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 10px;
+
+    margin-top: 20px;
+}
+
+
+// ==========================================
+// SINGLE PROGRESS ITEM
+// ==========================================
+
+.progress-list .single-progress,
+.activity-list .activity-card {
+
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 13px 14px;
+
+    background: #f8f8fb;
+
+    border: 1px solid #eeeeF3;
+
+    border-radius: 0.75rem;
+
+    transition:
+        background 0.2s ease,
+        border-color 0.2s ease,
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+// Hover effect
+
+.progress-list .single-progress:hover,
+.activity-list .activity-card:hover {
+
+    background: #ffffff;
+
+    border-color: rgba(124, 92, 255, 0.2);
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 6px 18px rgba(35, 35, 70, 0.07);
+}
+
+
+// ==========================================
+// LEFT SIDE
+// ==========================================
+
+.single-progress .progress-title,
+.activity-card .recent-left {
+
+    display: flex;
+
+    gap: 12px;
+
+    align-items: center;
+
+    min-width: 0;
+}
+
+
+// ==========================================
+// PROGRESS ICON
+// ==========================================
+
+.progress-title span {
+
+    width: 38px;
+    height: 38px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0;
+
+    background: rgba(124, 92, 255, 0.1);
+
+    border: 1px solid rgba(124, 92, 255, 0.15);
+
+    border-radius: 10px;
+
+    color: var(--primary);
+
+    font-size: 1rem;
+
+    transition: 0.2s ease;
+}
+
+
+// Icon hover
+
+.single-progress:hover .progress-title span {
+
+    background: var(--primary);
+
+    color: #ffffff;
+
+    transform: scale(1.05);
+}
+
+
+// ==========================================
+// PROGRESS TITLE
+// ==========================================
+
+.progress-title h4 {
+
+    margin: 0;
+
+    font-size: clamp(0.85rem, 1.5vw, 1rem);
+
+    font-family: "Poppins", sans-serif;
+
+    color: #363842;
+
+    font-weight: 600;
+
+    line-height: 1.3;
+}
+
+
+// ==========================================
+// PROGRESS VALUE
+// ==========================================
+
+.single-progress p {
+
+    margin: 0;
+
+    font-size: clamp(0.85rem, 1.5vw, 1rem);
+
+    font-family: "Poppins", sans-serif;
+
+    color: var(--primary);
+
+    font-weight: 700;
+
+    white-space: nowrap;
+}
+
+
+// ==========================================
+// OPTIONAL PROGRESS BAR
+// ==========================================
+
+.single-progress .progress-value {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+}
+
+.single-progress .progress-bar {
+
+    width: 70px;
+    height: 6px;
+
+    overflow: hidden;
+
+    background: #e9e9ef;
+
+    border-radius: 999px;
+}
+
+.single-progress .progress-bar span {
+
+    display: block;
+
+    height: 100%;
+
+    width: var(--progress, 0%);
+
+    background: var(--primary);
+
+    border-radius: inherit;
+
+    transition: width 0.5s ease;
+}
+
+
+// ==========================================
+// MOBILE
+// ==========================================
+
+@media (max-width: 600px) {
+
+    .progress-list,
+    .activity-list {
+        margin-top: 15px;
+
+        gap: 8px;
+    }
+
+    .progress-list .single-progress,
+    .activity-list .activity-card {
+        padding: 11px 12px;
+
+        border-radius: 0.7rem;
+    }
+
+    .single-progress .progress-title,
+    .activity-card .recent-left {
+        gap: 10px;
+    }
+
+    .progress-title span {
+        width: 34px;
+        height: 34px;
+
+        border-radius: 9px;
+
+        font-size: 0.85rem;
+    }
+
+    .progress-title h4 {
+        font-size: 0.8rem;
+    }
+
+    .single-progress p {
+        font-size: 0.8rem;
+    }
+
+    .single-progress .progress-bar {
+        width: 50px;
+        height: 5px;
+    }
+}
+
+
+// ==========================================
+// SMALL MOBILE
+// ==========================================
+
+@media (max-width: 380px) {
+
+    .progress-list .single-progress,
+    .activity-list .activity-card {
+        padding: 9px 10px;
+    }
+
+    .progress-title span {
+        width: 31px;
+        height: 31px;
+
+        font-size: 0.75rem;
+    }
+
+    .progress-title h4 {
+        font-size: 0.75rem;
+    }
+
+    .single-progress p {
+        font-size: 0.75rem;
+    }
+}

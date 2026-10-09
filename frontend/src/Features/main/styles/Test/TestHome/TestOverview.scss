@@ -1,0 +1,450 @@
+// ==========================================
+// TEST OVERVIEW
+// ==========================================
+
+.test-overview {
+
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(240px, 1fr));
+
+    gap: 18px;
+
+    margin-top: 20px;
+
+    box-sizing: border-box;
+}
+
+
+// ==========================================
+// TEST CARD
+// ==========================================
+
+.test-card {
+
+    width: 100%;
+
+    min-width: 0;
+
+    min-height: 260px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 12px;
+
+    padding: 18px;
+
+    box-sizing: border-box;
+
+    background:
+        linear-gradient(
+            145deg,
+            #181a20,
+            #111318
+        );
+
+    border: 1px solid #292c34;
+
+    border-radius: 1rem;
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, .25),
+        inset 0 1px 0 rgba(255, 255, 255, .025);
+
+    transition:
+        transform .25s ease,
+        border-color .25s ease,
+        background .25s ease,
+        box-shadow .25s ease;
+}
+
+
+// ==========================================
+// CARD HOVER
+// ==========================================
+
+.test-card:hover {
+
+    transform: translateY(-5px);
+
+    background:
+        linear-gradient(
+            145deg,
+            #1b1d24,
+            #121419
+        );
+
+    border-color: rgba(124, 92, 255, .55);
+
+    box-shadow:
+        0 15px 35px rgba(0, 0, 0, .38),
+        0 0 20px rgba(124, 92, 255, .05);
+}
+
+
+// ==========================================
+// CARD HEADER
+// ==========================================
+
+.card-header {
+
+    width: 100%;
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 13px;
+
+    min-width: 0;
+}
+
+
+// ==========================================
+// HEADER CONTENT
+// ==========================================
+
+.header-content {
+
+    min-width: 0;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 4px;
+}
+
+
+.header-content h3,
+.card-body h2 {
+
+    margin: 0;
+
+    font-size: clamp(.95rem, 2vw, 1.15rem);
+
+    font-family: "Poppins", sans-serif;
+
+    font-weight: 600;
+
+    letter-spacing: -.2px;
+
+    color: #f1f3f5;
+
+    line-height: 1.4;
+}
+
+
+.header-content p,
+.card-body span {
+
+    margin: 0;
+
+    font-size: clamp(.7rem, 1vw, .8rem);
+
+    font-family: "Poppins", sans-serif;
+
+    font-weight: 450;
+
+    color: #858994;
+
+    line-height: 1.55;
+
+    min-height: auto;
+}
+
+
+// ==========================================
+// CARD BODY
+// ==========================================
+
+.card-body {
+
+    width: 100%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 3px;
+
+    margin-top: 8px;
+}
+
+
+.card-body h2 {
+
+    font-size: clamp(1.25rem, 3vw, 1.7rem);
+
+    color: #ffffff;
+
+    letter-spacing: -.4px;
+}
+
+
+.card-body span {
+
+    font-size: clamp(.68rem, 1vw, .78rem);
+
+    color: #777c87;
+}
+
+
+// ==========================================
+// CARD FOOTER
+// ==========================================
+
+.test-card .card-footer {
+
+    width: 100%;
+
+    margin-top: auto;
+
+    padding-top: 12px;
+}
+
+
+// ==========================================
+// START BUTTON
+// ==========================================
+
+.test-card .card-footer button {
+
+    width: 100%;
+
+    min-height: 42px;
+
+    padding: 10px 18px;
+
+    border: 1px solid rgba(124, 92, 255, .25);
+
+    border-radius: 9px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #5b3df5,
+            #8068ff
+        );
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: clamp(.72rem, 1vw, .82rem);
+
+    font-weight: 600;
+
+    letter-spacing: .1px;
+
+    color: #ffffff;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 7px 18px rgba(91, 61, 245, .20);
+
+    transition:
+        transform .25s ease,
+        box-shadow .25s ease,
+        filter .25s ease;
+}
+
+
+// ==========================================
+// BUTTON HOVER
+// ==========================================
+
+.test-card .card-footer button:hover {
+
+    transform: translateY(-2px);
+
+    filter: brightness(1.08);
+
+    box-shadow:
+        0 10px 24px rgba(91, 61, 245, .32);
+}
+
+
+.test-card .card-footer button:active {
+
+    transform: translateY(0);
+
+    box-shadow:
+        0 5px 14px rgba(91, 61, 245, .20);
+}
+
+
+// ==========================================
+// TABLET
+// ==========================================
+
+@media (max-width: 768px) {
+
+    .test-overview {
+
+        grid-template-columns:
+            repeat(auto-fit, minmax(220px, 1fr));
+
+        gap: 14px;
+
+        margin-top: 16px;
+    }
+
+
+    .test-card {
+
+        min-height: 245px;
+
+        padding: 16px;
+
+        border-radius: .9rem;
+    }
+
+
+    .header-content h3 {
+
+        font-size: .92rem;
+    }
+
+
+    .header-content p {
+
+        font-size: .7rem;
+    }
+
+
+    .card-body h2 {
+
+        font-size: 1.3rem;
+    }
+
+
+    .card-body span {
+
+        font-size: .68rem;
+    }
+}
+
+
+// ==========================================
+// MOBILE
+// ==========================================
+
+@media (max-width: 520px) {
+
+    .test-overview {
+
+        grid-template-columns: 1fr;
+
+        gap: 12px;
+
+        margin-top: 14px;
+    }
+
+
+    .test-card {
+
+        min-height: 220px;
+
+        padding: 15px;
+
+        border-radius: .85rem;
+    }
+
+
+    .card-header {
+
+        gap: 10px;
+    }
+
+
+    .header-content h3 {
+
+        font-size: .9rem;
+    }
+
+
+    .header-content p {
+
+        font-size: .68rem;
+
+        line-height: 1.5;
+    }
+
+
+    .card-body {
+
+        margin-top: 5px;
+    }
+
+
+    .card-body h2 {
+
+        font-size: 1.2rem;
+    }
+
+
+    .card-body span {
+
+        font-size: .66rem;
+    }
+
+
+    .test-card .card-footer {
+
+        padding-top: 10px;
+    }
+
+
+    .test-card .card-footer button {
+
+        min-height: 40px;
+
+        font-size: .7rem;
+    }
+}
+
+
+// ==========================================
+// SMALL PHONE
+// ==========================================
+
+@media (max-width: 360px) {
+
+    .test-card {
+
+        min-height: 205px;
+
+        padding: 13px;
+    }
+
+
+    .header-content h3 {
+
+        font-size: .84rem;
+    }
+
+
+    .header-content p {
+
+        font-size: .64rem;
+    }
+
+
+    .card-body h2 {
+
+        font-size: 1.1rem;
+    }
+
+
+    .test-card .card-footer button {
+
+        min-height: 38px;
+
+        font-size: .66rem;
+    }
+}

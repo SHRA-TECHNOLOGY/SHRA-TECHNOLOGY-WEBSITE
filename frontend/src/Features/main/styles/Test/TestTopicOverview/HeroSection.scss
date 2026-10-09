@@ -1,0 +1,575 @@
+// ==========================================
+// SUBJECT HERO
+// ==========================================
+
+.subject-hero {
+
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1.5fr)
+        minmax(0, 3fr);
+
+    align-items: center;
+
+    gap: 20px;
+
+    padding: 20px;
+
+    background:
+        radial-gradient(
+            circle at top right,
+            rgba(124, 92, 255, .08),
+            transparent 35%
+        ),
+        linear-gradient(
+            145deg,
+            #181a20,
+            #111318
+        );
+
+    border: 1px solid #292c34;
+
+    border-radius: 1rem;
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, .28),
+        inset 0 1px 0 rgba(255, 255, 255, .025);
+
+    box-sizing: border-box;
+}
+
+
+// ==========================================
+// LEFT SUBJECT INFO
+// ==========================================
+
+.subject-info {
+
+    min-width: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 16px;
+}
+
+
+// ==========================================
+// SUBJECT ICON
+// ==========================================
+
+.subject-icon {
+
+    width: 82px;
+
+    height: 82px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 18px;
+
+    background:
+        rgba(124, 92, 255, .12);
+
+    border: 1px solid rgba(124, 92, 255, .20);
+
+    color: var(--primary);
+
+    box-shadow:
+        0 8px 20px rgba(0, 0, 0, .22),
+        inset 0 1px 0 rgba(255, 255, 255, .03);
+
+    transition:
+        transform .25s ease,
+        background .25s ease,
+        border-color .25s ease;
+}
+
+
+.subject-hero:hover .subject-icon {
+
+    transform: scale(1.04);
+
+    background:
+        rgba(124, 92, 255, .16);
+
+    border-color:
+        rgba(124, 92, 255, .35);
+}
+
+
+// ==========================================
+// SUBJECT CONTENT
+// ==========================================
+
+.subject-content {
+
+    min-width: 0;
+}
+
+
+.subject-content h1 {
+
+    margin: 0 0 7px;
+
+    font-size: clamp(1.2rem, 3vw, 2rem);
+
+    font-family: "Poppins", sans-serif;
+
+    font-weight: 650;
+
+    letter-spacing: -.5px;
+
+    color: #f3f4f6;
+
+    line-height: 1.3;
+}
+
+
+.subject-content p {
+
+    max-width: 520px;
+
+    margin: 0;
+
+    font-size: clamp(.72rem, 1.2vw, .85rem);
+
+    font-family: "Poppins", sans-serif;
+
+    font-weight: 450;
+
+    color: #8f939d;
+
+    line-height: 1.7;
+}
+
+
+// ==========================================
+// SUBJECT STATS
+// ==========================================
+
+.subject-stats {
+
+    width: 100%;
+
+    min-width: 0;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    align-items: stretch;
+
+    background:
+        #121419;
+
+    border: 1px solid #292c34;
+
+    border-radius: 14px;
+
+    overflow: hidden;
+
+    box-sizing: border-box;
+}
+
+
+// ==========================================
+// SINGLE STAT
+// ==========================================
+
+.single-stat {
+
+    min-width: 0;
+
+    padding: 16px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    transition:
+        background .25s ease;
+}
+
+
+.single-stat:hover {
+
+    background:
+        rgba(255, 255, 255, .025);
+}
+
+
+// ==========================================
+// STAT SEPARATOR
+// ==========================================
+
+.border-right {
+
+    border-right: 1px solid #292c34;
+}
+
+
+// ==========================================
+// STAT ICON
+// ==========================================
+
+.stat-icon {
+
+    width: 56px;
+
+    height: 56px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 14px;
+
+    background:
+        rgba(124, 92, 255, .10);
+
+    border: 1px solid rgba(124, 92, 255, .16);
+
+    color: var(--primary);
+}
+
+
+// ==========================================
+// STAT CONTENT
+// ==========================================
+
+.stat-content {
+
+    min-width: 0;
+
+    display: flex;
+
+    flex-direction: column;
+
+    overflow: hidden;
+}
+
+
+.stat-content h2 {
+
+    margin: 0 0 3px;
+
+    font-size: clamp(1rem, 2vw, 1.4rem);
+
+    font-family: "Poppins", sans-serif;
+
+    font-weight: 650;
+
+    letter-spacing: -.3px;
+
+    color: #f3f4f6;
+
+    line-height: 1.3;
+}
+
+
+.stat-content p {
+
+    margin: 0;
+
+    font-size: clamp(.62rem, 1vw, .75rem);
+
+    font-family: "Poppins", sans-serif;
+
+    font-weight: 450;
+
+    color: #7f838e;
+
+    line-height: 1.5;
+
+    white-space: nowrap;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+}
+
+
+// ==========================================
+// TABLET
+// ==========================================
+
+@media (max-width: 1000px) {
+
+    .subject-hero {
+
+        grid-template-columns: 1fr;
+
+        gap: 15px;
+
+        padding: 17px;
+    }
+
+
+    .subject-content p {
+
+        max-width: 700px;
+    }
+
+
+    .subject-stats {
+
+        width: 100%;
+    }
+}
+
+
+// ==========================================
+// SMALL TABLET
+// ==========================================
+
+@media (max-width: 700px) {
+
+    .subject-hero {
+
+        padding: 15px;
+
+        border-radius: .9rem;
+    }
+
+
+    .subject-info {
+
+        gap: 12px;
+    }
+
+
+    .subject-icon {
+
+        width: 68px;
+
+        height: 68px;
+
+        border-radius: 15px;
+    }
+
+
+    .subject-content h1 {
+
+        font-size: 1.25rem;
+    }
+
+
+    .subject-content p {
+
+        font-size: .72rem;
+
+        line-height: 1.6;
+    }
+
+
+    .single-stat {
+
+        padding: 13px;
+
+        gap: 9px;
+    }
+
+
+    .stat-icon {
+
+        width: 46px;
+
+        height: 46px;
+
+        border-radius: 11px;
+    }
+
+
+    .stat-content h2 {
+
+        font-size: 1rem;
+    }
+
+
+    .stat-content p {
+
+        font-size: .62rem;
+    }
+}
+
+
+// ==========================================
+// MOBILE
+// ==========================================
+
+@media (max-width: 520px) {
+
+    .subject-hero {
+
+        padding: 13px;
+
+        gap: 13px;
+
+        border-radius: .85rem;
+    }
+
+
+    .subject-info {
+
+        align-items: flex-start;
+
+        gap: 11px;
+    }
+
+
+    .subject-icon {
+
+        width: 58px;
+
+        height: 58px;
+
+        border-radius: 13px;
+    }
+
+
+    .subject-content h1 {
+
+        font-size: 1.05rem;
+
+        letter-spacing: -.2px;
+    }
+
+
+    .subject-content p {
+
+        font-size: .67rem;
+
+        line-height: 1.55;
+    }
+
+
+    // Stats become vertical
+
+    .subject-stats {
+
+        grid-template-columns: 1fr;
+
+        border-radius: 10px;
+    }
+
+
+    .single-stat {
+
+        min-height: 58px;
+
+        padding: 11px 12px;
+    }
+
+
+    .border-right {
+
+        border-right: none;
+
+        border-bottom: 1px solid #292c34;
+    }
+
+
+    .stat-icon {
+
+        width: 40px;
+
+        height: 40px;
+
+        border-radius: 10px;
+    }
+
+
+    .stat-content h2 {
+
+        font-size: .95rem;
+    }
+
+
+    .stat-content p {
+
+        font-size: .62rem;
+    }
+}
+
+
+// ==========================================
+// SMALL PHONE
+// ==========================================
+
+@media (max-width: 360px) {
+
+    .subject-hero {
+
+        padding: 11px;
+
+        gap: 11px;
+    }
+
+
+    .subject-icon {
+
+        width: 50px;
+
+        height: 50px;
+
+        border-radius: 11px;
+    }
+
+
+    .subject-content h1 {
+
+        font-size: .95rem;
+    }
+
+
+    .subject-content p {
+
+        font-size: .62rem;
+    }
+
+
+    .single-stat {
+
+        padding: 9px 10px;
+    }
+
+
+    .stat-icon {
+
+        width: 36px;
+
+        height: 36px;
+
+        border-radius: 9px;
+    }
+
+
+    .stat-content h2 {
+
+        font-size: .85rem;
+    }
+
+
+    .stat-content p {
+
+        font-size: .58rem;
+    }
+}

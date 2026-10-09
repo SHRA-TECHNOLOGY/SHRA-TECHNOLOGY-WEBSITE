@@ -1,0 +1,727 @@
+/* ==========================================================
+   RESET PASSWORD RIGHT PART
+========================================================== */
+
+.form-container {
+    width: 100%;
+    max-width: 620px;
+
+    padding: 42px 48px;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 24px;
+
+    background: #ffffff;
+
+    border: 1px solid #eef2f7;
+    border-radius: 20px;
+
+    box-shadow:
+        0 8px 30px rgba(15, 23, 42, 0.04),
+        0 20px 50px rgba(15, 23, 42, 0.04);
+
+    animation: resetFormAppear 0.7s ease both;
+}
+
+
+/* ==========================================================
+   FORM TITLE
+========================================================== */
+
+.form-container h1 {
+    margin: 0;
+
+    color: #111827;
+
+    font-family:
+        Inter,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+
+    font-size: clamp(1.8rem, 3vw, 2.25rem);
+
+    font-weight: 750;
+
+    line-height: 1.2;
+
+    letter-spacing: -0.8px;
+
+    text-align: center;
+}
+
+
+/* ==========================================================
+   SUBTITLE
+========================================================== */
+
+.reset-subTitle {
+    max-width: 480px;
+
+    margin: -10px auto 4px;
+
+    color: #6b7280;
+
+    font-family:
+        Inter,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+
+    font-size: 14px;
+
+    font-weight: 400;
+
+    line-height: 1.7;
+
+    text-align: center;
+}
+
+
+/* ==========================================================
+   FORM
+========================================================== */
+
+.form-container form {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 20px;
+}
+
+
+/* ==========================================================
+   INPUT GROUP
+========================================================== */
+
+.input-group {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 8px;
+}
+
+.input-group label {
+    color: #374151;
+
+    font-family:
+        Inter,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    line-height: 1.4;
+}
+
+
+/* ==========================================================
+   PASSWORD FIELD
+========================================================== */
+
+.password-field {
+    position: relative;
+
+    width: 100%;
+}
+
+.password-field input {
+    width: 100%;
+    height: 50px;
+
+    padding: 0 50px 0 16px;
+
+    border: 1px solid #e5e7eb;
+
+    outline: none;
+
+    border-radius: 11px;
+
+    background: #f9fafb;
+
+    color: #111827;
+
+    font-family:
+        Inter,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+
+    font-size: 14px;
+
+    transition:
+        border-color 0.2s ease,
+        background 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.password-field input::placeholder {
+    color: #9ca3af;
+
+    font-size: 13px;
+}
+
+.password-field input:hover {
+    border-color: #d1d5db;
+
+    background: #ffffff;
+}
+
+.password-field input:focus {
+    border-color: #ec4899;
+
+    background: #ffffff;
+
+    box-shadow:
+        0 0 0 4px rgba(236, 72, 153, 0.08);
+}
+
+
+/* ==========================================================
+   EYE ICON
+========================================================== */
+
+.eye-icon {
+    position: absolute;
+
+    top: 50%;
+    right: 15px;
+
+    width: 18px;
+    height: 18px;
+
+    transform: translateY(-50%);
+
+    color: #9ca3af;
+
+    cursor: pointer;
+
+    transition:
+        color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.eye-icon:hover {
+    color: #ec4899;
+
+    transform:
+        translateY(-50%)
+        scale(1.08);
+}
+
+
+/* ==========================================================
+   PASSWORD INSTRUCTIONS
+========================================================== */
+
+.instructionForPassword {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 14px;
+
+    padding: 18px;
+
+    border: 1px solid #f1f5f9;
+
+    border-radius: 14px;
+
+    background: #fafafa;
+
+    transition:
+        border-color 0.2s ease,
+        background 0.2s ease;
+}
+
+.instructionForPassword:hover {
+    border-color: #fce7f3;
+
+    background: #ffffff;
+}
+
+
+/* ==========================================================
+   INSTRUCTION TITLE
+========================================================== */
+
+.instructionForPassword h3 {
+    margin: 0;
+
+    color: #374151;
+
+    font-family:
+        Inter,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+
+    font-size: 14px;
+
+    font-weight: 650;
+
+    line-height: 1.4;
+}
+
+
+/* ==========================================================
+   INSTRUCTION GRID
+========================================================== */
+
+.instructionForPassword .instruction-section {
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 10px 14px;
+}
+
+
+/* ==========================================================
+   SINGLE INSTRUCTION
+========================================================== */
+
+.instructionForPassword
+.instruction-section
+.instruction {
+    min-width: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    padding: 8px 9px;
+
+    border-radius: 8px;
+
+    background: #ffffff;
+}
+
+
+/* ==========================================================
+   CHECK ICON
+========================================================== */
+
+.instruction-section
+.instruction
+svg {
+    width: 16px;
+    height: 16px;
+
+    flex-shrink: 0;
+}
+
+
+/* ==========================================================
+   INSTRUCTION TEXT
+========================================================== */
+
+.instruction-section
+.instruction
+p {
+    margin: 0;
+
+    color: #6b7280;
+
+    font-family:
+        Inter,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+
+    font-size: 12px;
+
+    font-weight: 500;
+
+    line-height: 1.4;
+}
+
+
+/* ==========================================================
+   RESET BUTTON
+========================================================== */
+
+.form-container .primary-button {
+    width: 100%;
+
+    min-height: 50px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 9px;
+
+    border: none;
+
+    border-radius: 11px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ec4899,
+            #f43f5e
+        );
+
+    color: #ffffff;
+
+    font-family:
+        Inter,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+
+    font-size: 14px;
+
+    font-weight: 650;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 8px 20px
+        rgba(236, 72, 153, 0.18);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        opacity 0.2s ease;
+}
+
+.form-container .primary-button svg {
+    width: 17px;
+    height: 17px;
+}
+
+.form-container .primary-button:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 12px 26px
+        rgba(236, 72, 153, 0.25);
+}
+
+.form-container .primary-button:active {
+    transform: translateY(0);
+}
+
+.form-container .primary-button:focus-visible {
+    outline: none;
+
+    box-shadow:
+        0 0 0 4px rgba(236, 72, 153, 0.12),
+        0 8px 20px rgba(236, 72, 153, 0.18);
+}
+
+
+/* ==========================================================
+   SECURITY FOOTER
+========================================================== */
+
+.footer-reset {
+    width: 100%;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 9px;
+
+    margin: -5px 0 0;
+
+    padding: 8px 0 0;
+
+    color: #9ca3af;
+
+    font-family:
+        Inter,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+
+    font-size: 12px;
+
+    font-weight: 500;
+
+    text-align: center;
+}
+
+.footer-reset .icon-forgot {
+    width: 17px;
+    height: 17px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    color: #ec4899;
+}
+
+.footer-reset .icon-forgot svg {
+    width: 17px;
+    height: 17px;
+}
+
+
+/* ==========================================================
+   ANIMATION
+========================================================== */
+
+@keyframes resetFormAppear {
+    from {
+        opacity: 0;
+
+        transform:
+            translateX(25px)
+            translateY(5px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateX(0)
+            translateY(0);
+    }
+}
+
+
+/* ==========================================================
+   TABLET
+========================================================== */
+
+@media (max-width: 900px) {
+
+    .form-container {
+        max-width: 100%;
+
+        padding: 34px 32px;
+
+        border-radius: 18px;
+    }
+
+    .instructionForPassword {
+        padding: 16px;
+    }
+
+}
+
+
+/* ==========================================================
+   MOBILE
+========================================================== */
+
+@media (max-width: 600px) {
+
+    .form-container {
+        width: 100%;
+
+        max-width: 100%;
+
+        padding: 28px 20px;
+
+        gap: 20px;
+
+        border-radius: 0;
+
+        border: none;
+
+        box-shadow: none;
+
+        animation-name: resetFormMobile;
+    }
+
+
+    .form-container h1 {
+        font-size: 1.75rem;
+
+        letter-spacing: -0.5px;
+    }
+
+
+    .reset-subTitle {
+        margin-top: -8px;
+
+        font-size: 13px;
+
+        line-height: 1.6;
+    }
+
+
+    .form-container form {
+        gap: 17px;
+    }
+
+
+    .input-group {
+        gap: 7px;
+    }
+
+
+    .input-group label {
+        font-size: 13px;
+    }
+
+
+    .password-field input {
+        height: 48px;
+
+        padding-left: 14px;
+        padding-right: 46px;
+
+        border-radius: 10px;
+
+        font-size: 13px;
+    }
+
+
+    .eye-icon {
+        right: 13px;
+
+        width: 17px;
+        height: 17px;
+    }
+
+
+    .instructionForPassword {
+        padding: 15px;
+
+        gap: 12px;
+
+        border-radius: 12px;
+    }
+
+
+    .instructionForPassword h3 {
+        font-size: 13px;
+    }
+
+
+    .instructionForPassword
+    .instruction-section {
+        grid-template-columns: 1fr;
+
+        gap: 7px;
+    }
+
+
+    .instructionForPassword
+    .instruction-section
+    .instruction {
+        padding: 7px 8px;
+    }
+
+
+    .instruction-section
+    .instruction
+    p {
+        font-size: 12px;
+    }
+
+
+    .form-container .primary-button {
+        min-height: 48px;
+
+        border-radius: 10px;
+
+        font-size: 13px;
+    }
+
+
+    .footer-reset {
+        font-size: 11px;
+
+        padding-top: 3px;
+    }
+
+}
+
+
+/* ==========================================================
+   SMALL MOBILE
+========================================================== */
+
+@media (max-width: 380px) {
+
+    .form-container {
+        padding: 24px 15px;
+    }
+
+
+    .form-container h1 {
+        font-size: 1.55rem;
+    }
+
+
+    .reset-subTitle {
+        font-size: 12px;
+    }
+
+
+    .password-field input {
+        height: 46px;
+    }
+
+
+    .instructionForPassword {
+        padding: 13px;
+    }
+
+
+    .instruction-section
+    .instruction
+    p {
+        font-size: 11.5px;
+    }
+
+
+    .form-container .primary-button {
+        min-height: 46px;
+    }
+
+}
+
+
+/* ==========================================================
+   MOBILE ANIMATION
+========================================================== */
+
+@keyframes resetFormMobile {
+
+    from {
+        opacity: 0;
+
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform: translateY(0);
+    }
+
+}

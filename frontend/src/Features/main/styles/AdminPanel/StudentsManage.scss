@@ -1,0 +1,529 @@
+// ==========================================
+// STUDENTS LIST
+// ==========================================
+
+.students-list-container {
+
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 12px;
+
+    margin-top: 15px;
+}
+
+
+// ==========================================
+// SINGLE STUDENT CARD
+// ==========================================
+
+.students-list-container .single-student {
+
+    width: 100%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    padding: 16px 18px;
+
+    background: #ffffff;
+
+    border: 1px solid #e8e8ef;
+
+    border-radius: 0.9rem;
+
+    box-shadow:
+        0 5px 18px rgba(35, 35, 70, 0.05);
+
+    transition:
+        transform 0.2s ease,
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+// Hover
+
+.students-list-container .single-student:hover {
+
+    border-color: rgba(124, 92, 255, 0.25);
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 9px 24px rgba(35, 35, 70, 0.09);
+}
+
+
+// ==========================================
+// LEFT + RIGHT PART
+// ==========================================
+
+.students-list-container
+.single-student
+.left-part,
+
+.students-list-container
+.single-student
+.right-part {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+}
+
+
+// ==========================================
+// STUDENT NUMBER / AVATAR
+// ==========================================
+
+.single-student .left-part > span {
+
+    width: 42px;
+    height: 42px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 12px;
+
+    background: rgba(124, 92, 255, 0.1);
+
+    border: 1px solid rgba(124, 92, 255, 0.15);
+
+    color: var(--primary);
+
+    font-size: clamp(0.85rem, 2vw, 1rem);
+
+    font-family: "Poppins", sans-serif;
+
+    font-weight: 700;
+
+    transition: 0.2s ease;
+}
+
+.single-student:hover .left-part > span {
+
+    background: var(--primary);
+
+    color: #ffffff;
+
+    transform: scale(1.05);
+}
+
+
+// ==========================================
+// STUDENT INFO
+// ==========================================
+
+.single-student .left-part .lift-info {
+
+    min-width: 0;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 3px;
+}
+
+.single-student .left-part .lift-info h4 {
+
+    margin: 0;
+
+    font-size: clamp(0.85rem, 1.5vw, 1rem);
+
+    font-family: "Poppins", sans-serif;
+
+    font-weight: 600;
+
+    color: #30323a;
+
+    letter-spacing: -0.1px;
+
+    white-space: nowrap;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+}
+
+.single-student .left-part .lift-info p {
+
+    margin: 0;
+
+    font-size: clamp(0.7rem, 1.5vw, 0.8rem);
+
+    font-family: "Poppins", sans-serif;
+
+    letter-spacing: 0.2px;
+
+    font-weight: 450;
+
+    color: #777984;
+
+    white-space: nowrap;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+}
+
+
+// ==========================================
+// RIGHT PART
+// ==========================================
+
+.students-list-container
+.single-student
+.right-part {
+
+    flex-shrink: 0;
+
+    justify-content: flex-end;
+
+    gap: 25px;
+}
+
+
+// ==========================================
+// RIGHT INFO CARDS
+// ==========================================
+
+.single-student
+.right-part
+.right-card {
+
+    min-width: 75px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 2px;
+
+    padding: 7px 10px;
+
+    border-radius: 0.6rem;
+
+    background: #f8f8fb;
+
+    border: 1px solid #eeeeF3;
+}
+
+.single-student
+.right-part
+.right-card p {
+
+    margin: 0;
+
+    font-size: clamp(0.65rem, 1.5vw, 0.75rem);
+
+    font-family: "Poppins", sans-serif;
+
+    font-weight: 500;
+
+    color: #858792;
+}
+
+.single-student
+.right-part
+.right-card span {
+
+    font-size: clamp(0.75rem, 1.5vw, 0.9rem);
+
+    font-family: "Poppins", sans-serif;
+
+    font-weight: 650;
+
+    color: #363842;
+}
+
+
+// ==========================================
+// VIEW DETAILS BUTTON
+// ==========================================
+
+.single-student
+.right-part
+.view-btn {
+
+    min-width: 90px;
+
+    padding: 9px 14px;
+
+    border-radius: 0.6rem;
+
+    background: #ffffff;
+
+    border: 1px solid #dedee7;
+
+    color: #4b4d57;
+
+    font-size: clamp(0.7rem, 1.5vw, 0.82rem);
+
+    font-family: "Poppins", sans-serif;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        color 0.2s ease,
+        border-color 0.2s ease,
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.single-student
+.right-part
+.view-btn:hover {
+
+    background: var(--primary);
+
+    color: #ffffff;
+
+    border-color: var(--primary);
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 5px 14px rgba(124, 92, 255, 0.2);
+}
+
+
+// ==========================================
+// TABLET
+// ==========================================
+
+@media (max-width: 900px) {
+
+    .students-list-container
+    .single-student {
+
+        padding: 14px;
+
+        gap: 15px;
+    }
+
+    .students-list-container
+    .single-student
+    .right-part {
+
+        gap: 10px;
+    }
+
+    .single-student
+    .right-part
+    .right-card {
+
+        min-width: 65px;
+
+        padding: 6px 8px;
+    }
+
+    .single-student
+    .right-part
+    .view-btn {
+
+        min-width: 75px;
+
+        padding: 8px 10px;
+    }
+}
+
+
+// ==========================================
+// MOBILE
+// ==========================================
+
+@media (max-width: 700px) {
+
+    .students-list-container {
+
+        gap: 10px;
+    }
+
+    .students-list-container
+    .single-student {
+
+        padding: 12px;
+
+        gap: 12px;
+
+        border-radius: 0.75rem;
+    }
+
+    .students-list-container
+    .single-student
+    .left-part {
+
+        gap: 10px;
+
+        min-width: 0;
+    }
+
+    .single-student
+    .left-part > span {
+
+        width: 36px;
+        height: 36px;
+
+        border-radius: 10px;
+
+        font-size: 0.8rem;
+    }
+
+    .single-student
+    .left-part
+    .lift-info
+    h4 {
+
+        font-size: 0.78rem;
+    }
+
+    .single-student
+    .left-part
+    .lift-info
+    p {
+
+        font-size: 0.65rem;
+    }
+
+    .students-list-container
+    .single-student
+    .right-part {
+
+        gap: 6px;
+    }
+
+    .single-student
+    .right-part
+    .right-card {
+
+        min-width: 55px;
+
+        padding: 5px 6px;
+    }
+
+    .single-student
+    .right-part
+    .right-card
+    p {
+
+        font-size: 0.58rem;
+    }
+
+    .single-student
+    .right-part
+    .right-card
+    span {
+
+        font-size: 0.7rem;
+    }
+
+    .single-student
+    .right-part
+    .view-btn {
+
+        min-width: auto;
+
+        padding: 7px 9px;
+
+        font-size: 0.65rem;
+    }
+}
+
+
+// ==========================================
+// SMALL MOBILE
+// ==========================================
+
+@media (max-width: 520px) {
+
+    .students-list-container
+    .single-student {
+
+        align-items: flex-start;
+    }
+
+    .students-list-container
+    .single-student
+    .right-part {
+
+        flex-direction: column;
+
+        align-items: flex-end;
+
+        gap: 5px;
+    }
+
+    .single-student
+    .right-part
+    .right-card {
+
+        min-width: 60px;
+
+        flex-direction: row;
+
+        gap: 5px;
+    }
+}
+
+
+// ==========================================
+// VERY SMALL MOBILE
+// ==========================================
+
+@media (max-width: 380px) {
+
+    .students-list-container
+    .single-student {
+
+        padding: 10px;
+    }
+
+    .single-student
+    .left-part > span {
+
+        width: 32px;
+        height: 32px;
+
+        border-radius: 8px;
+    }
+
+    .single-student
+    .left-part
+    .lift-info
+    h4 {
+
+        font-size: 0.72rem;
+    }
+
+    .single-student
+    .right-part
+    .view-btn {
+
+        padding: 6px 8px;
+
+        font-size: 0.6rem;
+    }
+}

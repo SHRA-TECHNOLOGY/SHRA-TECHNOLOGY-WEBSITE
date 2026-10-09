@@ -1,0 +1,363 @@
+/* =========================================================
+   TEST LOADING / ERROR STATE
+========================================================= */
+
+.test-state-page {
+    width: 100%;
+    min-height: calc(100vh - 70px);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 30px 20px;
+
+    background: #f8f9fc;
+
+    font-family: "Poppins", sans-serif;
+}
+
+
+/* =========================================================
+   STATE CARD
+========================================================= */
+
+.test-state-card {
+    width: min(440px, 100%);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 40px 30px;
+
+    text-align: center;
+
+    background: #ffffff;
+
+    border: 1px solid #e8eaf0;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 15px 40px rgba(15, 23, 42, 0.07);
+
+    animation: testStateAppear 0.35s ease;
+}
+
+
+/* =========================================================
+   LOADING SPINNER
+========================================================= */
+
+.test-loading-spinner {
+    width: 48px;
+    height: 48px;
+
+    margin-bottom: 20px;
+
+    border: 4px solid #eeeef5;
+
+    border-top-color: var(--primary);
+
+    border-radius: 50%;
+
+    animation: testSpinner 0.8s linear infinite;
+}
+
+
+/* =========================================================
+   TITLE
+========================================================= */
+
+.test-state-card h3 {
+    margin: 0;
+
+    color: #202124;
+
+    font-size: 20px;
+
+    font-weight: 700;
+
+    letter-spacing: -0.3px;
+}
+
+
+/* =========================================================
+   DESCRIPTION
+========================================================= */
+
+.test-state-card > p {
+    max-width: 350px;
+
+    margin: 8px 0 0;
+
+    color: #777b87;
+
+    font-size: 13px;
+
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   LOADING SKELETON
+========================================================= */
+
+.test-loading-skeleton {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 8px;
+
+    margin-top: 25px;
+}
+
+
+.test-loading-skeleton span {
+    display: block;
+
+    width: 100%;
+    height: 10px;
+
+    border-radius: 20px;
+
+    background: linear-gradient(
+        90deg,
+        #f0f1f5 25%,
+        #e5e7ed 50%,
+        #f0f1f5 75%
+    );
+
+    background-size: 200% 100%;
+
+    animation: testSkeleton 1.5s ease-in-out infinite;
+}
+
+
+.test-loading-skeleton span:nth-child(2) {
+    width: 85%;
+}
+
+
+.test-loading-skeleton span:nth-child(3) {
+    width: 65%;
+}
+
+
+/* =========================================================
+   ERROR ICON
+========================================================= */
+
+.test-error-icon {
+    width: 54px;
+    height: 54px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 18px;
+
+    border: 1px solid #fecaca;
+
+    border-radius: 50%;
+
+    background: #fff1f2;
+
+    color: #dc2626;
+
+    font-size: 25px;
+
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   ERROR CARD
+========================================================= */
+
+.test-error-card {
+    border-color: #f0e1e3;
+}
+
+
+.test-error-card > p {
+    color: #77727a;
+}
+
+
+/* =========================================================
+   RETRY BUTTON
+========================================================= */
+
+.test-retry-btn {
+    min-height: 44px;
+
+    margin-top: 22px;
+
+    padding: 0 22px;
+
+    border: none;
+
+    border-radius: 9px;
+
+    background: var(--gradient-primary);
+
+    color: #ffffff;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 6px 16px rgba(124, 92, 255, 0.18);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+.test-retry-btn:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 9px 22px rgba(124, 92, 255, 0.25);
+}
+
+
+.test-retry-btn:active {
+    transform: translateY(0);
+}
+
+
+/* =========================================================
+   ANIMATIONS
+========================================================= */
+
+@keyframes testSpinner {
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+@keyframes testSkeleton {
+
+    0% {
+        background-position: 200% 0;
+    }
+
+    100% {
+        background-position: -200% 0;
+    }
+}
+
+
+@keyframes testStateAppear {
+
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .test-state-page {
+        min-height: calc(100vh - 60px);
+
+        padding: 25px 16px;
+    }
+
+
+    .test-state-card {
+        padding: 35px 25px;
+
+        border-radius: 16px;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .test-state-page {
+        padding: 20px 12px;
+    }
+
+
+    .test-state-card {
+        width: 100%;
+
+        padding: 32px 20px;
+
+        border-radius: 14px;
+    }
+
+
+    .test-loading-spinner {
+        width: 42px;
+        height: 42px;
+    }
+
+
+    .test-state-card h3 {
+        font-size: 18px;
+    }
+
+
+    .test-state-card > p {
+        font-size: 12px;
+    }
+
+
+    .test-retry-btn {
+        width: 100%;
+
+        min-height: 43px;
+    }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 400px) {
+
+    .test-state-card {
+        padding: 28px 16px;
+    }
+
+
+    .test-state-card h3 {
+        font-size: 17px;
+    }
+
+
+    .test-state-card > p {
+        font-size: 11px;
+    }
+}

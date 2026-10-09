@@ -1,0 +1,837 @@
+/* ==========================================
+   WEEKLY PROGRESS
+========================================== */
+
+.weekly-progress {
+
+    width: 100%;
+    min-width: 0;
+
+    margin-top: 20px;
+    padding: 20px;
+
+    background: #ffffff;
+
+    border: 1px solid #e8eaf0;
+
+    border-radius: 14px;
+
+    box-shadow:
+        0 8px 20px rgba(91, 76, 243, 0.25);
+
+    box-sizing: border-box;
+
+    overflow: hidden;
+
+    transition:
+        box-shadow .25s ease,
+        border-color .25s ease;
+}
+
+.weekly-progress:hover {
+
+    border-color:
+        rgba(91, 76, 243, .18);
+
+    box-shadow:
+        0 12px 28px rgba(91, 76, 243, .28);
+}
+
+
+/* ==========================================
+   HEADER
+========================================== */
+
+.progress-header {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 12px;
+
+    margin-bottom: 4px;
+}
+
+.progress-header h2 {
+
+    margin: 0;
+
+    color: #20232b;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: clamp(
+        .95rem,
+        2vw,
+        1.2rem
+    );
+
+    font-weight: 650;
+
+    line-height: 1.4;
+}
+
+.progress-header button {
+
+    flex-shrink: 0;
+
+    padding: 6px 10px;
+
+    border: none;
+
+    border-radius: 7px;
+
+    background:
+        rgba(99, 102, 241, .07);
+
+    color: #6c4dff;
+
+    cursor: pointer;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: .6rem;
+
+    font-weight: 650;
+
+    transition:
+        background .2s ease,
+        transform .2s ease;
+}
+
+.progress-header button:hover {
+
+    background:
+        rgba(99, 102, 241, .13);
+
+    transform: translateY(-1px);
+}
+
+
+/* ==========================================
+   PROGRESS BODY
+========================================== */
+
+.progress-body {
+
+    margin-top: 22px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 35px;
+
+    min-width: 0;
+}
+
+
+/* ==========================================
+   OVERALL PROGRESS
+========================================== */
+
+.overall-progress {
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+
+/* ==========================================
+   PROGRESS CIRCLE
+========================================== */
+
+.progress-circle {
+
+    width: 140px;
+    height: 140px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background:
+        conic-gradient(
+            #6c4dff var(--progress, 0%),
+            #eeeef3 0
+        );
+
+    position: relative;
+}
+
+.progress-circle::before {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 7px;
+
+    border-radius: 50%;
+
+    background: #ffffff;
+}
+
+
+/* ==========================================
+   CIRCLE INNER
+========================================== */
+
+.circle-inner {
+
+    width: 110px;
+    height: 110px;
+
+    position: relative;
+    z-index: 1;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #ffffff;
+
+    text-align: center;
+
+    box-shadow:
+        0 3px 12px rgba(31, 35, 50, .05);
+}
+
+.circle-inner h1 {
+
+    margin: 0 0 3px;
+
+    color: #20232b;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: clamp(
+        1.1rem,
+        3vw,
+        1.7rem
+    );
+
+    font-weight: 700;
+
+    line-height: 1.2;
+}
+
+.circle-inner span {
+
+    color: #858a95;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: .55rem;
+
+    font-weight: 600;
+}
+
+
+/* ==========================================
+   PROGRESS LIST
+========================================== */
+
+.progress-list {
+
+    flex: 1;
+
+    min-width: 0;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 16px;
+}
+
+
+/* ==========================================
+   PROGRESS ITEM
+========================================== */
+
+.progress-item {
+
+    width: 100%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 7px;
+
+    min-width: 0;
+}
+
+
+/* ==========================================
+   TITLE ROW
+========================================== */
+
+.title-row {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 10px;
+
+    min-width: 0;
+}
+
+.title-row h4 {
+
+    margin: 0;
+
+    min-width: 0;
+
+    color: #363636;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: clamp(
+        .62rem,
+        1.5vw,
+        .72rem
+    );
+
+    font-weight: 600;
+
+    line-height: 1.4;
+
+    overflow-wrap: anywhere;
+}
+
+.title-row span {
+
+    flex-shrink: 0;
+
+    color: #555b66;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: .58rem;
+
+    font-weight: 650;
+}
+
+
+/* ==========================================
+   PROGRESS BAR
+========================================== */
+
+.bar {
+
+    width: 100%;
+
+    height: 7px;
+
+    background: #ececf1;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+}
+
+.fill {
+
+    height: 100%;
+
+    min-width: 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            #6c4dff,
+            #8068ff
+        );
+
+    border-radius: inherit;
+
+    transition:
+        width .5s ease;
+}
+
+
+/* ==========================================
+   EMPTY PROGRESS
+========================================== */
+
+.empty-progress {
+
+    width: 100%;
+    min-width: 0;
+
+    min-height: 260px;
+
+    margin-top: 20px;
+
+    padding: 25px 20px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    background: #ffffff;
+
+    border: 1px solid #e8eaf0;
+
+    border-radius: 14px;
+
+    box-shadow:
+        0 8px 20px rgba(91, 76, 243, 0.25);
+
+    box-sizing: border-box;
+
+    transition:
+        box-shadow .25s ease,
+        border-color .25s ease;
+}
+
+.empty-progress:hover {
+
+    border-color:
+        rgba(91, 76, 243, .18);
+
+    box-shadow:
+        0 12px 28px rgba(91, 76, 243, .28);
+}
+
+
+/* ==========================================
+   TARGET ICON
+========================================== */
+
+.target-icon {
+
+    width: 58px;
+    height: 58px;
+
+    margin-bottom: 14px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 14px;
+
+    color: #6c4dff;
+
+    background:
+        linear-gradient(
+            135deg,
+            #f0edff,
+            #e8e3ff
+        );
+
+    border: 1px solid
+        rgba(108, 77, 255, .10);
+
+    box-shadow:
+        0 5px 14px
+        rgba(108, 77, 255, .10);
+}
+
+.target-icon svg {
+
+    width: 28px;
+    height: 28px;
+}
+
+
+/* ==========================================
+   EMPTY TEXT
+========================================== */
+
+.empty-progress h2 {
+
+    margin: 0 0 7px;
+
+    color: #20232b;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: clamp(
+        .9rem,
+        2vw,
+        1.15rem
+    );
+
+    font-weight: 650;
+
+    line-height: 1.4;
+}
+
+.empty-progress p {
+
+    max-width: 480px;
+
+    margin: 0 0 17px;
+
+    color: #858a95;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: clamp(
+        .58rem,
+        1.2vw,
+        .67rem
+    );
+
+    font-weight: 450;
+
+    line-height: 1.6;
+}
+
+
+/* ==========================================
+   EMPTY BUTTON
+========================================== */
+
+.empty-progress button {
+
+    min-height: 35px;
+
+    padding: 7px 15px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #6c4dff,
+            #5b3bea
+        );
+
+    color: #ffffff;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: .61rem;
+
+    font-weight: 650;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 5px 14px
+        rgba(108, 77, 255, .20);
+
+    transition:
+        transform .2s ease,
+        box-shadow .2s ease,
+        filter .2s ease;
+}
+
+.empty-progress button:hover {
+
+    transform: translateY(-2px);
+
+    filter: brightness(1.03);
+
+    box-shadow:
+        0 8px 20px
+        rgba(108, 77, 255, .27);
+}
+
+.empty-progress button:active {
+
+    transform: translateY(0);
+}
+
+
+/* ==========================================
+   TABLET
+========================================== */
+
+@media (max-width: 900px) {
+
+    .weekly-progress {
+
+        padding: 18px;
+    }
+
+    .progress-body {
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+        gap: 22px;
+    }
+
+    .overall-progress {
+
+        margin-bottom: 2px;
+    }
+
+    .progress-circle {
+
+        width: 125px;
+        height: 125px;
+    }
+
+    .circle-inner {
+
+        width: 98px;
+        height: 98px;
+    }
+
+    .progress-list {
+
+        gap: 14px;
+    }
+}
+
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 600px) {
+
+    .weekly-progress {
+
+        margin-top: 15px;
+
+        padding: 14px;
+
+        border-radius: 11px;
+    }
+
+    .progress-header h2 {
+
+        font-size: .82rem;
+    }
+
+    .progress-header button {
+
+        padding: 5px 8px;
+
+        font-size: .54rem;
+    }
+
+    .progress-body {
+
+        margin-top: 17px;
+
+        gap: 18px;
+    }
+
+    .progress-circle {
+
+        width: 110px;
+        height: 110px;
+    }
+
+    .circle-inner {
+
+        width: 86px;
+        height: 86px;
+    }
+
+    .circle-inner h1 {
+
+        font-size: 1.15rem;
+    }
+
+    .circle-inner span {
+
+        font-size: .5rem;
+    }
+
+    .title-row h4 {
+
+        font-size: .58rem;
+    }
+
+    .title-row span {
+
+        font-size: .52rem;
+    }
+
+    .bar {
+
+        height: 6px;
+    }
+
+    .empty-progress {
+
+        min-height: 220px;
+
+        margin-top: 15px;
+
+        padding: 20px 14px;
+
+        border-radius: 11px;
+    }
+
+    .target-icon {
+
+        width: 52px;
+        height: 52px;
+
+        margin-bottom: 11px;
+    }
+
+    .target-icon svg {
+
+        width: 24px;
+        height: 24px;
+    }
+
+    .empty-progress h2 {
+
+        font-size: .82rem;
+    }
+
+    .empty-progress p {
+
+        font-size: .55rem;
+
+        margin-bottom: 14px;
+    }
+
+    .empty-progress button {
+
+        min-height: 33px;
+
+        padding: 6px 13px;
+
+        font-size: .57rem;
+    }
+}
+
+
+/* ==========================================
+   SMALL MOBILE
+========================================== */
+
+@media (max-width: 380px) {
+
+    .weekly-progress {
+
+        padding: 11px;
+
+        border-radius: 9px;
+    }
+
+    .progress-header h2 {
+
+        font-size: .74rem;
+    }
+
+    .progress-header button {
+
+        font-size: .5rem;
+    }
+
+    .progress-body {
+
+        gap: 15px;
+    }
+
+    .progress-circle {
+
+        width: 95px;
+        height: 95px;
+    }
+
+    .circle-inner {
+
+        width: 75px;
+        height: 75px;
+    }
+
+    .circle-inner h1 {
+
+        font-size: 1rem;
+    }
+
+    .circle-inner span {
+
+        font-size: .45rem;
+    }
+
+    .progress-list {
+
+        gap: 12px;
+    }
+
+    .title-row h4 {
+
+        font-size: .54rem;
+    }
+
+    .title-row span {
+
+        font-size: .48rem;
+    }
+
+    .bar {
+
+        height: 5px;
+    }
+
+    .empty-progress {
+
+        min-height: 200px;
+
+        padding: 16px 10px;
+    }
+
+    .target-icon {
+
+        width: 46px;
+        height: 46px;
+    }
+
+    .target-icon svg {
+
+        width: 21px;
+        height: 21px;
+    }
+
+    .empty-progress h2 {
+
+        font-size: .75rem;
+    }
+
+    .empty-progress p {
+
+        font-size: .51rem;
+    }
+
+    .empty-progress button {
+
+        font-size: .53rem;
+    }
+}

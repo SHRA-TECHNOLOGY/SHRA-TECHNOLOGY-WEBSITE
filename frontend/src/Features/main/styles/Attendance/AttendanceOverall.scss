@@ -1,0 +1,87 @@
+.attendance-overview{
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border: 1px solid var(--border);
+    border-radius: .8rem;
+    background: var(--bg-card);
+}
+
+.attendance-overview p{
+    font-size: clamp(1rem,2vw,1.4rem);
+    font-family: "Poppins", sans-serif;
+    margin: 15px 0px 0px 10px;
+    font-weight: 600;
+    color: var(--text-secondary);
+
+}
+
+
+//percentage show
+
+.attendance-percentage {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin: 20px auto;
+  padding: 12px;
+}
+
+.inner-circle {
+  width: 145px;
+  height: 145px;
+  border-radius: 50%;
+  background: #fff;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: clamp(1rem,3vw,2.5rem);
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+//Present & Absent section
+
+.attendance-overview .absent-present-section{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.attendance-overview .absent-present-section p,.attendance-overview .absent-present-section span{
+    font-size: clamp(.8rem,1vw,1.4rem);
+    font-family: "Poppins", sans-serif;
+    color: var(--text-secondary);
+}
+
+.absent-present-section .present-box{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 10px 0px 10px;
+}
+
+//note section
+
+.attendance-overview .note-section{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    padding-bottom: 20px;
+}
+
+.attendance-overview .note-section p{
+    font-size: clamp(.8rem,1vw,1.4rem);
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+}

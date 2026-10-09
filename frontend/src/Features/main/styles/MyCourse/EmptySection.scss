@@ -1,0 +1,84 @@
+/* =========================================
+   EMPTY STATE
+========================================= */
+
+.empty-course {
+
+  width: 100%;
+  min-height: 400px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  grid-column: 1 / -1;
+
+  flex-direction: column;
+
+  border: none;
+
+  text-align: center;
+}
+
+
+.empty-icon {
+  width: 58px;
+  height: 58px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 12px;
+
+  border-radius: 50%;
+
+  background: #f0eaff;
+
+  color: #6d3be2;
+
+  font-size: 28px;
+}
+
+
+.empty-course h3 {
+  margin: 0;
+
+  font-size: clamp(1rem,3vw,1.6rem);
+  font-family: "Poppins", sans-serif;
+
+  color: #172038;
+}
+
+
+.empty-course p {
+  margin: 7px 0 17px;
+
+  color: #77788a;
+
+  font-size: clamp(.8rem,2vw,1.2rem);
+  font-family: "Poppins", sans-serif;
+}
+
+
+.empty-course button {
+  padding: 10px 22px;
+
+  border: none;
+
+  border-radius: 6px;
+
+  background: #6030dc;
+
+  color: white;
+
+  font-size: clamp(.8rem,1vw,1.4rem);
+  font-family: "Poppins", sans-serif;
+
+  cursor: pointer;
+
+
+  &:hover {
+    background: #5124c5;
+  }
+}

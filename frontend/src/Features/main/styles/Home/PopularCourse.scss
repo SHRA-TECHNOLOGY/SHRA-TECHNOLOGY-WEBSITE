@@ -1,0 +1,621 @@
+/* =========================================
+   POPULAR COURSE SECTION
+========================================= */
+
+.popular-course-container {
+  width: 100%;
+  max-width: 100%;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 22px;
+
+  padding: 20px;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================
+   TITLE SECTION
+========================================= */
+
+.popular-title-section {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 15px;
+
+  box-sizing: border-box;
+}
+
+.popular-title-section h2 {
+  margin: 0;
+
+  min-width: 0;
+
+  font-family: "Poppins", sans-serif;
+
+  font-size: clamp(1.1rem, 2vw, 1.4rem);
+
+  font-weight: 600;
+
+  color: var(--text-primary, #202124);
+}
+
+.popular-title-section button {
+  flex-shrink: 0;
+
+  border: none;
+
+  background: transparent;
+
+  padding: 6px 0;
+
+  font-family: "Poppins", sans-serif;
+
+  font-size: 0.9rem;
+
+  font-weight: 600;
+
+  color: var(--primary);
+
+  cursor: pointer;
+
+  transition:
+    color 0.2s ease,
+    transform 0.2s ease;
+
+  &:hover {
+    color: var(--primary-light);
+
+    transform: translateX(2px);
+  }
+}
+
+
+/* =========================================
+   POPULAR CARDS GRID
+========================================= */
+
+.popular-cards {
+  width: 100%;
+  max-width: 100%;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, minmax(0, 1fr));
+
+  gap: 20px;
+
+  align-items: start;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================
+   POPULAR CARD
+========================================= */
+
+.popular-card {
+  width: 100%;
+  min-width: 0;
+
+  display: flex;
+  flex-direction: column;
+
+  overflow: hidden;
+
+  box-sizing: border-box;
+
+  background: var(--bg-card, #ffffff);
+
+  border: 1px solid var(--border, #e7e7e7);
+
+  border-radius: 15px;
+
+  box-shadow:
+    0 3px 10px rgba(30, 25, 70, 0.05);
+
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.popular-card:hover {
+  transform: translateY(-5px);
+
+  border-color:
+    rgba(91, 61, 245, 0.25);
+
+  box-shadow:
+    0 12px 28px rgba(30, 25, 70, 0.1);
+}
+
+
+/* =========================================
+   COURSE IMAGE
+========================================= */
+
+.popular-card .course-image {
+  position: relative;
+
+  width: 100%;
+
+  height: 200px;
+
+  overflow: hidden;
+
+  background: #f1f2f5;
+
+  flex-shrink: 0;
+}
+
+.popular-card .course-image img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  transition:
+    transform 0.45s ease;
+}
+
+.popular-card:hover .course-image img {
+  transform: scale(1.04);
+}
+
+
+/* =========================================
+   COURSE TAG
+========================================= */
+
+.popular-card .course-image .course-tag {
+  position: absolute;
+
+  left: 12px;
+  top: 12px;
+
+  max-width: calc(100% - 24px);
+
+  padding: 5px 9px;
+
+  border-radius: 7px;
+
+  background:
+    rgba(255, 255, 255, 0.94);
+
+  color: var(--primary);
+
+  font-family: "Poppins", sans-serif;
+
+  font-size: 0.68rem;
+
+  font-weight: 600;
+
+  white-space: nowrap;
+
+  overflow: hidden;
+
+  text-overflow: ellipsis;
+
+  box-shadow:
+    0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+
+/* =========================================
+   COURSE CONTENT
+========================================= */
+
+.popular-card .course-content {
+  width: 100%;
+  min-width: 0;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 14px;
+
+  padding: 16px;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================
+   COURSE TITLE
+========================================= */
+
+.popular-card .course-content h3 {
+  margin: 0;
+
+  min-width: 0;
+
+  font-family: "Poppins", sans-serif;
+
+  font-size:clamp(1rem,2vw,1.8rem);
+
+  font-weight: 600;
+
+  line-height: 1.4;
+
+  color: var(--text-primary, #202124);
+
+  display: -webkit-box;
+
+  -webkit-box-orient: vertical;
+
+  -webkit-line-clamp: 2;
+
+  overflow: hidden;
+
+  transition: color 0.2s ease;
+}
+
+.popular-card:hover .course-content h3 {
+  color: var(--primary);
+}
+
+
+/* =========================================
+   DESCRIPTION
+========================================= */
+
+.popular-card .course-content  p {
+  margin: 0;
+
+  color: var(--text-secondary, #6b7280);
+
+  font-family: "Poppins", sans-serif;
+
+  font-size: clamp(1rem,2vw,1.8rem);
+
+  line-height: 1.55;
+
+  display: -webkit-box;
+
+  -webkit-box-orient: vertical;
+
+  -webkit-line-clamp: 2;
+
+  overflow: hidden;
+}
+
+
+/* =========================================
+   COURSE META
+========================================= */
+
+.popular-card .course-content .course-meta {
+  width: 100%;
+
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  align-items: center;
+
+  gap: 6px;
+
+  padding: 11px 0;
+
+  border-top: 1px solid var(--border, #eeeeee);
+
+  border-bottom: 1px solid var(--border, #eeeeee);
+
+  box-sizing: border-box;
+}
+
+
+/* IMPORTANT:
+   Scope span only inside course-meta
+*/
+
+.popular-card .course-content .course-meta span {
+  min-width: 0;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 5px;
+
+  color: var(--text-secondary, #6b7280);
+
+  font-family: "Poppins", sans-serif;
+
+  font-size: 10px;
+
+  font-weight: 500;
+
+  white-space: nowrap;
+
+  overflow: hidden;
+
+  text-overflow: ellipsis;
+}
+
+.popular-card .course-content .course-meta svg {
+  width: 15px;
+  height: 15px;
+
+  flex-shrink: 0;
+}
+
+
+/* =========================================
+   PRICE + BUTTON
+========================================= */
+
+.popular-card .course-content .course-btn {
+  width: 100%;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 10px;
+}
+
+
+/* Price */
+
+.popular-card .course-content .course-btn p {
+  margin: 0;
+
+  flex-shrink: 0;
+
+  font-family: "Poppins", sans-serif;
+
+  font-size: 16px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.2px;
+
+  color: var(--primary);
+}
+
+
+/* =========================================
+   VIEW DETAILS BUTTON
+========================================= */
+
+.popular-card .course-content button {
+  min-width: 0;
+
+  padding: 9px 13px;
+
+  border: none;
+
+  border-radius: 8px;
+
+  background: var(--btn-enroll, var(--primary));
+
+  color: var(--text-color, #ffffff);
+
+  font-family: "Poppins", sans-serif;
+
+  font-size: 11px;
+
+  font-weight: 600;
+
+  white-space: nowrap;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 4px 12px rgba(91, 76, 243, 0.15);
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.popular-card .course-content button:hover {
+  transform: translateY(-1px);
+
+  box-shadow:
+    0 7px 16px rgba(91, 76, 243, 0.22);
+}
+
+.popular-card .course-content button:active {
+  transform: scale(0.97);
+}
+
+
+/* =========================================
+   LARGE DESKTOP
+========================================= */
+
+@media (max-width: 1250px) {
+
+  .popular-cards {
+    grid-template-columns:
+      repeat(3, minmax(0, 1fr));
+
+    gap: 18px;
+  }
+
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 950px) {
+
+  .popular-course-container {
+    padding: 18px;
+  }
+
+  .popular-cards {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+
+    gap: 16px;
+  }
+
+  .popular-card .course-image {
+    height: 170px;
+  }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+  .popular-course-container {
+    padding: 15px;
+
+    gap: 18px;
+  }
+
+
+  .popular-title-section {
+    gap: 10px;
+  }
+
+
+  .popular-title-section h2 {
+    font-size: 1.05rem;
+  }
+
+
+  .popular-title-section button {
+    font-size: 0.76rem;
+  }
+
+
+  .popular-cards {
+    grid-template-columns: minmax(0, 1fr);
+
+    gap: 15px;
+  }
+
+
+  .popular-card {
+    width: 100%;
+  }
+
+
+  .popular-card .course-image {
+    height: 195px;
+  }
+
+
+  .popular-card .course-content {
+    padding: 15px;
+
+    gap: 13px;
+  }
+
+
+  .popular-card .course-content h3 {
+    font-size: 15px;
+  }
+
+
+  .popular-card .course-content > p {
+    font-size: 11px;
+  }
+
+
+  .popular-card .course-content .course-meta span {
+    font-size: 10px;
+  }
+
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 380px) {
+
+  .popular-course-container {
+    padding: 12px;
+  }
+
+
+  .popular-title-section h2 {
+    font-size: 0.98rem;
+  }
+
+
+  .popular-title-section button {
+    font-size: 0.7rem;
+  }
+
+
+  .popular-card .course-image {
+    height: 170px;
+  }
+
+
+  .popular-card .course-content {
+    padding: 13px;
+  }
+
+
+  .popular-card .course-content h3 {
+    font-size: 14px;
+  }
+
+
+  .popular-card .course-content > p {
+    font-size: 10.5px;
+  }
+
+
+  .popular-card .course-content .course-meta {
+    gap: 3px;
+  }
+
+
+  .popular-card .course-content .course-meta span {
+    font-size: 9px;
+
+    gap: 3px;
+  }
+
+
+  .popular-card .course-content .course-meta svg {
+    width: 13px;
+    height: 13px;
+  }
+
+
+  .popular-card .course-content .course-btn p {
+    font-size: 14px;
+  }
+
+
+  .popular-card .course-content button {
+    padding: 8px 11px;
+
+    font-size: 10px;
+  }
+
+}

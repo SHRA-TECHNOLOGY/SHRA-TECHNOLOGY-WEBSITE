@@ -1,0 +1,1298 @@
+/* ================================
+   LIVE CLASSES
+================================ */
+
+.main-content {
+
+  width: 100%;
+
+  margin-top: 20px;
+
+  font-family: "Poppins", sans-serif;
+}
+
+
+/* ================================
+   TAB SECTION
+================================ */
+
+.main-content .classes-status {
+
+  width: 100%;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: clamp(20px, 3vw, 35px);
+
+  border-bottom: 2px solid var(--border);
+
+  padding: 5px 0 0;
+
+  font-family: "Poppins", sans-serif;
+}
+
+
+.main-content .classes-status button {
+
+  position: relative;
+
+  background: transparent;
+
+  border: none;
+
+  color: var(--text-secondary);
+
+  font-family: "Poppins", sans-serif;
+
+  font-size: clamp(
+    .8rem,
+    2vw,
+    1.05rem
+  );
+
+  font-weight: 500;
+
+  padding: 10px 5px 12px;
+
+  cursor: pointer;
+
+  transition:
+    color .3s ease,
+    transform .3s ease;
+}
+
+
+.main-content .classes-status button:hover {
+
+  color: var(--primary);
+
+  transform: translateY(-2px);
+}
+
+
+.main-content .classes-status button.active {
+
+  color: var(--primary);
+
+  font-weight: 600;
+}
+
+
+/* Active underline */
+
+.main-content .classes-status button.active::after {
+
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+
+  right: 0;
+
+  bottom: -2px;
+
+  height: 4px;
+
+  background: var(--primary);
+
+  border-radius: 10px 10px 0 0;
+
+  box-shadow:
+    0 0 12px var(--primary);
+}
+
+
+/* ================================
+   CLASS LIST
+================================ */
+
+.live-classes-list {
+
+  width: 100%;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(
+      3,
+      minmax(0, 1fr)
+    );
+
+  gap: clamp(
+    15px,
+    2vw,
+    20px
+  );
+
+  margin-top: 20px;
+
+  align-items: start;
+
+  box-sizing: border-box;
+
+  font-family: "Poppins", sans-serif;
+}
+
+
+/* ================================
+   CLASS CARD
+================================ */
+
+.live-classes-list .live-class-card {
+
+  position: relative;
+
+  width: 100%;
+
+  display: flex;
+
+  flex-direction: column;
+
+  padding: 18px;
+
+  box-sizing: border-box;
+
+  background: var(--bg-card);
+
+  border: 2px solid var(--border);
+
+  border-radius: 16px;
+
+  overflow: hidden;
+
+  transition:
+    transform .3s ease,
+    border-color .3s ease,
+    box-shadow .3s ease;
+}
+
+
+/* Top animated line */
+
+.live-classes-list .live-class-card::before {
+
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+
+  left: 0;
+
+  width: 100%;
+
+  height: 3px;
+
+  background: var(--primary);
+
+  transform: scaleX(0);
+
+  transform-origin: left;
+
+  transition:
+    transform .3s ease;
+}
+
+
+.live-classes-list .live-class-card:hover::before {
+
+  transform: scaleX(1);
+}
+
+
+/* Card hover */
+
+.live-classes-list .live-class-card:hover {
+
+  transform: translateY(-6px);
+
+  border-color: var(--primary);
+
+  box-shadow:
+    0 12px 30px
+    rgba(
+      108,
+      77,
+      255,
+      .15
+    );
+}
+
+
+/* ================================
+   LEFT CONTENT
+================================ */
+
+.live-class-card .live-class-left {
+
+  width: 100%;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  gap: 12px;
+}
+
+
+/* ================================
+   CLASS ICON
+================================ */
+
+.live-class-card .live-class-left .pdf-logo {
+
+  width: 80px;
+
+  height: 65px;
+
+  padding: 10px;
+
+  object-fit: contain;
+
+  background: var(--bg-secondary);
+
+  border-radius: 14px;
+
+  transition:
+    transform .3s ease,
+    background .3s ease;
+}
+
+
+.live-class-card:hover
+.live-class-left .pdf-logo {
+
+  transform:
+    scale(1.08)
+    rotate(-2deg);
+
+  background:
+    rgba(
+      108,
+      77,
+      255,
+      .1
+    );
+}
+
+
+/* ================================
+   CLASS DETAILS
+================================ */
+
+.live-class-left .class-details {
+
+  width: 100%;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 7px;
+
+  padding: 5px 0;
+}
+
+
+/* Course name */
+
+.live-class-left
+.class-details
+.course-name {
+
+  color: var(--primary);
+
+  font-size: clamp(
+    .8rem,
+    2vw,
+    1rem
+  );
+
+  font-family: "Poppins", sans-serif;
+
+  font-weight: 600;
+
+  text-transform: uppercase;
+
+  letter-spacing: .4px;
+
+  margin-bottom: -2px;
+}
+
+
+/* Class title */
+
+.live-class-left
+.class-details
+h3 {
+
+  margin: 0;
+
+  color: var(--text-primary);
+
+  font-size: clamp(
+    1rem,
+    1.5vw,
+    1.8rem
+  );
+
+  font-family: "Poppins", sans-serif;
+
+  font-weight: 600;
+
+  line-height: 1.35;
+
+  transition:
+    color .3s ease;
+}
+
+
+.live-class-card:hover
+.class-details h3 {
+
+  color: var(--primary);
+}
+
+
+/* Date & time */
+
+.live-class-left
+.class-details > p {
+
+  margin: 0;
+
+  color: var(--text-secondary);
+
+  font-size: clamp(
+    .8rem,
+    2vw,
+    1rem
+  );
+
+  font-family: "Poppins", sans-serif;
+
+  font-weight: 500;
+}
+
+
+// ==========================================
+// CLASS INFORMATION
+// ==========================================
+
+.class-info-row {
+
+    width: 100%;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: clamp(
+        8px,
+        1vw,
+        12px
+    );
+
+    margin-top: 4px;
+
+    font-family: "Poppins", sans-serif;
+
+    box-sizing: border-box;
+}
+
+
+// ==========================================
+// INFORMATION LABEL
+// ==========================================
+
+.class-info-row .info-label {
+
+    min-width: clamp(
+        75px,
+        6vw,
+        90px
+    );
+
+    color: var(--text-secondary);
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: clamp(
+        .68rem,
+        1vw,
+        .78rem
+    );
+
+    font-weight: 500;
+
+    line-height: 1.5;
+
+    flex-shrink: 0;
+}
+
+
+// ==========================================
+// INFORMATION VALUE
+// ==========================================
+
+.class-info-row .info-value {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    min-width: 0;
+
+    color: var(--text-primary);
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: clamp(
+        .72rem,
+        1vw,
+        .88rem
+    );
+
+    font-weight: 600;
+
+    line-height: 1.5;
+
+    word-break: break-word;
+}
+
+
+// ==========================================
+// PLATFORM VALUE
+// ==========================================
+
+.class-info-row .platform-value {
+
+    gap: 8px;
+}
+
+
+// ==========================================
+// PLATFORM LOGO
+// ==========================================
+
+.class-info-row .platform-logo {
+
+    width: clamp(
+        40px,
+        2vw,
+        40px
+    );
+
+    height: clamp(
+        40px,
+        2vw,
+        40px
+    );
+
+    object-fit: contain;
+
+    flex-shrink: 0;
+
+    border-radius: 5px;
+
+    transition:
+        transform .25s ease;
+}
+
+
+.live-class-card:hover
+.class-info-row .platform-logo {
+
+    transform: scale(1.08);
+}
+
+
+// ==========================================
+// DURATION
+// ==========================================
+
+.class-info-row:last-child .info-value {
+
+    color: var(--text-primary);
+
+}
+
+
+// ==========================================
+// MOBILE
+// ==========================================
+
+@media (max-width: 600px) {
+
+    .class-info-row {
+
+        justify-content: center;
+
+        gap: 8px;
+
+        margin-top: 5px;
+
+    }
+
+
+    .class-info-row .info-label {
+
+        min-width: auto;
+
+        font-size: .68rem;
+
+    }
+
+
+    .class-info-row .info-value {
+
+        font-size: .76rem;
+
+        text-align: left;
+
+    }
+
+
+    .class-info-row .platform-logo {
+
+        width: 22px;
+
+        height: 22px;
+
+    }
+
+}
+
+
+// ==========================================
+// SMALL MOBILE
+// ==========================================
+
+@media (max-width: 400px) {
+
+    .class-info-row {
+
+        gap: 6px;
+
+    }
+
+
+    .class-info-row .info-label {
+
+        font-size: .63rem;
+
+    }
+
+
+    .class-info-row .info-value {
+
+        font-size: .7rem;
+
+    }
+
+
+    .class-info-row .platform-logo {
+
+        width: 20px;
+
+        height: 20px;
+
+    }
+
+}
+
+
+/* ================================
+   BUTTON
+================================ */
+
+.live-class-card
+.join-btn-section {
+
+  width: 100%;
+
+  margin-top: 15px;
+}
+
+
+.live-class-card
+.join-btn {
+
+  width: 100%;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  padding: 11px 15px;
+
+  box-sizing: border-box;
+
+  border-radius: 10px;
+
+  background: var(--primary);
+
+  color: var(--text-color);
+
+  text-decoration: none;
+
+  font-family: "Poppins", sans-serif;
+
+  font-size: clamp(
+    .7rem,
+    1vw,
+    .85rem
+  );
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    background .3s ease,
+    transform .3s ease,
+    box-shadow .3s ease;
+}
+
+
+.live-class-card
+.join-btn:hover {
+
+  background: var(--primary-light);
+
+  transform:
+    scale(.97);
+
+  box-shadow:
+    0 6px 18px
+    rgba(
+      108,
+      77,
+      255,
+      .3
+    );
+}
+
+
+.live-class-card
+.join-btn:active {
+
+  transform:
+    scale(.97);
+}
+
+
+/* ==================================================
+   LOADING / ERROR / EMPTY STATE
+================================================== */
+
+.live-class-state {
+
+  width: 100%;
+
+  min-height: 320px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  padding: clamp(
+    20px,
+    4vw,
+    35px
+  );
+
+  box-sizing: border-box;
+
+  background: #ffffff;
+
+  font-family: "Poppins", sans-serif;
+}
+
+
+/* ================================
+   LOADING CARD
+================================ */
+
+.live-class-loading-card {
+
+  width: min(
+    430px,
+    100%
+  );
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  padding: clamp(
+    28px,
+    5vw,
+    40px
+  ) clamp(
+    20px,
+    4vw,
+    30px
+  );
+
+  text-align: center;
+
+  background: #ffffff;
+
+  border: 1px solid #e8eaf0;
+
+  border-radius: 18px;
+
+  box-shadow:
+    0 12px 35px
+    rgba(
+      15,
+      23,
+      42,
+      .06
+    );
+
+  box-sizing: border-box;
+}
+
+
+/* Loading spinner */
+
+.live-class-spinner {
+
+  width: clamp(
+    40px,
+    6vw,
+    48px
+  );
+
+  height: clamp(
+    40px,
+    6vw,
+    48px
+  );
+
+  margin-bottom: 18px;
+
+  border: 4px solid #eeeef5;
+
+  border-top-color:
+    var(--primary);
+
+  border-radius: 50%;
+
+  animation:
+    liveClassSpin
+    .8s linear infinite;
+}
+
+
+@keyframes liveClassSpin {
+
+  to {
+
+    transform:
+      rotate(360deg);
+
+  }
+
+}
+
+
+/* ================================
+   STATE TEXT
+================================ */
+
+.live-class-loading-card h3,
+.live-class-error-card h3,
+.live-class-empty-card h3 {
+
+  margin: 0;
+
+  color: #202124;
+
+  font-family: "Poppins", sans-serif;
+
+  font-size: clamp(
+    1rem,
+    2vw,
+    1.2rem
+  );
+
+  font-weight: 700;
+
+  line-height: 1.4;
+}
+
+
+.live-class-loading-card p,
+.live-class-error-card p,
+.live-class-empty-card p {
+
+  max-width: 350px;
+
+  margin:
+    7px 0 0;
+
+  color: #858893;
+
+  font-family: "Poppins", sans-serif;
+
+  font-size: clamp(
+    .65rem,
+    1vw,
+    .75rem
+  );
+
+  line-height: 1.7;
+}
+
+
+/* ================================
+   ERROR CARD
+================================ */
+
+.live-class-error-card {
+
+  width: min(
+    440px,
+    100%
+  );
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  padding: clamp(
+    28px,
+    5vw,
+    40px
+  ) clamp(
+    20px,
+    4vw,
+    30px
+  );
+
+  text-align: center;
+
+  background: #ffffff;
+
+  border: 1px solid #f0dfe2;
+
+  border-radius: 18px;
+
+  box-shadow:
+    0 12px 35px
+    rgba(
+      15,
+      23,
+      42,
+      .055
+    );
+
+  box-sizing: border-box;
+}
+
+
+/* Error icon */
+
+.live-class-error-icon {
+
+  width: clamp(
+    45px,
+    7vw,
+    55px
+  );
+
+  height: clamp(
+    45px,
+    7vw,
+    55px
+  );
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  margin-bottom: 17px;
+
+  border:
+    1px solid #fecaca;
+
+  border-radius: 50%;
+
+  background: #fff1f2;
+
+  color: #dc2626;
+
+  font-family: "Poppins", sans-serif;
+
+  font-size: clamp(
+    1.2rem,
+    3vw,
+    1.5rem
+  );
+
+  font-weight: 700;
+}
+
+
+/* Retry */
+
+.live-class-error-card button {
+
+  min-height: 42px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 7px;
+
+  margin-top: 20px;
+
+  padding:
+    0 clamp(
+      16px,
+      2vw,
+      22px
+    );
+
+  border: none;
+
+  border-radius: 8px;
+
+  background:
+    var(--primary);
+
+  color: #ffffff;
+
+  font-family: "Poppins", sans-serif;
+
+  font-size: clamp(
+    .62rem,
+    .9vw,
+    .72rem
+  );
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 6px 16px
+    rgba(
+      124,
+      92,
+      255,
+      .16
+    );
+
+  transition:
+    transform .2s ease,
+    box-shadow .2s ease;
+}
+
+
+.live-class-error-card button:hover {
+
+  transform:
+    translateY(-2px);
+
+  box-shadow:
+    0 9px 22px
+    rgba(
+      124,
+      92,
+      255,
+      .23
+    );
+}
+
+
+/* ================================
+   EMPTY CARD
+================================ */
+
+.live-class-empty-card {
+
+  width: min(
+    430px,
+    100%
+  );
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  padding: clamp(
+    28px,
+    5vw,
+    40px
+  ) clamp(
+    20px,
+    4vw,
+    30px
+  );
+
+  text-align: center;
+
+  background: #ffffff;
+
+  border: 1px dashed #dfe2e8;
+
+  border-radius: 18px;
+
+  box-sizing: border-box;
+}
+
+
+/* Empty icon */
+
+.live-class-empty-icon {
+
+  width: clamp(
+    48px,
+    7vw,
+    58px
+  );
+
+  height: clamp(
+    48px,
+    7vw,
+    58px
+  );
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  margin-bottom: 17px;
+
+  border-radius: 50%;
+
+  background: #f5f3ff;
+
+  color: var(--primary);
+}
+
+
+/* ================================
+   TABLET
+================================ */
+
+@media (max-width: 1000px) {
+
+  .live-classes-list {
+
+    grid-template-columns:
+      repeat(
+        2,
+        minmax(0, 1fr)
+      );
+
+  }
+
+}
+
+
+/* ================================
+   MOBILE
+================================ */
+
+@media (max-width: 600px) {
+
+  .main-content {
+
+    margin-top: 15px;
+
+  }
+
+
+  /* Tabs */
+
+  .main-content .classes-status {
+
+    gap: 20px;
+
+    overflow-x: auto;
+
+    scrollbar-width: none;
+
+  }
+
+
+  .main-content .classes-status::-webkit-scrollbar {
+
+    display: none;
+
+  }
+
+
+  .main-content .classes-status button {
+
+    white-space: nowrap;
+
+    font-size: .85rem;
+
+  }
+
+
+  /* Cards */
+
+  .live-classes-list {
+
+    grid-template-columns: 1fr;
+
+    gap: 15px;
+
+    margin-top: 15px;
+
+  }
+
+
+  .live-classes-list
+  .live-class-card {
+
+    padding: 16px;
+
+  }
+
+
+  /* Icon */
+
+  .live-class-card
+  .live-class-left
+  .pdf-logo {
+
+    width: 75px;
+
+    height: 60px;
+
+  }
+
+
+  /* Center mobile content */
+
+  .live-class-left
+  .class-details {
+
+    text-align: center;
+
+    align-items: center;
+
+  }
+
+
+  .platform-section {
+
+    justify-content: center;
+
+  }
+
+
+  .instructor-section {
+
+    justify-content: center;
+
+  }
+
+
+  /* State */
+
+  .live-class-state {
+
+    min-height: 280px;
+
+    padding:
+      20px 14px;
+
+  }
+
+
+  .live-class-loading-card,
+  .live-class-error-card,
+  .live-class-empty-card {
+
+    width: 100%;
+
+    border-radius: 14px;
+
+  }
+
+}
+
+
+/* ================================
+   SMALL MOBILE
+================================ */
+
+@media (max-width: 400px) {
+
+  .live-class-state {
+
+    padding:
+      16px 10px;
+
+  }
+
+
+  .live-class-loading-card,
+  .live-class-error-card,
+  .live-class-empty-card {
+
+    padding:
+      28px 17px;
+
+    border-radius: 12px;
+
+  }
+
+
+  .live-class-loading-card p,
+  .live-class-error-card p,
+  .live-class-empty-card p {
+
+    font-size: .62rem;
+
+    line-height: 1.6;
+
+  }
+
+
+  .live-class-error-card button {
+
+    width: 100%;
+
+  }
+
+}

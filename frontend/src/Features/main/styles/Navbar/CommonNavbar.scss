@@ -1,0 +1,539 @@
+// ==========================================
+// NAV LEFT
+// ==========================================
+
+.nac-left {
+
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+
+    gap: 5px;
+
+    padding-left: 30px;
+
+    margin-top: -10px;
+
+    box-sizing: border-box;
+}
+
+
+// ==========================================
+// MAIN HEADING
+// ==========================================
+
+.nac-left h2,
+.nac-left .dark-white span,
+.nac-left .white span {
+
+    margin: 0;
+
+    font-size: clamp(1rem, 2vw, 1.5rem);
+
+    font-family: "Poppins", sans-serif;
+
+    font-weight: 650;
+
+    letter-spacing: -0.3px;
+
+    color: var(--text-primary);
+
+    opacity: .9;
+
+    display: flex;
+
+    align-items: center;
+
+    line-height: 1.3;
+}
+
+
+.nac-left h2 {
+
+    color: #202124;
+
+    gap: 6px;
+}
+
+
+.nac-left h2 span {
+
+    font-size: inherit;
+
+    font-family: "Poppins", sans-serif;
+
+    font-weight: 650;
+
+    color: var(--primary);
+
+    letter-spacing: -0.3px;
+}
+
+
+// ==========================================
+// THEME TEXT
+// ==========================================
+
+.nac-left .white {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    color: #202124;
+}
+
+
+.nac-left .dark-white {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+}
+
+
+.nac-left .dark-white span {
+
+    color: #202124;
+}
+
+
+// ==========================================
+// SUBTITLE
+// ==========================================
+
+.nac-left p {
+
+    margin: 0;
+
+    font-size: clamp(.72rem, 1.2vw, .9rem);
+
+    font-family: "Poppins", sans-serif;
+
+    font-weight: 450;
+
+    letter-spacing: 0;
+
+    color: #737580;
+
+    line-height: 1.6;
+
+    max-width: 600px;
+}
+
+
+// ==========================================
+// NAV RIGHT
+// ==========================================
+
+.nav-right {
+
+    width: 100%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: flex-end;
+
+    gap: 14px;
+
+    padding-right: 20px;
+
+    margin-top: -10px;
+
+    box-sizing: border-box;
+}
+
+
+// ==========================================
+// BUTTONS
+// ==========================================
+
+.nav-right button {
+
+    width: 42px;
+
+    height: 42px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: #f7f7fa;
+
+    border: 1px solid #e7e7ed;
+
+    border-radius: 10px;
+
+    color: #4b4d57;
+
+    cursor: pointer;
+
+    transition:
+        background .25s ease,
+        color .25s ease,
+        border-color .25s ease,
+        transform .25s ease,
+        box-shadow .25s ease;
+}
+
+
+.nav-right button:hover {
+
+    background: var(--primary);
+
+    border-color: var(--primary);
+
+    color: #ffffff;
+
+    transform: translateY(-2px);
+
+    box-shadow: 0 7px 18px rgba(0, 0, 0, .10);
+}
+
+
+.nav-right button:active {
+
+    transform: translateY(0);
+}
+
+
+// ==========================================
+// THEME ICON
+// ==========================================
+
+.nav-right .white,
+.nav-right .dark-white {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    color: #4b4d57;
+}
+
+
+// ==========================================
+// PROFILE IMAGE
+// ==========================================
+
+.nav-right .profile-img {
+
+    width: 46px;
+
+    height: 46px;
+
+    flex-shrink: 0;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+
+    cursor: pointer;
+
+    border: 2px solid #ffffff;
+
+    outline: 1px solid #e5e5eb;
+
+    box-shadow: 0 4px 14px rgba(0, 0, 0, .10);
+
+    transition:
+        transform .25s ease,
+        box-shadow .25s ease,
+        outline-color .25s ease;
+}
+
+
+.nav-right .profile-img:hover {
+
+    transform: scale(1.05);
+
+    outline-color: var(--primary);
+
+    box-shadow: 0 7px 20px rgba(0, 0, 0, .14);
+}
+
+
+// ==========================================
+// TABLET
+// ==========================================
+
+@media (max-width: 768px) {
+
+    .nac-left {
+
+        padding-left: 20px;
+
+        margin-top: 0;
+
+        gap: 4px;
+    }
+
+
+    .nac-left h2 {
+
+        font-size: clamp(1rem, 4vw, 1.35rem);
+    }
+
+
+    .nac-left p {
+
+        font-size: .78rem;
+
+        max-width: 90%;
+    }
+
+
+    .nav-right {
+
+        gap: 10px;
+
+        padding-right: 15px;
+
+        margin-top: 0;
+    }
+
+
+    .nav-right button {
+
+        width: 40px;
+
+        height: 40px;
+    }
+
+
+    .nav-right .profile-img {
+
+        width: 42px;
+
+        height: 42px;
+    }
+}
+
+
+// ==========================================
+// MOBILE
+// ==========================================
+
+@media (max-width: 600px) {
+
+    .nac-left {
+
+        padding-left: 15px;
+
+        width: 100%;
+    }
+
+
+    .nac-left h2 {
+
+        font-size: 1.05rem;
+
+        gap: 5px;
+
+        white-space: nowrap;
+    }
+
+
+    .nac-left h2 span {
+
+        font-size: 1.05rem;
+    }
+
+
+    .nac-left p {
+
+        font-size: .72rem;
+
+        line-height: 1.5;
+
+        max-width: 95%;
+    }
+
+
+    .nav-right {
+
+        gap: 8px;
+
+        padding-right: 10px;
+    }
+
+
+    .nav-right button {
+
+        width: 38px;
+
+        height: 38px;
+
+        border-radius: 9px;
+    }
+
+
+    .nav-right .profile-img {
+
+        width: 40px;
+
+        height: 40px;
+    }
+}
+
+
+// ==========================================
+// SMALL PHONE
+// ==========================================
+
+@media (max-width: 400px) {
+
+    .nac-left {
+
+        padding-left: 10px;
+    }
+
+
+    .nac-left h2 {
+
+        font-size: .95rem;
+    }
+
+
+    .nac-left h2 span {
+
+        font-size: .95rem;
+    }
+
+
+    .nac-left p {
+
+        font-size: .68rem;
+    }
+
+
+    .nav-right {
+
+        gap: 6px;
+
+        padding-right: 7px;
+    }
+
+
+    .nav-right button {
+
+        width: 35px;
+
+        height: 35px;
+    }
+
+
+    .nav-right .profile-img {
+
+        width: 36px;
+
+        height: 36px;
+    }
+}
+
+
+// ==========================================
+// NOTIFICATION NAV
+// ==========================================
+
+.notification-nav-wrapper {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.notification-nav-wrapper button {
+    position: relative;
+}
+
+
+// ==========================================
+// NOTIFICATION BADGE
+// ==========================================
+
+.notification-badge {
+    position: absolute;
+
+    top: -4px;
+    right: -5px;
+
+    min-width: 17px;
+    height: 17px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 0 4px;
+
+    border: 2px solid #ffffff;
+
+    border-radius: 20px;
+
+    background: #ef4444;
+
+    color: #ffffff;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: 8px;
+
+    font-weight: 700;
+
+    line-height: 1;
+
+    box-sizing: border-box;
+
+    animation: notificationBadgePop .25s ease;
+}
+
+
+@keyframes notificationBadgePop {
+
+    from {
+        opacity: 0;
+        transform: scale(.5);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+}
+
+
+// ==========================================
+// MOBILE
+// ==========================================
+
+@media (max-width: 600px) {
+
+    .notification-badge {
+        min-width: 15px;
+        height: 15px;
+
+        top: -3px;
+        right: -4px;
+
+        font-size: 7px;
+    }
+
+}
