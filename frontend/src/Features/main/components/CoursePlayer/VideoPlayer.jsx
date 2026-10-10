@@ -3,9 +3,9 @@
 import { useState, useEffect, useMemo, useRef } from "react";
 import YouTube from "react-youtube";
 
-import usePlayer from "../../hooks/usePlayer";
-import useKeyboard from "../../hooks/useKeyboard";
-import useProgress from "../../Hooks/useProgress";
+import usePlayer from "../../hooks/usePlayer.js";
+import useKeyboard from "../../hooks/useKeyboard.js";
+import useProgress from "../../Hooks/useProgress.js";
 
 import NextLessonOverlay from "./NextLessonOverlay";
 import VideoControls from "./VideoControls";

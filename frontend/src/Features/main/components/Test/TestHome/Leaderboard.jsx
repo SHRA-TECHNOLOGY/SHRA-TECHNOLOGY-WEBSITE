@@ -1,6 +1,7 @@
 import React, { useState } from "react";
-import "../../../styles/Test/TestHome/Leaderboard.scss";
 import { useTestXPLeaderboard } from "../../../Hooks/Test/useTest";
+
+import "../../../styles/Test/TestHome/Leaderboard.scss";
 
 const Leaderboard = () => {
     const [activeTab, setActiveTab] = useState("week");

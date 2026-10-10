@@ -2,7 +2,7 @@ import React from 'react'
 import '../../styles/AdminPanel/StudentsManage.scss'
 
 import { useAllStudents } from '../../Hooks/Admin/Student/useStudent'
-import ViewStudentDetails from './viewStudentDetails'
+import ViewStudentDetails from './ViewStudentDetails.jsx'
 
 
 const StudentManageSection = () => {
